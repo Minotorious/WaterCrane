@@ -16,4 +16,5 @@ IdMap = {
 	{ "models/woodBrownDark.png", "", "b5467e49-f79b-4b4c-9d12-f52e1e3432a5" },
 	{ "models/woodBrownWorn.png", "", "94588350-011e-4c1c-be52-564b61c35787" },
 	{ "models/woodplanksBrown.png", "", "92e57491-6092-42c8-a50b-d108f1441e37" },
+	{ "models/craneRender.png", "", "97fb342d-09cf-4ed8-8016-34740b787871" },
 }

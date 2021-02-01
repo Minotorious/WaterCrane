@@ -158,7 +158,6 @@
 		<meta id="ba0e9ea1-951d-445a-bafb-042265844624" name="Cube.280_Material.WoodBrownDark"/>
 		<meta id="7d2605c7-9d77-4a5b-9f54-dc3cfc2ae948" name="Cube.282_Material.WoodBrownDark"/>
 		<meta id="fd8f45bb-4ce0-40b9-9efb-43c33759cb5e" name="Cube.284_Material.WoodBrown"/>
-		<meta id="86c4a99e-f56e-4ddc-908c-5ceb6c134f98" name="Cube.292_Material.WoodBrown"/>
 		<meta id="066b0335-5dcf-43c9-be78-d53d7871a88c" name="Cube.293_Material.WoodBrownDark"/>
 		<meta id="5daa3d07-de31-4156-a61c-cd8b02883b69" name="Cylinder.037_Material.MetalRusty"/>
 		<meta id="749c54a1-1808-487e-947e-54ab58bde4a5" name="Cube.295_Material.MetalRusty"/>
@@ -166,7 +165,6 @@
 		<meta id="11890875-09f1-47c9-9eb0-c4849f33a389" name="Cylinder.048_Material.RopeBrown"/>
 		<meta id="7bbf2e63-ff5b-4d84-ae26-8a0fbf608cb9" name="Cylinder.049_Material.RopeBrown"/>
 		<meta id="52efce37-5759-45c0-a29b-ea7357ac8527" name="Cube.299_Material.StoneGrey"/>
-		<meta id="f884fd83-b6b4-478d-b817-0220642c7f8f" name="Cube.300_Material.StoneGrey"/>
 		<meta id="c143b530-ce44-424a-a566-c79eeac3474a" name="Cube.301_Material.StoneGrey"/>
 		<meta id="6a71e22a-d363-449f-8812-c7079fbefee4" name="Cube.302_Material.MetalRusty"/>
 		<meta id="abd6ab0d-dff4-43ef-8ff1-0153ccee7a18" name="Cube.275_Material.MetalRusty"/>
@@ -175,6 +173,7 @@
 		<meta id="c646e22c-83ad-4c26-bd8b-8b3cdc0d9967" name="Cylinder.032_Material.MetalRusty"/>
 		<meta id="e6a76f0a-a54d-4686-93b7-ad4d07b2559b" name="Cube.266_Material.MetalRusty"/>
 		<meta id="075c1c1d-8c5f-4721-830f-b3d90cf56171" name="Cube.297_Material.MetalRusty"/>
+		<meta id="da3a2154-62fc-402b-bcca-e6d487bda01c" name="Cylinder.028_Material.RopeBrown"/>
 	</meta>
 	<meta id="10246f63-31c0-4009-a90e-e74abad8046f" name="Prefab">
 		<meta id="e45de41c-83b6-417f-ab97-288816e9f9f8" name="Light"/>
@@ -542,11 +541,14 @@
 			<meta id="d68cfde7-8e03-4cc8-8fea-fbdc850850cf" name="Cube.302"/>
 			<meta id="e1afd5a7-a40f-45d8-a276-60477640b33e" name="Cube.303"/>
 			<meta id="97dce592-8318-4371-82a2-1f35d7e662db" name="Cylinder.050"/>
+			<meta id="6759ce05-5b1c-4c40-9c34-acbd17d6c419" name="Cylinder.028"/>
+			<meta id="9d4151a8-4544-4bbb-a078-04c88911d5c1" name="Cylinder.051"/>
+			<meta id="8f8b8d97-1b32-412c-bc06-89051b6ac0de" name="Cylinder.052"/>
 		</meta>
 	</meta>
 </meta>
 <importer type="GamCFbxImporterConfiguration">
-	<Md5Checksum value="74730f833a491f2bbccf781379a6f522"/>
+	<Md5Checksum value="0ede6810c44744d034e9038cad545bc7"/>
 	<Scale value="0.01"/>
 	<PatchMeshOffset value="true"/>
 	<UniqueNodeName value="false"/>
@@ -2381,6 +2383,21 @@
 						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
 						<ChildList/>
 						<NodeName value="Cylinder.050"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Cylinder.028"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Cylinder.051"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Cylinder.052"/>
 					</Item>
 				</ChildList>
 				<NodeName value="waterCranePart"/>

@@ -50,13 +50,13 @@ for i, nodePrefix in ipairs(defaultNodePrefixList) do
 end
 
 waterCrane:registerPrefabComponent("models/waterCrane.fbx/Prefab/GearMainPart", { DataType = "COMP_BUILDING_PART", BuildingPartType = "BUILD_ORDER_DEPENDENCY" })
-waterCrane:registerPrefabComponent("models/waterCrane.fbx/Prefab/GearMainFrontPart", { DataType = "COMP_BUILDING_PART", BuildingPartType = "LEFT" })
-waterCrane:registerPrefabComponent("models/waterCrane.fbx/Prefab/GearMainBackPart", { DataType = "COMP_BUILDING_PART", BuildingPartType = "RIGHT" })
+waterCrane:registerPrefabComponent("models/waterCrane.fbx/Prefab/GearMainFrontPart", { DataType = "COMP_BUILDING_PART", BuildingPartType = "MINOR" })
+waterCrane:registerPrefabComponent("models/waterCrane.fbx/Prefab/GearMainBackPart", { DataType = "COMP_BUILDING_PART", BuildingPartType = "LEFT" })
 waterCrane:registerPrefabComponent("models/waterCrane.fbx/Prefab/GearTopPart", { DataType = "COMP_BUILDING_PART", BuildingPartType = "INNER_BOTTOM" })
 waterCrane:registerPrefabComponent("models/waterCrane.fbx/Prefab/GearTopFrontPart", { DataType = "COMP_BUILDING_PART", BuildingPartType = "FRONT" })
 waterCrane:registerPrefabComponent("models/waterCrane.fbx/Prefab/GearTopBackPart", { DataType = "COMP_BUILDING_PART", BuildingPartType = "SIDE" })
 waterCrane:registerPrefabComponent("models/waterCrane.fbx/Prefab/GearMiddlePart", { DataType = "COMP_BUILDING_PART", BuildingPartType = "MAJOR" })
-waterCrane:registerPrefabComponent("models/waterCrane.fbx/Prefab/GearMiddleFrontPart", { DataType = "COMP_BUILDING_PART", BuildingPartType = "MINOR" })
+waterCrane:registerPrefabComponent("models/waterCrane.fbx/Prefab/GearMiddleFrontPart", { DataType = "COMP_BUILDING_PART", BuildingPartType = "RIGHT" })
 waterCrane:registerPrefabComponent("models/waterCrane.fbx/Prefab/GearMiddleBackPart", { DataType = "COMP_BUILDING_PART", BuildingPartType = "INNER_TOP" })
 waterCrane:registerPrefabComponent("models/waterCrane.fbx/Prefab/TreadmillPart", { DataType = "COMP_BUILDING_PART", BuildingPartType = "DOOR" })
 
@@ -138,6 +138,11 @@ function COMP_WATER_CRANE:generalSequence()
     
 end
 
+
+waterCrane:registerClass(COMP_WATER_CRANE)
+
+waterCrane:registerPrefabComponent("models/waterCrane.fbx/Prefab/WaterCraneCorePart", { DataType = "COMP_BUILDING_PART", FeedbackComponentListToActivate = { { "PREFAB_WATER_CRANE_CORE_PART", "COMP_WATER_CRANE" } } })
+waterCrane:registerPrefabComponent("models/waterCrane.fbx/Prefab/WaterCraneCorePart", { DataType = "COMP_WATER_CRANE",	Enabled = false })
 --[[------------------------------ MAIN MONUMENT ------------------------------]]--
 
 --[[------------------------------- MAIN EVENT --------------------------------]]--

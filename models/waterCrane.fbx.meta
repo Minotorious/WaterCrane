@@ -174,6 +174,7 @@
 		<meta id="c98a61aa-8610-402d-967c-ffb8815694e4" name="Cylinder.034_Material.MetalRusty"/>
 		<meta id="dd3f4586-705b-4198-8336-3f74c2ad32c4" name="Cylinder.017_Material.MetalSilver"/>
 		<meta id="1b0b6104-8819-4262-b418-8c7f5b4fc8e0" name="BezierCircle.010_Material.WoodBrownWorn"/>
+		<meta id="9bdfba04-18f2-4506-a27d-6299a35f2f04" name="TreadmillPart_COLLIDER"/>
 	</meta>
 	<meta id="10246f63-31c0-4009-a90e-e74abad8046f" name="Prefab">
 		<meta id="e45de41c-83b6-417f-ab97-288816e9f9f8" name="Light"/>
@@ -381,16 +382,17 @@
 			<meta id="f3bbeeb6-a629-4e9c-acb6-8beb3dcbb42f" name="Cylinder.036"/>
 			<meta id="fc72ded0-30ee-4ce0-8e69-f18bf9acd158" name="Cube.275"/>
 			<meta id="cd0c4cdc-e522-4072-b145-20c16edf708b" name="Cube.276"/>
-			<meta id="bc33ac7e-2f00-44f0-8dfd-21bdaa99ad71" name="AttachMinor"/>
-			<meta id="ee62e6d9-a78f-4ade-81bd-a95af866f4b7" name="AttachMajor"/>
-			<meta id="e8e5002a-421b-4854-955e-f22a7f26bde3" name="AttachFront"/>
-			<meta id="c5d76b98-22c0-461b-963e-124af937ff02" name="AttachSide"/>
-			<meta id="95d57d2b-41b2-4281-b6f8-c9d1f90fbd67" name="AttachBuildOrderDependency"/>
-			<meta id="65ee1664-e8a4-4372-ae15-af9c598c0b6d" name="AttachTop"/>
-			<meta id="7c14a1c6-1c9d-4cab-99a2-78abec4d2972" name="AttachDoor"/>
-			<meta id="b84360b8-7f5d-4a5f-9045-f28682bbaf70" name="AttachRight"/>
-			<meta id="5540a2f9-1113-4cf2-a7b0-8a28727759bc" name="AttachLeft"/>
-			<meta id="12c05b88-680c-41ff-a605-3d4bc58b7ee3" name="AttachBottom"/>
+			<meta id="43c7e831-a47d-4729-b431-51c4b2ac3ac8" name="PATH_B_1"/>
+			<meta id="61e9d025-bc1e-4dcc-adb6-bcde1eb262a0" name="AttachMinor.GearTopFront"/>
+			<meta id="a158463b-52b7-4c47-9098-61792afe698b" name="AttachMinor.GearTopBack"/>
+			<meta id="4e6f6221-7362-4393-ad8a-dd7fc9ad91aa" name="AttachMajor.GearMain"/>
+			<meta id="f6c4c296-2dc3-4e35-a8b6-f95fa6bdb32d" name="AttachMajor.GearTop"/>
+			<meta id="44681506-891c-457d-ada2-2678da1eb13a" name="AttachMajor.GearMiddle"/>
+			<meta id="7a2df642-8161-4765-80c0-fa388494c9f4" name="AttachMajor.Treadmill"/>
+			<meta id="a13db17d-851f-44dc-8e1e-deb9293ce6ad" name="AttachMinor.GearMainBack"/>
+			<meta id="0d5c79f1-d08a-4e6d-bcc6-b375a32c5ace" name="AttachMinor.GearMainFront"/>
+			<meta id="6155b04b-cbeb-4417-bec9-d4e4cafdf779" name="AttachMinor.GearMiddleFront"/>
+			<meta id="279240fd-cdf2-452a-b247-079553fe4d15" name="AttachMinor.GearMiddleBack"/>
 		</meta>
 		<meta id="e0d05a8d-794f-404b-ad58-7a964ef7d62e" name="TreadmillPart">
 			<meta id="97b086c5-6a3d-4128-9df8-92278d7c06dd" name="BezierCircle.001"/>
@@ -459,6 +461,10 @@
 			<meta id="182e256b-6af1-41ce-a49e-bb549354c492" name="Cylinder.001"/>
 			<meta id="7e1b74e3-7ffc-4351-b034-2ff513bdcfb9" name="BezierCircle.004"/>
 			<meta id="87a88881-5f69-45b0-bafe-c6b81d750c3f" name="Cylinder.003"/>
+			<meta id="24b8b709-4abc-4f26-bcec-d7bd9600a453" name="PATH_A_1"/>
+			<meta id="546a32f7-90d8-4092-91f2-9348bf8324a4" name="PATH_A_2"/>
+			<meta id="5cad2ac1-ab0b-4d36-9212-452aa8d10bbe" name="PATH_A_3"/>
+			<meta id="c675ea09-2248-4447-9066-3108566b3e67" name="PATH_A_4"/>
 		</meta>
 		<meta id="0cbb8440-6d8e-4635-b2b0-5c80c6236599" name="GearMiddlePart">
 			<meta id="2d247324-8413-47cb-b78b-b3f1a55ccc36" name="BezierCircle.005"/>
@@ -579,7 +585,7 @@
 	</meta>
 </meta>
 <importer type="GamCFbxImporterConfiguration">
-	<Md5Checksum value="410cd18137bea5f0c8cec6b861e8d855"/>
+	<Md5Checksum value="3553661572ab790d65f0f8ae79c9b4d1"/>
 	<Scale value="0.01"/>
 	<PatchMeshOffset value="true"/>
 	<UniqueNodeName value="false"/>
@@ -1618,52 +1624,57 @@
 					<Item type="GenCFbxNodeConfig">
 						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
 						<ChildList/>
-						<NodeName value="AttachMinor"/>
+						<NodeName value="PATH_B_1"/>
 					</Item>
 					<Item type="GenCFbxNodeConfig">
 						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
 						<ChildList/>
-						<NodeName value="AttachMajor"/>
+						<NodeName value="AttachMinor.GearTopFront"/>
 					</Item>
 					<Item type="GenCFbxNodeConfig">
 						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
 						<ChildList/>
-						<NodeName value="AttachFront"/>
+						<NodeName value="AttachMinor.GearTopBack"/>
 					</Item>
 					<Item type="GenCFbxNodeConfig">
 						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
 						<ChildList/>
-						<NodeName value="AttachSide"/>
+						<NodeName value="AttachMajor.GearMain"/>
 					</Item>
 					<Item type="GenCFbxNodeConfig">
 						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
 						<ChildList/>
-						<NodeName value="AttachBuildOrderDependency"/>
+						<NodeName value="AttachMajor.GearTop"/>
 					</Item>
 					<Item type="GenCFbxNodeConfig">
 						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
 						<ChildList/>
-						<NodeName value="AttachTop"/>
+						<NodeName value="AttachMajor.GearMiddle"/>
 					</Item>
 					<Item type="GenCFbxNodeConfig">
 						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
 						<ChildList/>
-						<NodeName value="AttachDoor"/>
+						<NodeName value="AttachMajor.Treadmill"/>
 					</Item>
 					<Item type="GenCFbxNodeConfig">
 						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
 						<ChildList/>
-						<NodeName value="AttachRight"/>
+						<NodeName value="AttachMinor.GearMainBack"/>
 					</Item>
 					<Item type="GenCFbxNodeConfig">
 						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
 						<ChildList/>
-						<NodeName value="AttachLeft"/>
+						<NodeName value="AttachMinor.GearMainFront"/>
 					</Item>
 					<Item type="GenCFbxNodeConfig">
 						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
 						<ChildList/>
-						<NodeName value="AttachBottom"/>
+						<NodeName value="AttachMinor.GearMiddleFront"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="AttachMinor.GearMiddleBack"/>
 					</Item>
 				</ChildList>
 				<NodeName value="WaterCraneCorePart"/>
@@ -2000,6 +2011,26 @@
 						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
 						<ChildList/>
 						<NodeName value="Cylinder.003"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="PATH_A_1"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="PATH_A_2"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="PATH_A_3"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="PATH_A_4"/>
 					</Item>
 				</ChildList>
 				<NodeName value="TreadmillPart"/>

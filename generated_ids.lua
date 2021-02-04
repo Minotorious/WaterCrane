@@ -49,10 +49,12 @@ IdMap = {
 	{ "TREADMILL_WORKER_BEHAVIOR_TREE/Transport", "", "ea469a65-c08a-45b4-bdec-e8168f2f4abc" },
 	{ "TREADMILL_WORKER_BEHAVIOR_TREE/WorkLoopSequencer", "", "21f563d3-c0f3-4904-9e8c-1f53e3ce7c9c" },
 	{ "TREADMILL_WORKER_BEHAVIOR_TREE/SetupWork", "", "43dd33bf-494e-4385-bc0d-bc5b8afd792f" },
+	{ "WATER_LEVEL_MARK_PART", "BUILDING_PART", "741fb808-dbf3-4288-8d45-d03fce8df755" },
 	{ "TREADMILL_WORKER_BEHAVIOR_TREE/GoToResource", "", "2e238dab-5ca0-45df-8edd-f5ed60169394" },
 	{ "TREADMILL_WORKER_BEHAVIOR_TREE/ProduceResource", "", "272f6a73-344f-4e34-a2dc-cf6642f2cb60" },
 	{ "TREADMILL_WORKER_BEHAVIOR_TREE/TreadmillRunningSpeed", "", "cee952e5-96b4-44dc-8f0c-2993de7c4e10" },
 	{ "TREADMILL_WORKER_BEHAVIOR_TREE/GettingXp", "", "9a095ab8-1a9f-4fab-83d3-4061c18e42a1" },
 	{ "WATER_CRANE_GEMS_BUILDING_FUNCTION", "BUILDING_FUNCTION", "428fd170-d739-45f7-bf9c-8c633f925764" },
 	{ "TREADMILL_WORKER_BEHAVIOR_TREE/GoToResourceOrWorkplace", "", "6d16af3f-1373-4199-9287-6c239fa2c23f" },
+	{ "models/Transparent.png", "", "0c5808c0-21fe-48b3-ab06-dad4dd7a8f66" },
 }

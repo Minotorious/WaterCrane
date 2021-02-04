@@ -21,6 +21,7 @@ waterCrane:registerAssetId("models/waterCrane.fbx/Prefab/GearMiddleFrontPart", "
 waterCrane:registerAssetId("models/waterCrane.fbx/Prefab/GearMiddleBackPart", "PREFAB_GEAR_MIDDLE_BACK_PART")
 waterCrane:registerAssetId("models/waterCrane.fbx/Prefab/TreadmillPart", "PREFAB_TREADMILL_PART")
 waterCrane:registerAssetId("models/waterCrane.fbx/Prefab/WaterCraneCorePart", "PREFAB_WATER_CRANE_CORE_PART")
+waterCrane:registerAssetId("models/waterCrane.fbx/Prefab/WaterLevelMarkPart", "PREFAB_WATER_LEVEL_MARK_PART")
 
 waterCrane:registerAssetId("models/waterCrane.fbx/Prefab/TreadmillPart/PATH_A_1.TreadmillWork", "PATH_TREADMILL_WORK_A1")
 waterCrane:registerAssetId("models/waterCrane.fbx/Prefab/TreadmillPart/PATH_A_2.TreadmillWork", "PATH_TREADMILL_WORK_A2")
@@ -28,6 +29,13 @@ waterCrane:registerAssetId("models/waterCrane.fbx/Prefab/TreadmillPart/PATH_A_3.
 waterCrane:registerAssetId("models/waterCrane.fbx/Prefab/TreadmillPart/PATH_A_4.TreadmillWork", "PATH_TREADMILL_WORK_A4")
 waterCrane:registerAssetId("models/waterCrane.fbx/Prefab/TreadmillPart/PATH_A_1.TreadmillPickUp", "PATH_TREADMILL_PICKUP_A1")
 waterCrane:registerAssetId("models/waterCrane.fbx/Prefab/WaterCraneCorePart/PATH_A_1.WaterWell", "PATH_WATER_WELL_A1")
+
+waterCrane:registerAssetId("models/waterCrane.fbx/Materials/Material.Transparent", "MATERIAL_TRANSPARENT")
+
+waterCrane:override({
+    Id = "MATERIAL_TRANSPARENT",
+    HasAlphaTest = true
+})
 
 --[[---------------------------- CUSTOM COMPONENTS ----------------------------]]--
 
@@ -39,12 +47,15 @@ local COMP_WATER_CRANE = {
     TypeName = "COMP_WATER_CRANE",
     ParentType = "COMPONENT",
     Properties = {
-        { Name = "GearVelocity", Type = "float", Default = 0.8 }
+        { Name = "GearVelocity", Type = "float", Default = 0.8 },
+        { Name = "RopeVelocity", Type = "float", Default = 0.3 },
+        { Name = "BucketVelocity", Type = "float", Default = 1.0 }
     }
 }
 
 function COMP_WATER_CRANE:create()
     self.sequence = 0
+    self.ropeReeled = false
 end
 
 function COMP_WATER_CRANE:onEnabled()
@@ -55,7 +66,80 @@ function COMP_WATER_CRANE:onDisabled()
     waterCrane:log("Component Disabled")
 end
 
-function COMP_WATER_CRANE:generalSequence()
+function COMP_WATER_CRANE:bucketSequence(dif)
+    local dt = self:getLevel():getDeltaTime()
+    self:getOwner():forEachChild(
+        function(child)
+            if child.Name == "AttachMajor.GearMain" then
+                child:forEachChild(
+                    function(part)
+                        if part.Name == "GearMainPart" then
+                            part:forEachChild(
+                                function(bucketPart)
+                                    if starts_with(bucketPart.Name, "Bucket") then
+                                        bucketPart:move({ 0, dif, 0 })
+                                    end
+                                end
+                            )
+                        end
+                    end
+                )
+            end
+        end
+    )
+end
+
+function COMP_WATER_CRANE:ropeReelSequence()
+    local dt = self:getLevel():getDeltaTime()
+    self:getOwner():forEachChild(
+        function(child)
+            if child.Name == "AttachMajor.GearMain" then
+                child:forEachChild(
+                    function(part)
+                        if part.Name == "GearMainPart" then
+                            part:forEachChild(
+                                function(rope)
+                                    if rope.Name == "Rope" then
+                                        if self.ropeReeled == false then
+                                            if rope.Scale.y > 0.1 then
+                                                --waterCrane:log("Old Scale: " .. rope.Scale.y)
+                                                local oldScale = rope.Scale.y
+                                                rope:scaleAround({ 6.975, 4.4475, 0 }, { 1, 1 - self.RopeVelocity*dt, 1 })
+                                                --waterCrane:log("New Scale: " .. rope.Scale.y)
+                                                local newScale = rope.Scale.y
+                                                local dif = 6 * (oldScale - newScale)
+                                                --waterCrane:log("Difference: " .. dif)
+                                                self:bucketSequence(dif)
+                                            else
+                                                waterCrane:log(rope.Scale.y)
+                                                self.ropeReeled = true
+                                            end
+                                        else
+                                            if rope.Scale.y < 1 then
+                                                --waterCrane:log(rope.Scale.y)
+                                                local oldScale = rope.Scale.y
+                                                rope:scaleAround({ 6.975, 4.4475, 0 }, { 1, 1 + self.RopeVelocity*dt, 1 })
+                                                local newScale = rope.Scale.y
+                                                local dif = 6 * (oldScale - newScale)
+                                                --waterCrane:log("Difference: " .. dif)
+                                                self:bucketSequence(dif)
+                                            else
+                                                waterCrane:log(rope.Scale.y)
+                                                self.ropeReeled = false
+                                            end
+                                        end
+                                    end
+                                end
+                            )
+                        end
+                    end
+                )
+            end
+        end
+    )
+end
+
+function COMP_WATER_CRANE:generalGearsSequence()
     local dt = self:getLevel():getDeltaTime()
     
     --waterCrane:log(self:getOwner():getParent().Name)
@@ -70,7 +154,7 @@ function COMP_WATER_CRANE:generalSequence()
                             attachment:forEachChild(
                                 function(mesh)
                                     if not starts_with(mesh.Name, "PATH") then
-                                        mesh:rotateAround({ 0, 0, 2.5 }, { 0, 0, 1 }, -self.GearVelocity * dt)
+                                        mesh:rotateAround({ 0, 0, 0 }, { 0, 0, 1 }, -self.GearVelocity * dt)
                                     end
                                 end
                             )
@@ -99,7 +183,8 @@ function COMP_WATER_CRANE:generalSequence()
 end
 
 function COMP_WATER_CRANE:update()
-    self:generalSequence()
+    self:generalGearsSequence()
+    self:ropeReelSequence()
 end
 
 waterCrane:registerClass(COMP_WATER_CRANE)
@@ -123,6 +208,7 @@ waterCrane:registerPrefabComponent("models/waterCrane.fbx/Prefab/GearMiddlePart"
 waterCrane:registerPrefabComponent("models/waterCrane.fbx/Prefab/GearMiddleFrontPart", { DataType = "COMP_BUILDING_PART", BuildingPartType = "MINOR" })
 waterCrane:registerPrefabComponent("models/waterCrane.fbx/Prefab/GearMiddleBackPart", { DataType = "COMP_BUILDING_PART", BuildingPartType = "MINOR" })
 waterCrane:registerPrefabComponent("models/waterCrane.fbx/Prefab/TreadmillPart", { DataType = "COMP_BUILDING_PART", BuildingPartType = "MAJOR" })
+waterCrane:registerPrefabComponent("models/waterCrane.fbx/Prefab/WaterLevelMarkPart", { DataType = "COMP_BUILDING_PART", BuildingPartType = "MINOR" })
 
 waterCrane:registerPrefabComponent("models/waterCrane.fbx/Prefab/WaterCraneCorePart", {
     DataType = "COMP_BUILDING_PART",
@@ -152,6 +238,7 @@ waterCrane:registerPrefabComponent("models/waterCrane.fbx/Prefab/WaterCraneCoreP
 })
 
 waterCrane:configurePrefabFlagList("models/waterCrane.fbx/Prefab/WaterCraneCorePart", { "PLATFORM" })
+waterCrane:registerPrefabComponent("models/waterCrane.fbx/Prefab/WaterLevelMarkPart", { DataType = "COMP_GROUNDED" })
 
 --[[------------------------ BUILDINGS & BUILDING PARTS -----------------------]]--
 
@@ -173,7 +260,8 @@ local defaultNodePrefixList = {
     "GEAR_MIDDLE",
     "GEAR_MIDDLE_FRONT",
     "GEAR_MIDDLE_BACK",
-    "TREADMILL"
+    "TREADMILL",
+    "WATER_LEVEL_MARK"
 }
 
 for i, nodePrefix in ipairs(defaultNodePrefixList) do
@@ -194,7 +282,7 @@ waterCrane:register({
     AssetCoreBuildingPart = "WATER_CRANE_PART",
     VillagerRequired = {
         Status = "SERF",
-        Quantity = 10
+        Quantity = 1--10
     }
 })
 
@@ -216,7 +304,8 @@ waterCrane:register({
             { BuildingPart = "GEAR_MIDDLE_PART", OptionalAttachNodeString = "AttachMajor.GearMiddle" },
             { BuildingPart = "GEAR_MIDDLE_FRONT_PART",  OptionalAttachNodeString = "AttachMinor.GearMiddleFront" },
             { BuildingPart = "GEAR_MIDDLE_BACK_PART",  OptionalAttachNodeString = "AttachMinor.GearMiddleBack" },
-            { BuildingPart = "TREADMILL_PART", OptionalAttachNodeString = "AttachMajor.Treadmill" }
+            { BuildingPart = "TREADMILL_PART", OptionalAttachNodeString = "AttachMajor.Treadmill" },
+            { BuildingPart = "WATER_LEVEL_MARK_PART", OptionalAttachNodeString = "AttachMinor.WaterLevelMark" }
         }
     },
     AssetBuildingFunction = "BUILDING_FUNCTION_WELL",
@@ -259,15 +348,15 @@ waterCrane:register({
         RessourcesNeeded = {
             {
                 Resource = "PLANK",
-                Quantity = 50
+                Quantity = 0--50
             },
             {
                 Resource = "STONE",
-                Quantity = 10
+                Quantity = 0--10
             },
             {
                 Resource = "TOOL",
-                Quantity = 10
+                Quantity = 0--10
             }
         }
     },

@@ -8,6 +8,8 @@
 		<meta id="5b6611e8-8670-4a7d-9eaf-2c9138473453" name="Material.MetalSilver"/>
 		<meta id="31707fb4-e477-4968-8e0c-fc1145a1c8df" name="Material.RopeBrown"/>
 		<meta id="8357988c-709c-4ba6-aecb-def7aa189079" name="Material.StoneGrey"/>
+		<meta id="72cc8dd1-3145-4f6f-8279-524cc081680f" name="Material.Water"/>
+		<meta id="633d07e9-812b-40d8-ad4d-bc724b25d5a3" name="Material.Transparent"/>
 	</meta>
 	<meta id="ed845b65-0213-4942-baec-61c541fb3906" type="group" folder="true" name="Meshes">
 		<meta id="3b3d2662-ffcb-40ec-91c0-688bbad02c1c" name="BezierCircle.001_Material.WoodBrownWorn"/>
@@ -157,7 +159,6 @@
 		<meta id="749c54a1-1808-487e-947e-54ab58bde4a5" name="Cube.295_Material.MetalRusty"/>
 		<meta id="eaf53151-7dd5-4439-90e1-420fa817238f" name="Cylinder.041_Material.RopeBrown"/>
 		<meta id="11890875-09f1-47c9-9eb0-c4849f33a389" name="Cylinder.048_Material.RopeBrown"/>
-		<meta id="7bbf2e63-ff5b-4d84-ae26-8a0fbf608cb9" name="Cylinder.049_Material.RopeBrown"/>
 		<meta id="52efce37-5759-45c0-a29b-ea7357ac8527" name="Cube.299_Material.StoneGrey"/>
 		<meta id="c143b530-ce44-424a-a566-c79eeac3474a" name="Cube.301_Material.StoneGrey"/>
 		<meta id="6a71e22a-d363-449f-8812-c7079fbefee4" name="Cube.302_Material.MetalRusty"/>
@@ -175,6 +176,12 @@
 		<meta id="dd3f4586-705b-4198-8336-3f74c2ad32c4" name="Cylinder.017_Material.MetalSilver"/>
 		<meta id="1b0b6104-8819-4262-b418-8c7f5b4fc8e0" name="BezierCircle.010_Material.WoodBrownWorn"/>
 		<meta id="80a86d45-96db-4493-9d97-ee8c3f3761c8" name="WaterCraneCorePart_COLLIDER"/>
+		<meta id="b5d45405-be46-4b24-bdf4-dac50a90ac37" name="Rope_Material.RopeBrown"/>
+		<meta id="8dd637c2-f027-4dfb-8e58-ed3e4724f681" name="BucketMain_Material.WoodBrownWorn"/>
+		<meta id="6489d4ce-3f25-414e-8e7a-8fc0e14b4bf5" name="BucketWater_Material.Water"/>
+		<meta id="cebe59f9-faae-49ef-82da-9965db05aa16" name="BucketHandle_Material.MetalRusty"/>
+		<meta id="20272bb0-07dc-44dd-9af7-cbdc915b151c" name="BucketRope_Material.RopeBrown"/>
+		<meta id="06fd2b34-f965-442a-a281-f380546ae52b" name="WaterLevelMark_Material.Transparent"/>
 	</meta>
 	<meta id="10246f63-31c0-4009-a90e-e74abad8046f" name="Prefab">
 		<meta id="e45de41c-83b6-417f-ab97-288816e9f9f8" name="Light"/>
@@ -393,6 +400,7 @@
 			<meta id="6155b04b-cbeb-4417-bec9-d4e4cafdf779" name="AttachMinor.GearMiddleFront"/>
 			<meta id="279240fd-cdf2-452a-b247-079553fe4d15" name="AttachMinor.GearMiddleBack"/>
 			<meta id="5cd5b4d6-e75f-4207-8635-482859628a67" name="PATH_A_1.WaterWell"/>
+			<meta id="7a33176c-a929-4e1c-b2b8-19d17d67d0aa" name="AttachMinor.WaterLevelMark"/>
 		</meta>
 		<meta id="e0d05a8d-794f-404b-ad58-7a964ef7d62e" name="TreadmillPart">
 			<meta id="97b086c5-6a3d-4128-9df8-92278d7c06dd" name="BezierCircle.001"/>
@@ -556,7 +564,6 @@
 			<meta id="e8c166bb-3361-4a57-91a7-5bceda237293" name="Cube.297"/>
 			<meta id="c6b3a477-d253-4160-bcda-b137767eb2bd" name="Cube.298"/>
 			<meta id="bed5882a-2b47-4508-bf67-f0554e1dffed" name="Cylinder.047"/>
-			<meta id="d484cc19-98b1-41ef-a195-938bd39c5903" name="Cylinder.049"/>
 			<meta id="48ac1ae9-2a42-446c-81d7-2fcbbc2ee6a5" name="Cube.299"/>
 			<meta id="b2c4cabf-29d8-4e23-b8b5-7cdb92f15bc3" name="Cube.300"/>
 			<meta id="0318ed49-25b6-41bd-afa1-691fc6949455" name="Cube.301"/>
@@ -572,6 +579,11 @@
 			<meta id="4c66aec1-9f37-4490-8745-e0943670ecc9" name="Cylinder.028"/>
 			<meta id="b2d6fdeb-f6e2-4c5f-a0c3-cf2641b9a43e" name="Cylinder.051"/>
 			<meta id="5c8177de-c7db-42ca-b76a-c3ca6db53483" name="Cylinder.052"/>
+			<meta id="1955e3b0-d7b2-4232-8ae7-208cb1e60878" name="Rope"/>
+			<meta id="93e9c8da-3e91-466d-85d8-391938e03da8" name="BucketMain"/>
+			<meta id="0214ef93-e8e0-44bf-83de-785c0aea0605" name="BucketWater"/>
+			<meta id="910d7649-69bc-4041-a8eb-49cbdd84a923" name="BucketHandle"/>
+			<meta id="8c474414-b15f-40e9-850e-9820f89b4cc8" name="BucketRope"/>
 		</meta>
 		<meta id="4f647bad-7d5e-47e7-ae9e-7dfa404495ba" name="GearMainFrontPart">
 			<meta id="9057a82d-3b29-4f9f-bed9-e0fa1d77b013" name="Cylinder.017"/>
@@ -583,10 +595,13 @@
 			<meta id="f326131c-f284-4981-ad73-a316d0a0dafa" name="BezierCircle.009"/>
 			<meta id="73ac45b8-67a9-44ec-a1c1-529a72940bef" name="Cylinder.018"/>
 		</meta>
+		<meta id="ae38afef-d588-457d-bd75-ab683574032c" name="WaterLevelMarkPart">
+			<meta id="d00b8f71-54f8-4476-9cdc-11ea48a19bec" name="WaterLevelMark"/>
+		</meta>
 	</meta>
 </meta>
 <importer type="GamCFbxImporterConfiguration">
-	<Md5Checksum value="057f3dac7a3233c8b9210a2eab0245c6"/>
+	<Md5Checksum value="3b7187b5141be7df3176a2ae059a8a08"/>
 	<Scale value="0.01"/>
 	<PatchMeshOffset value="true"/>
 	<UniqueNodeName value="false"/>
@@ -1677,6 +1692,11 @@
 						<ChildList/>
 						<NodeName value="PATH_A_1.WaterWell"/>
 					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="AttachMinor.WaterLevelMark"/>
+					</Item>
 				</ChildList>
 				<NodeName value="WaterCraneCorePart"/>
 			</Item>
@@ -2463,11 +2483,6 @@
 					<Item type="GenCFbxNodeConfig">
 						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
 						<ChildList/>
-						<NodeName value="Cylinder.049"/>
-					</Item>
-					<Item type="GenCFbxNodeConfig">
-						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
-						<ChildList/>
 						<NodeName value="Cube.299"/>
 					</Item>
 					<Item type="GenCFbxNodeConfig">
@@ -2540,6 +2555,31 @@
 						<ChildList/>
 						<NodeName value="Cylinder.052"/>
 					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Rope"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="BucketMain"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="BucketWater"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="BucketHandle"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="BucketRope"/>
+					</Item>
 				</ChildList>
 				<NodeName value="GearMainPart"/>
 			</Item>
@@ -2585,6 +2625,17 @@
 				</ChildList>
 				<NodeName value="GearMainBackPart"/>
 			</Item>
+			<Item type="GenCFbxNodeConfig">
+				<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+				<ChildList>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="WaterLevelMark"/>
+					</Item>
+				</ChildList>
+				<NodeName value="WaterLevelMarkPart"/>
+			</Item>
 		</ChildList>
 		<NodeName value="Prefab"/>
 	</NodeConfig>
@@ -2604,6 +2655,14 @@
 		<Item type="GamCDataMaterialPair">
 			<MaterialGuid value="8357988c-709c-4ba6-aecb-def7aa189079"/>
 			<MaterialName value="Material.StoneGrey"/>
+		</Item>
+		<Item type="GamCDataMaterialPair">
+			<MaterialGuid value="633d07e9-812b-40d8-ad4d-bc724b25d5a3"/>
+			<MaterialName value="Material.Transparent"/>
+		</Item>
+		<Item type="GamCDataMaterialPair">
+			<MaterialGuid value="72cc8dd1-3145-4f6f-8279-524cc081680f"/>
+			<MaterialName value="Material.Water"/>
 		</Item>
 		<Item type="GamCDataMaterialPair">
 			<MaterialGuid value="8dc214bb-b70d-4c14-a6e2-88513bd1449a"/>

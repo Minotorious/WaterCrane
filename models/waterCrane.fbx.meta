@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<meta id="8a7a860e-6748-4bdc-b47c-4bb860b608d3">
+<meta id="5d4d152e-48cc-4ce7-91d5-64915d53a875">
 	<meta id="6dad35f7-b2a5-44dd-a57a-d34640e230c4" type="group" folder="true" name="Materials">
 		<meta id="e96e687d-5647-48d5-a56b-f37c9b067399" name="Material.WoodBrownWorn"/>
 		<meta id="8dc214bb-b70d-4c14-a6e2-88513bd1449a" name="Material.WoodBrown"/>
@@ -129,9 +129,6 @@
 		<meta id="6111d2c2-9aed-4830-b73f-9ec71a3248bd" name="Cube.179_Material.MetalRusty"/>
 		<meta id="2d25c622-7a2b-47e5-81ff-b4ce5a1bd682" name="Cylinder.020_Material.MetalRusty"/>
 		<meta id="bc39ab7a-0ec5-4d3f-891d-7e79ba426324" name="Cylinder.019_Material.MetalSilver"/>
-		<meta id="9b8977a8-61f3-46fa-a290-d195efd2db17" name="Cylinder.022_Material.MetalSilver"/>
-		<meta id="dc096e3d-dd3b-404e-b594-40455afcd40a" name="Cylinder.021_Material.MetalSilver"/>
-		<meta id="b4778416-0acc-45ba-bdf1-164a75fef5d2" name="Cylinder.024_Material.WoodBrownWorn"/>
 		<meta id="df7fedad-f3ec-4a12-9da7-1600483b3fac" name="Cube.183_Material.WoodBrownDark"/>
 		<meta id="bd6f6b16-765c-4db4-84fc-10419015dd9f" name="Cube.177_Material.WoodBrownDark"/>
 		<meta id="be09f423-6b00-4161-be64-6b546ec3b4b3" name="Cylinder.027_Material.MetalSilver"/>
@@ -150,7 +147,6 @@
 		<meta id="b555507a-fbbd-4f06-9a27-781e7e596865" name="Cylinder.035_Material.MetalSilver"/>
 		<meta id="0a511c1c-79b2-4cb4-bccb-5fc223d2d60d" name="Cube.278_Material.WoodBrownDark"/>
 		<meta id="3653449d-99b1-4d3a-8cc0-c27073e63716" name="Cube.279_Material.MetalRusty"/>
-		<meta id="aa7ccd9b-222a-41f1-ab2d-6053f8344c84" name="Cylinder.030_Material.RopeBrown"/>
 		<meta id="ba0e9ea1-951d-445a-bafb-042265844624" name="Cube.280_Material.WoodBrownDark"/>
 		<meta id="7d2605c7-9d77-4a5b-9f54-dc3cfc2ae948" name="Cube.282_Material.WoodBrownDark"/>
 		<meta id="fd8f45bb-4ce0-40b9-9efb-43c33759cb5e" name="Cube.284_Material.WoodBrown"/>
@@ -165,7 +161,6 @@
 		<meta id="abd6ab0d-dff4-43ef-8ff1-0153ccee7a18" name="Cube.275_Material.MetalRusty"/>
 		<meta id="a2fa7b53-0e28-4931-9930-636583192f52" name="Cube.276_Material.MetalRusty"/>
 		<meta id="1ebc92dd-2565-43a1-a5a9-db83b0ba8585" name="Cube.185_Material.WoodBrownWorn"/>
-		<meta id="c646e22c-83ad-4c26-bd8b-8b3cdc0d9967" name="Cylinder.032_Material.MetalRusty"/>
 		<meta id="e6a76f0a-a54d-4686-93b7-ad4d07b2559b" name="Cube.266_Material.MetalRusty"/>
 		<meta id="075c1c1d-8c5f-4721-830f-b3d90cf56171" name="Cube.297_Material.MetalRusty"/>
 		<meta id="da3a2154-62fc-402b-bcca-e6d487bda01c" name="Cylinder.028_Material.RopeBrown"/>
@@ -182,6 +177,14 @@
 		<meta id="cebe59f9-faae-49ef-82da-9965db05aa16" name="BucketHandle_Material.MetalRusty"/>
 		<meta id="20272bb0-07dc-44dd-9af7-cbdc915b151c" name="BucketRope_Material.RopeBrown"/>
 		<meta id="06fd2b34-f965-442a-a281-f380546ae52b" name="WaterLevelMark_Material.Transparent"/>
+		<meta id="31d51cbd-6458-40bd-801a-2d7b16031c62" name="Lever_Material.MetalSilver"/>
+		<meta id="727d7a57-192d-4250-85be-2cf8d3d2163d" name="Reel.Bottom_Material.WoodBrownWorn"/>
+		<meta id="5967bcdd-8b3a-4447-ba34-8671e44de957" name="Reel.Bottom_Material.MetalRusty"/>
+		<meta id="35f7361b-b2a7-4fc3-8af1-5bf776fdf92b" name="Reel.Bottom_Material.MetalSilver"/>
+		<meta id="7bb171f9-47be-4fd0-8ac1-4d37c352118f" name="Reel.Bottom_Material.RopeBrown"/>
+		<meta id="52df7d1b-9c3a-4125-a6e0-494eebf09adf" name="Cube.186_Material.WoodBrownDark"/>
+		<meta id="87310b19-24ad-4475-a2fb-b2b79fb7a195" name="Cube.268_Material.Water"/>
+		<meta id="2e951660-c3c6-4ad0-acf3-4a6cda92d470" name="Cube.270_Material.WoodBrownDark"/>
 	</meta>
 	<meta id="10246f63-31c0-4009-a90e-e74abad8046f" name="Prefab">
 		<meta id="e45de41c-83b6-417f-ab97-288816e9f9f8" name="Light"/>
@@ -399,8 +402,11 @@
 			<meta id="0d5c79f1-d08a-4e6d-bcc6-b375a32c5ace" name="AttachMinor.GearMainFront"/>
 			<meta id="6155b04b-cbeb-4417-bec9-d4e4cafdf779" name="AttachMinor.GearMiddleFront"/>
 			<meta id="279240fd-cdf2-452a-b247-079553fe4d15" name="AttachMinor.GearMiddleBack"/>
-			<meta id="5cd5b4d6-e75f-4207-8635-482859628a67" name="PATH_A_1.WaterWell"/>
 			<meta id="7a33176c-a929-4e1c-b2b8-19d17d67d0aa" name="AttachMinor.WaterLevelMark"/>
+			<meta id="dfa9c3f1-65a8-4b06-85ea-5871b0dcaee1" name="AttachMinor.GroundLevelMark"/>
+			<meta id="b519794e-9b90-4629-95fe-603732d88365" name="PATH_B_1.WaterWell"/>
+			<meta id="27b3dc25-6983-4e5e-8b2c-30529922bae6" name="PATH_C_1.WaterWell"/>
+			<meta id="9ade8688-28bc-4b39-842e-1e81563ffc47" name="PATH_D_1.WaterWell"/>
 		</meta>
 		<meta id="e0d05a8d-794f-404b-ad58-7a964ef7d62e" name="TreadmillPart">
 			<meta id="97b086c5-6a3d-4128-9df8-92278d7c06dd" name="BezierCircle.001"/>
@@ -473,7 +479,6 @@
 			<meta id="0ebadba3-a59b-4172-ba24-962c0156266c" name="PATH_A_2.TreadmillWork"/>
 			<meta id="27143f2c-cc7a-4d86-a62b-edecc8ccc1d0" name="PATH_A_3.TreadmillWork"/>
 			<meta id="fedd6ed4-4825-4653-a275-a8d2d1dc54e6" name="PATH_A_4.TreadmillWork"/>
-			<meta id="0cdad691-9687-4b7c-a514-5c047f0527e6" name="PATH_A_1.TreadmillPickUp"/>
 		</meta>
 		<meta id="0cbb8440-6d8e-4635-b2b0-5c80c6236599" name="GearMiddlePart">
 			<meta id="2d247324-8413-47cb-b78b-b3f1a55ccc36" name="BezierCircle.005"/>
@@ -516,15 +521,10 @@
 			<meta id="7d2480d2-e5b0-4349-b68a-e6d0a1be6b77" name="Cylinder.013"/>
 			<meta id="e4289f18-5e2a-4ce0-ae01-90f7c6ad08b1" name="Cube.178"/>
 			<meta id="715d4ee7-5ed3-452f-b3c6-ec3d2a215d54" name="Cube.179"/>
-			<meta id="3dce6f86-143e-488e-ae77-7853a57f833b" name="Cylinder.022"/>
-			<meta id="67e901ad-7b33-42a9-a02b-beb0f0e52dad" name="Cylinder.021"/>
-			<meta id="c7fab156-2bca-4e62-a62f-ed53d32031f7" name="Cylinder.023"/>
-			<meta id="80000013-269a-47e2-ba8f-c19534110ef7" name="Cylinder.024"/>
 			<meta id="c16b2b65-b9a9-41cc-b714-a6e1f11470cd" name="Cube.185"/>
 			<meta id="f0c5d580-f6d9-4fc8-909e-ec60adbf5502" name="Cube.181"/>
 			<meta id="f908dd9c-5fec-4ddd-949c-998b95a0ef7c" name="Cube.183"/>
 			<meta id="3d3304db-13a0-4cb9-819b-bd501af5503e" name="Cube.187"/>
-			<meta id="b9300d62-9590-4be7-8954-395520642819" name="Cylinder.032"/>
 			<meta id="f460ed28-d681-411d-a79a-bb59f98d58d9" name="Cube.271"/>
 			<meta id="21a9fc8b-0124-45c2-818c-36b56714f18d" name="Cube.273"/>
 			<meta id="164fc6aa-0098-40ba-9ee0-ffe1c40973fe" name="Cube.278"/>
@@ -533,7 +533,6 @@
 			<meta id="27dc8502-5979-489f-97ac-da2735554329" name="Cube.269"/>
 			<meta id="77fdbdc5-0e12-4a11-bc71-18245ad38351" name="Cube.277"/>
 			<meta id="7b66572d-c3e5-464c-aaac-2b686889eb39" name="Cube.279"/>
-			<meta id="09aea9dd-efb3-4d07-826a-d93cb2f9c3de" name="Cylinder.030"/>
 			<meta id="f6c51762-ab01-4204-b8c6-0aea03ce5f18" name="Cube.280"/>
 			<meta id="15f8fb1e-7b65-4800-8352-73c8ee3ea8af" name="Cube.281"/>
 			<meta id="663e2fcd-c153-4271-a697-cf6018ac4cb4" name="Cube.282"/>
@@ -550,20 +549,12 @@
 			<meta id="75e4aa4d-1fc3-4e30-b2ce-05d385abc513" name="Cube.293"/>
 			<meta id="3e16aa79-979e-4803-9cc2-a3ea9f0ccc12" name="Cube.294"/>
 			<meta id="392dba6c-f030-4671-b1e0-c2e500519af8" name="Cylinder.037"/>
-			<meta id="34510b7d-f894-4a2b-89f9-ae4b096d6932" name="Cylinder.038"/>
-			<meta id="13877f5b-d5f2-481c-8522-449a2e34fc1a" name="Cylinder.039"/>
-			<meta id="2a9b0dac-3643-4fdc-ac30-45c0b3acd5e8" name="Cylinder.040"/>
 			<meta id="8f267d09-49f6-4033-adb1-38dd32f6b69b" name="Cube.295"/>
 			<meta id="0db11e92-59ad-4731-816d-afbadead4d43" name="Cube.296"/>
 			<meta id="c83a0f19-d71c-49d0-b218-82149879cc0d" name="Cylinder.041"/>
-			<meta id="44202e3f-bcfe-4d17-b70a-675054407848" name="Cylinder.042"/>
 			<meta id="a5579a8e-5552-4232-878d-a8841066e583" name="Cylinder.043"/>
-			<meta id="03bac684-9fda-4888-8de0-ed9299da8f22" name="Cylinder.044"/>
-			<meta id="2c17ef36-dcea-4e9d-a197-6131754d507c" name="Cylinder.045"/>
-			<meta id="e75d8dbd-af5d-446f-a8c4-a920fefa524f" name="Cylinder.046"/>
 			<meta id="e8c166bb-3361-4a57-91a7-5bceda237293" name="Cube.297"/>
 			<meta id="c6b3a477-d253-4160-bcda-b137767eb2bd" name="Cube.298"/>
-			<meta id="bed5882a-2b47-4508-bf67-f0554e1dffed" name="Cylinder.047"/>
 			<meta id="48ac1ae9-2a42-446c-81d7-2fcbbc2ee6a5" name="Cube.299"/>
 			<meta id="b2c4cabf-29d8-4e23-b8b5-7cdb92f15bc3" name="Cube.300"/>
 			<meta id="0318ed49-25b6-41bd-afa1-691fc6949455" name="Cube.301"/>
@@ -572,7 +563,6 @@
 			<meta id="62e032cd-6fab-4507-8c40-9f464c630d69" name="Cube.274"/>
 			<meta id="cce43919-4e7f-497d-8872-f0357c133417" name="Cylinder.048"/>
 			<meta id="d49ff996-7fa6-4a7c-ac41-2df9e982a8c7" name="Cube.184"/>
-			<meta id="769824cb-fb26-4b74-bdcf-89d9b2effa62" name="Cylinder.050"/>
 			<meta id="fe462760-e915-442f-be80-0297624a9a90" name="Cube.176"/>
 			<meta id="d438c940-22aa-4059-a823-62e012cb97d0" name="Cube.180"/>
 			<meta id="35509897-c86a-472d-a028-76d601756f0e" name="Cube.182"/>
@@ -584,6 +574,23 @@
 			<meta id="0214ef93-e8e0-44bf-83de-785c0aea0605" name="BucketWater"/>
 			<meta id="910d7649-69bc-4041-a8eb-49cbdd84a923" name="BucketHandle"/>
 			<meta id="8c474414-b15f-40e9-850e-9820f89b4cc8" name="BucketRope"/>
+			<meta id="c4be8645-052c-4b56-98f0-1495b7492187" name="Lever"/>
+			<meta id="44347b83-4d78-4225-aadc-8cd5f596c4fd" name="Reel.Bottom">
+				<meta id="6f932456-9772-4d47-a337-0ad059c2740d" name="Reel.Bottom_0"/>
+				<meta id="23ebc88a-0fd5-4f44-a467-963d688649ff" name="Reel.Bottom_1"/>
+				<meta id="ce362505-4c3b-4001-8a5c-22a14d071588" name="Reel.Bottom_2"/>
+				<meta id="77e80f3c-8147-42d9-8d50-ab957ecaaa7c" name="Reel.Bottom_3"/>
+			</meta>
+			<meta id="c0a5c168-ffdb-4780-8d43-366446d62132" name="Reel.Top">
+				<meta id="a130243e-dd10-4199-9a83-6ec87a4702de" name="Reel.Top_0"/>
+				<meta id="8a4098af-d4ad-4397-89a1-c32a9fd57551" name="Reel.Top_1"/>
+				<meta id="963635f9-e641-4e28-b9eb-41c62be20492" name="Reel.Top_2"/>
+			</meta>
+			<meta id="f04fbcba-d622-4ded-b241-e8f764c23c0e" name="Reel.Outer">
+				<meta id="3efb8184-48c3-4dd2-9e52-e9b43d1017f8" name="Reel.Outer_0"/>
+				<meta id="62603500-27ec-4a45-a5a9-018bcd20003b" name="Reel.Outer_1"/>
+				<meta id="be190d39-1be8-498d-8afc-c81e6188a8b9" name="Reel.Outer_2"/>
+			</meta>
 		</meta>
 		<meta id="4f647bad-7d5e-47e7-ae9e-7dfa404495ba" name="GearMainFrontPart">
 			<meta id="9057a82d-3b29-4f9f-bed9-e0fa1d77b013" name="Cylinder.017"/>
@@ -598,10 +605,19 @@
 		<meta id="ae38afef-d588-457d-bd75-ab683574032c" name="WaterLevelMarkPart">
 			<meta id="d00b8f71-54f8-4476-9cdc-11ea48a19bec" name="WaterLevelMark"/>
 		</meta>
+		<meta id="c3dcdbf9-66e4-4665-9983-b60105d14e4f" name="GroundLevelMarkPart">
+			<meta id="29911b9b-3b7e-4aff-aa57-381ef7ce5370" name="GroundLevelMark"/>
+			<meta id="74bb45f9-6bc6-4dcc-a2a4-b6662f64ea2e" name="Cube.186"/>
+			<meta id="1cc96918-c02e-415c-af58-694dbbbf482b" name="Cube.268"/>
+			<meta id="2efe54ee-e496-4375-a2ba-36ccafc24236" name="Cube.270"/>
+			<meta id="9d87415b-924e-4453-9a2d-f63f12237ed2" name="Cube.272"/>
+			<meta id="9861e3b9-c489-463f-abb5-05fd664cbb98" name="Cube.304"/>
+			<meta id="7c2ff8cf-d500-4854-9e0c-666802a0998b" name="Cube.305"/>
+		</meta>
 	</meta>
 </meta>
 <importer type="GamCFbxImporterConfiguration">
-	<Md5Checksum value="3b7187b5141be7df3176a2ae059a8a08"/>
+	<Md5Checksum value="fe76a7842c8157d4dabcd73fd1848a20"/>
 	<Scale value="0.01"/>
 	<PatchMeshOffset value="true"/>
 	<UniqueNodeName value="false"/>
@@ -1690,12 +1706,27 @@
 					<Item type="GenCFbxNodeConfig">
 						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
 						<ChildList/>
-						<NodeName value="PATH_A_1.WaterWell"/>
+						<NodeName value="AttachMinor.WaterLevelMark"/>
 					</Item>
 					<Item type="GenCFbxNodeConfig">
 						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
 						<ChildList/>
-						<NodeName value="AttachMinor.WaterLevelMark"/>
+						<NodeName value="AttachMinor.GroundLevelMark"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="PATH_B_1.WaterWell"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="PATH_C_1.WaterWell"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="PATH_D_1.WaterWell"/>
 					</Item>
 				</ChildList>
 				<NodeName value="WaterCraneCorePart"/>
@@ -2053,11 +2084,6 @@
 						<ChildList/>
 						<NodeName value="PATH_A_4.TreadmillWork"/>
 					</Item>
-					<Item type="GenCFbxNodeConfig">
-						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
-						<ChildList/>
-						<NodeName value="PATH_A_1.TreadmillPickUp"/>
-					</Item>
 				</ChildList>
 				<NodeName value="TreadmillPart"/>
 			</Item>
@@ -2243,26 +2269,6 @@
 					<Item type="GenCFbxNodeConfig">
 						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
 						<ChildList/>
-						<NodeName value="Cylinder.022"/>
-					</Item>
-					<Item type="GenCFbxNodeConfig">
-						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
-						<ChildList/>
-						<NodeName value="Cylinder.021"/>
-					</Item>
-					<Item type="GenCFbxNodeConfig">
-						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
-						<ChildList/>
-						<NodeName value="Cylinder.023"/>
-					</Item>
-					<Item type="GenCFbxNodeConfig">
-						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
-						<ChildList/>
-						<NodeName value="Cylinder.024"/>
-					</Item>
-					<Item type="GenCFbxNodeConfig">
-						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
-						<ChildList/>
 						<NodeName value="Cube.185"/>
 					</Item>
 					<Item type="GenCFbxNodeConfig">
@@ -2279,11 +2285,6 @@
 						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
 						<ChildList/>
 						<NodeName value="Cube.187"/>
-					</Item>
-					<Item type="GenCFbxNodeConfig">
-						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
-						<ChildList/>
-						<NodeName value="Cylinder.032"/>
 					</Item>
 					<Item type="GenCFbxNodeConfig">
 						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
@@ -2324,11 +2325,6 @@
 						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
 						<ChildList/>
 						<NodeName value="Cube.279"/>
-					</Item>
-					<Item type="GenCFbxNodeConfig">
-						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
-						<ChildList/>
-						<NodeName value="Cylinder.030"/>
 					</Item>
 					<Item type="GenCFbxNodeConfig">
 						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
@@ -2413,21 +2409,6 @@
 					<Item type="GenCFbxNodeConfig">
 						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
 						<ChildList/>
-						<NodeName value="Cylinder.038"/>
-					</Item>
-					<Item type="GenCFbxNodeConfig">
-						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
-						<ChildList/>
-						<NodeName value="Cylinder.039"/>
-					</Item>
-					<Item type="GenCFbxNodeConfig">
-						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
-						<ChildList/>
-						<NodeName value="Cylinder.040"/>
-					</Item>
-					<Item type="GenCFbxNodeConfig">
-						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
-						<ChildList/>
 						<NodeName value="Cube.295"/>
 					</Item>
 					<Item type="GenCFbxNodeConfig">
@@ -2443,27 +2424,7 @@
 					<Item type="GenCFbxNodeConfig">
 						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
 						<ChildList/>
-						<NodeName value="Cylinder.042"/>
-					</Item>
-					<Item type="GenCFbxNodeConfig">
-						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
-						<ChildList/>
 						<NodeName value="Cylinder.043"/>
-					</Item>
-					<Item type="GenCFbxNodeConfig">
-						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
-						<ChildList/>
-						<NodeName value="Cylinder.044"/>
-					</Item>
-					<Item type="GenCFbxNodeConfig">
-						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
-						<ChildList/>
-						<NodeName value="Cylinder.045"/>
-					</Item>
-					<Item type="GenCFbxNodeConfig">
-						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
-						<ChildList/>
-						<NodeName value="Cylinder.046"/>
 					</Item>
 					<Item type="GenCFbxNodeConfig">
 						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
@@ -2474,11 +2435,6 @@
 						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
 						<ChildList/>
 						<NodeName value="Cube.298"/>
-					</Item>
-					<Item type="GenCFbxNodeConfig">
-						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
-						<ChildList/>
-						<NodeName value="Cylinder.047"/>
 					</Item>
 					<Item type="GenCFbxNodeConfig">
 						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
@@ -2519,11 +2475,6 @@
 						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
 						<ChildList/>
 						<NodeName value="Cube.184"/>
-					</Item>
-					<Item type="GenCFbxNodeConfig">
-						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
-						<ChildList/>
-						<NodeName value="Cylinder.050"/>
 					</Item>
 					<Item type="GenCFbxNodeConfig">
 						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
@@ -2580,6 +2531,79 @@
 						<ChildList/>
 						<NodeName value="BucketRope"/>
 					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Lever"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList>
+							<Item type="GenCFbxNodeConfig">
+								<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+								<ChildList/>
+								<NodeName value="Reel.Bottom_0"/>
+							</Item>
+							<Item type="GenCFbxNodeConfig">
+								<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+								<ChildList/>
+								<NodeName value="Reel.Bottom_1"/>
+							</Item>
+							<Item type="GenCFbxNodeConfig">
+								<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+								<ChildList/>
+								<NodeName value="Reel.Bottom_2"/>
+							</Item>
+							<Item type="GenCFbxNodeConfig">
+								<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+								<ChildList/>
+								<NodeName value="Reel.Bottom_3"/>
+							</Item>
+						</ChildList>
+						<NodeName value="Reel.Bottom"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList>
+							<Item type="GenCFbxNodeConfig">
+								<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+								<ChildList/>
+								<NodeName value="Reel.Top_0"/>
+							</Item>
+							<Item type="GenCFbxNodeConfig">
+								<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+								<ChildList/>
+								<NodeName value="Reel.Top_1"/>
+							</Item>
+							<Item type="GenCFbxNodeConfig">
+								<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+								<ChildList/>
+								<NodeName value="Reel.Top_2"/>
+							</Item>
+						</ChildList>
+						<NodeName value="Reel.Top"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList>
+							<Item type="GenCFbxNodeConfig">
+								<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+								<ChildList/>
+								<NodeName value="Reel.Outer_0"/>
+							</Item>
+							<Item type="GenCFbxNodeConfig">
+								<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+								<ChildList/>
+								<NodeName value="Reel.Outer_1"/>
+							</Item>
+							<Item type="GenCFbxNodeConfig">
+								<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+								<ChildList/>
+								<NodeName value="Reel.Outer_2"/>
+							</Item>
+						</ChildList>
+						<NodeName value="Reel.Outer"/>
+					</Item>
 				</ChildList>
 				<NodeName value="GearMainPart"/>
 			</Item>
@@ -2635,6 +2659,47 @@
 					</Item>
 				</ChildList>
 				<NodeName value="WaterLevelMarkPart"/>
+			</Item>
+			<Item type="GenCFbxNodeConfig">
+				<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+				<ChildList>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="GroundLevelMark"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Cube.186"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Cube.268"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Cube.270"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Cube.272"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Cube.304"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Cube.305"/>
+					</Item>
+				</ChildList>
+				<NodeName value="GroundLevelMarkPart"/>
 			</Item>
 		</ChildList>
 		<NodeName value="Prefab"/>

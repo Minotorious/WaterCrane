@@ -648,7 +648,7 @@ waterCrane:register({
     WorkerCapacity = 1,
     RelatedJob = { Job = "TREADMILL_WORKER", Behavior = "TREADMILL_WORKER_BEHAVIOR_TREE" },
     ResourceProduced = {
-        { Resource = "FISH", Quantity = 5 }
+        { Resource = "FISH", Quantity = 10 }
     },
     RandomResourceToSpawn = "GEMS",
     SpawnPercentage = 0.33

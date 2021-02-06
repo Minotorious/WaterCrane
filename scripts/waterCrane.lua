@@ -80,10 +80,27 @@ function COMP_WATER_CRANE:create()
     self.bucketTipped = false
     self.maxScaleWater = 1
     self.maxScaleGround = 1
+    
+    -- Game Objects
+    self.rope = nil
+    self.reels = {}
+    self.lever = nil
+    self.bucketWater = nil
+    self.bucketRope = nil
+    self.bucketParts = {}
+    self.cranePart = nil
+    self.treadmill = nil
+    self.gearMiddle = nil
+    self.gearMiddleFront = nil
+    self.gearMiddleBack = nil
+    self.gearTop = nil
+    self.gearTopFront = nil
+    self.gearTopBack = nil
+    self.gearMainFront = nil
+    self.gearMainBack = nil
 end
 
 function COMP_WATER_CRANE:init()
-    self:bucketWaterSequence()
     local waterLevel = 0
     local groundLevel = 0
     local bucketLevel = 0
@@ -105,14 +122,99 @@ function COMP_WATER_CRANE:init()
                         end
                     end
                 )
+            elseif child.Name == "AttachMajor.Treadmill" then
+                child:forEachChild(
+                    function(part)
+                        if part.Name == "TreadmillPart" then
+                            self.treadmill = part
+                        end
+                    end
+                )
+            elseif child.Name == "AttachMajor.GearMiddle" then
+                child:forEachChild(
+                    function(part)
+                        if part.Name == "GearMiddlePart" then
+                            self.gearMiddle = part
+                        end
+                    end
+                )
+            elseif child.Name == "AttachMinor.GearMiddleFront" then
+                child:forEachChild(
+                    function(part)
+                        if part.Name == "GearMiddleFrontPart" then
+                            self.gearMiddleFront = part
+                        end
+                    end
+                )
+            elseif child.Name == "AttachMinor.GearMiddleBack" then
+                child:forEachChild(
+                    function(part)
+                        if part.Name == "GearMiddleBackPart" then
+                            self.gearMiddleBack = part
+                        end
+                    end
+                )
+            elseif child.Name == "AttachMajor.GearTop" then
+                child:forEachChild(
+                    function(part)
+                        if part.Name == "GearTopPart" then
+                            self.gearTop = part
+                        end
+                    end
+                )
+            elseif child.Name == "AttachMinor.GearTopFront" then
+                child:forEachChild(
+                    function(part)
+                        if part.Name == "GearTopFrontPart" then
+                            self.gearTopFront = part
+                        end
+                    end
+                )
+            elseif child.Name == "AttachMinor.GearTopBack" then
+                child:forEachChild(
+                    function(part)
+                        if part.Name == "GearTopBackPart" then
+                            self.gearTopBack = part
+                        end
+                    end
+                )
+            elseif child.Name == "AttachMinor.GearMainFront" then
+                child:forEachChild(
+                    function(part)
+                        if part.Name == "GearMainFrontPart" then
+                            self.gearMainFront = part
+                        end
+                    end
+                )
+            elseif child.Name == "AttachMinor.GearMainBack" then
+                child:forEachChild(
+                    function(part)
+                        if part.Name == "GearMainBackPart" then
+                            self.gearMainBack = part
+                        end
+                    end
+                )
             elseif child.Name == "AttachMajor.GearMain" then
                 child:forEachChild(
                     function(part)
                         if part.Name == "GearMainPart" then
+                            self.cranePart = part
                             part:forEachChild(
-                                function(bucketPart)
-                                    if bucketPart.Name == "BucketRope" then
-                                        bucketLevel = bucketPart.Position.y
+                                function(mainGearPart)
+                                    if starts_with(mainGearPart.Name, "Bucket") then
+                                        table.insert(self.bucketParts, mainGearPart)
+                                        if mainGearPart.Name == "BucketRope" then
+                                            bucketLevel = mainGearPart.Position.y
+                                            self.bucketRope = mainGearPart
+                                        elseif mainGearPart.Name == "BucketWater" then
+                                            self.bucketWater = mainGearPart
+                                        end
+                                    elseif mainGearPart.Name == "Rope" then
+                                        self.rope = mainGearPart
+                                    elseif starts_with(mainGearPart.Name, "Reel") then
+                                        table.insert(self.reels, mainGearPart)
+                                    elseif mainGearPart.Name == "Lever" then
+                                        self.lever = mainGearPart
                                     end
                                 end
                             )
@@ -124,6 +226,7 @@ function COMP_WATER_CRANE:init()
     )
     self.maxScaleWater = (6 + math.abs(waterLevel))/6
     self.maxScaleGround = (6 + math.abs(groundLevel + 0.9))/6
+    self:bucketWaterSequence()
 end
 
 function COMP_WATER_CRANE:onEnabled()
@@ -136,362 +239,191 @@ end
 
 function COMP_WATER_CRANE:bucketWaterSequence()
     --waterCrane:log("BucketWaterSequence")
-    self:getOwner():forEachChild(
-        function(child)
-            if child.Name == "AttachMajor.GearMain" then
-                child:forEachChild(
-                    function(part)
-                        if part.Name == "GearMainPart" then
-                            part:forEachChild(
-                                function(bucketWater)
-                                    if bucketWater.Name == "BucketWater" then
-                                        if self.bucketFilled == true then
-                                            --waterCrane:log("BucketEmptySequence")
-                                            bucketWater:setScale(0)
-                                            self.bucketFilled = false
-                                        else
-                                            --waterCrane:log("BucketFillSequence")
-                                            bucketWater:setScale(1)
-                                            self.bucketFilled = true
-                                        end
-                                    end
-                                end
-                            )
-                        end
-                    end
-                )
-            end
-        end
-    )
+    if self.bucketFilled == true then
+        --waterCrane:log("BucketEmptySequence")
+        self.bucketWater:setScale(0)
+        self.bucketFilled = false
+    else
+        --waterCrane:log("BucketFillSequence")
+        self.bucketWater:setScale(1)
+        self.bucketFilled = true
+    end
 end
 
 function COMP_WATER_CRANE:bucketReelSequence(dif)
-    self:getOwner():forEachChild(
-        function(child)
-            if child.Name == "AttachMajor.GearMain" then
-                child:forEachChild(
-                    function(part)
-                        if part.Name == "GearMainPart" then
-                            part:forEachChild(
-                                function(bucketPart)
-                                    if starts_with(bucketPart.Name, "Bucket") then
-                                        bucketPart:move({ 0, dif, 0 })
-                                    end
-                                end
-                            )
-                        end
-                    end
-                )
-            end
-        end
-    )
+    for i, bucketPart in ipairs(self.bucketParts) do
+        bucketPart:move({ 0, dif, 0 })
+    end
 end
 
 function COMP_WATER_CRANE:bucketTipSequence()
     local dt = self:getLevel():getDeltaTime()
     local tipPointX = 6.975
-    local tipPointY = 0
+    local tipPointY = self.bucketRope.Position.y
     local tipPointZ = 0
-    self:getOwner():forEachChild(
-        function(child)
-            if child.Name == "AttachMajor.GearMain" then
-                child:forEachChild(
-                    function(part)
-                        if part.Name == "GearMainPart" then
-                            part:forEachChild(
-                                function(bucketPart)
-                                    if bucketPart.Name == "BucketRope" then
-                                        --waterCrane:log(bucketPart.Position)
-                                        tipPointY = bucketPart.Position.y
-                                    end
-                                end
-                            )
-                        end
-                    end
-                )
-            end
-        end
-    )
     
-    self:getOwner():forEachChild(
-        function(child)
-            if child.Name == "AttachMajor.GearMain" then
-                child:forEachChild(
-                    function(part)
-                        if part.Name == "GearMainPart" then
-                            part:forEachChild(
-                                function(bucketPart)
-                                    if starts_with(bucketPart.Name, "Bucket") then
-                                        if self.bucketTipped == false then
-                                            --waterCrane:log("Bucket Tipping")
-                                            bucketPart:rotateAround({ tipPointX, tipPointY, tipPointZ }, { 0, 0, 1 }, -self.GearVelocity * dt)
-                                            if bucketPart.Name == "BucketRope" then
-                                                --waterCrane:log(quaternion.getEulerAngles(bucketPart.Orientation).z)
-                                                if quaternion.getEulerAngles(bucketPart.Orientation).z < -1.3 then
-                                                    --waterCrane:log("Bucket Tipped")
-                                                    self.bucketTipped = true
-                                                    self:bucketWaterSequence()
-                                                end
-                                            end
-                                        else
-                                            --waterCrane:log("Bucket Untipping")
-                                            bucketPart:rotateAround({ tipPointX, tipPointY, tipPointZ }, { 0, 0, 1 }, self.GearVelocity * dt)
-                                            if bucketPart.Name == "BucketRope" then
-                                                if quaternion.getEulerAngles(bucketPart.Orientation).z > 0 then
-                                                    --waterCrane:log("Bucket Untipped")
-                                                    self:bucketResetSequence(tipPointY)
-                                                    self.bucketTipped = false
-                                                    self.ropeReeled = false
-                                                end
-                                            end
-                                        end
-                                    end
-                                end
-                            )
-                        end
-                    end
-                )
+    for i, bucketPart in ipairs(self.bucketParts) do
+        if self.bucketTipped == false then
+            --waterCrane:log("Bucket Tipping")
+            bucketPart:rotateAround({ tipPointX, tipPointY, tipPointZ }, { 0, 0, 1 }, -self.GearVelocity * dt)
+            if quaternion.getEulerAngles(self.bucketRope.Orientation).z < -1.3 then
+                --waterCrane:log("Bucket Tipped")
+                self.bucketTipped = true
+                self:bucketWaterSequence()
+            end
+        else
+            --waterCrane:log("Bucket Untipping")
+            bucketPart:rotateAround({ tipPointX, tipPointY, tipPointZ }, { 0, 0, 1 }, self.GearVelocity * dt)
+            if quaternion.getEulerAngles(self.bucketRope.Orientation).z > 0 then
+                --waterCrane:log("Bucket Untipped")
+                self:bucketResetSequence(tipPointY)
+                self.bucketTipped = false
+                self.ropeReeled = false
             end
         end
-    )
+    end
 end
 
 function COMP_WATER_CRANE:bucketResetSequence(tipPointY)
-    self:getOwner():forEachChild(
-        function(child)
-            if child.Name == "AttachMajor.GearMain" then
-                child:forEachChild(
-                    function(part)
-                        if part.Name == "GearMainPart" then
-                            part:forEachChild(
-                                function(bucketPart)
-                                    if starts_with(bucketPart.Name, "Bucket") then
-                                        bucketPart:setRotationZ(0)
-                                        if bucketPart.Name == "BucketRope" then
-                                            bucketPart:move({ 6.975 - bucketPart.Position.x, tipPointY - bucketPart.Position.y, 0 })
-                                        else
-                                            bucketPart:move({ 6.975 - bucketPart.Position.x, tipPointY - bucketPart.Position.y - 0.35894, 0 }) -- 0.35894 is the height rope to bucket difference in the fbx
-                                        end
-                                    end
-                                end
-                            )
-                        end
-                    end
-                )
-            end
+    for i, bucketPart in ipairs(self.bucketParts) do
+        bucketPart:setRotationZ(0)
+        if bucketPart.Name == "BucketRope" then
+            bucketPart:move({ 6.975 - bucketPart.Position.x, tipPointY - bucketPart.Position.y, 0 })
+        else
+            bucketPart:move({ 6.975 - bucketPart.Position.x, tipPointY - bucketPart.Position.y - 0.35894, 0 }) -- 0.35894 is the rope to bucket height difference in the fbx
         end
-    )
+    end
 end
 
 function COMP_WATER_CRANE:ropeReelSequence()
     local dt = self:getLevel():getDeltaTime()
-    self:getOwner():forEachChild(
-        function(child)
-            if child.Name == "AttachMajor.GearMain" then
-                child:forEachChild(
-                    function(part)
-                        if part.Name == "GearMainPart" then
-                            part:forEachChild(
-                                function(rope)
-                                    if rope.Name == "Rope" then
-                                        if self.ropeReeled == false then
-                                            if rope.Scale.y > 0.1 then
-                                                --waterCrane:log("Old Scale: " .. rope.Scale.y)
-                                                local oldScale = rope.Scale.y
-                                                rope:scaleAround({ 6.975, 4.4475, 0 }, { 1, 1 - self.RopeVelocity*dt, 1 })
-                                                --waterCrane:log("New Scale: " .. rope.Scale.y)
-                                                local newScale = rope.Scale.y
-                                                local dif = 6 * (oldScale - newScale)
-                                                --waterCrane:log("Difference: " .. dif)
-                                                self:bucketReelSequence(dif)
-                                            else
-                                                --waterCrane:log(rope.Scale.y)
-                                                --waterCrane:log("RopeReeled")
-                                                self.ropeReeled = true
-                                                if self.sequence == 0 then
-                                                    self.sequence = 1
-                                                    self.craneStop = false
-                                                elseif self.sequence == 2 then
-                                                    self.sequence = 3
-                                                    self.craneStop = false
-                                                end
-                                            end
-                                        else
-                                            if self.craneWaterSide == true then
-                                                if rope.Scale.y < self.maxScaleWater then
-                                                    --waterCrane:log(rope.Scale.y)
-                                                    local oldScale = rope.Scale.y
-                                                    rope:scaleAround({ 6.975, 4.4475, 0 }, { 1, 1 + self.RopeVelocity*dt, 1 })
-                                                    local newScale = rope.Scale.y
-                                                    local dif = 6 * (oldScale - newScale)
-                                                    --waterCrane:log("Difference: " .. dif)
-                                                    self:bucketReelSequence(dif)
-                                                else
-                                                    --waterCrane:log(rope.Scale.y)
-                                                    --waterCrane:log("RopeUnreeled")
-                                                    self.ropeReeled = false
-                                                    self:bucketWaterSequence()
-                                                end
-                                            else
-                                                if rope.Scale.y < self.maxScaleGround then
-                                                    --waterCrane:log(rope.Scale.y)
-                                                    local oldScale = rope.Scale.y
-                                                    rope:scaleAround({ 6.975, 4.4475, 0 }, { 1, 1 + self.RopeVelocity*dt, 1 })
-                                                    local newScale = rope.Scale.y
-                                                    local dif = 6 * (oldScale - newScale)
-                                                    --waterCrane:log("Difference: " .. dif)
-                                                    --waterCrane:log("scale: " .. newScale)
-                                                    self:bucketReelSequence(dif)
-                                                else
-                                                    --waterCrane:log(rope.Scale.y)
-                                                    --waterCrane:log("RopeUnreeled")
-                                                    self:bucketTipSequence()
-                                                    --self.ropeReeled = false
-                                                    --self:bucketWaterSequence()
-                                                end
-                                            end
-                                        end
-                                    elseif starts_with(rope.Name, "Reel") then
-                                        if self.ropeReeled == false then
-                                            rope:rotateZ(2 * self.GearVelocity * dt)
-                                        else
-                                            rope:rotateZ(-2 * self.GearVelocity * dt)
-                                        end
-                                    elseif rope.Name == "Lever" then
-                                        --waterCrane:log(rope.Position)
-                                        if self.leverUp == false then
-                                            if rope.Position.y < 2.02 then
-                                                rope:move({ 0, self.LeverVelocity*dt, 0 })
-                                            else
-                                                self.leverUp = true
-                                            end
-                                        else
-                                            if rope.Position.y > 1.92 then
-                                                rope:move({ 0, -self.LeverVelocity*dt, 0 })
-                                            else
-                                                self.leverUp = false
-                                            end
-                                        end
-                                    end
-                                end
-                            )
-                        end
-                    end
-                )
+    
+    if self.ropeReeled == false then
+        if self.rope.Scale.y > 0.1 then
+            local oldScale = self.rope.Scale.y
+            self.rope:scaleAround({ 6.975, 4.4475, 0 }, { 1, 1 - self.RopeVelocity*dt, 1 })
+            local newScale = self.rope.Scale.y
+            local dif = 6 * (oldScale - newScale)
+            self:bucketReelSequence(dif)
+        else
+            --waterCrane:log("RopeReeled")
+            self.ropeReeled = true
+            if self.sequence == 0 then
+                self.sequence = 1
+                self.craneStop = false
+            elseif self.sequence == 2 then
+                self.sequence = 3
+                self.craneStop = false
             end
         end
-    )
+    else
+        if self.craneWaterSide == true then
+            if self.rope.Scale.y < self.maxScaleWater then
+                local oldScale = self.rope.Scale.y
+                self.rope:scaleAround({ 6.975, 4.4475, 0 }, { 1, 1 + self.RopeVelocity*dt, 1 })
+                local newScale = self.rope.Scale.y
+                local dif = 6 * (oldScale - newScale)
+                self:bucketReelSequence(dif)
+            else
+                --waterCrane:log("RopeUnreeled")
+                self.ropeReeled = false
+                self:bucketWaterSequence()
+            end
+        else
+            if self.rope.Scale.y < self.maxScaleGround then
+                local oldScale = self.rope.Scale.y
+                self.rope:scaleAround({ 6.975, 4.4475, 0 }, { 1, 1 + self.RopeVelocity*dt, 1 })
+                local newScale = self.rope.Scale.y
+                local dif = 6 * (oldScale - newScale)
+                self:bucketReelSequence(dif)
+            else
+                --waterCrane:log("RopeUnreeled")
+                self:bucketTipSequence()
+            end
+        end
+    end
+    
+    for i, reel in ipairs(self.reels) do
+        if self.ropeReeled == false then
+            reel:rotateZ(2 * self.GearVelocity * dt)
+        else
+            reel:rotateZ(-2 * self.GearVelocity * dt)
+        end
+    end
+    
+    if self.leverUp == false then
+        if self.lever.Position.y < 2.02 then
+            self.lever:move({ 0, self.LeverVelocity*dt, 0 })
+        else
+            self.leverUp = true
+        end
+    else
+        if self.lever.Position.y > 1.92 then
+            self.lever:move({ 0, -self.LeverVelocity*dt, 0 })
+        else
+            self.leverUp = false
+        end
+    end
 end
 
 function COMP_WATER_CRANE:generalGearsSequence()
     local dt = self:getLevel():getDeltaTime()
     
-    --waterCrane:log(self:getOwner():getParent().Name)
-    self:getOwner():forEachChild(
-        function(child)
-            if starts_with(child.Name, "Attach") then
-                --waterCrane:log(child.Name)
-                child:forEachChild(
-                    function(attachment)
-                        --waterCrane:log(attachment.Name)
-                        if attachment.Name == "TreadmillPart" then
-                            attachment:forEachChild(
-                                function(mesh)
-                                    if not starts_with(mesh.Name, "PATH") then
-                                        mesh:rotateAround({ 0, 0, 0 }, { 0, 0, 1 }, -self.GearVelocity * dt)
-                                    end
-                                end
-                            )
-                        elseif attachment.Name == "GearMiddlePart" then
-                            attachment:rotateZ(self.GearVelocity * dt)
-                        elseif attachment.Name == "GearMiddleFrontPart" then
-                            attachment:rotateZ(-2 * self.GearVelocity * dt)
-                        elseif attachment.Name == "GearMiddleBackPart" then
-                            attachment:rotateZ(-2 * self.GearVelocity * dt)
-                        elseif attachment.Name == "GearTopPart" then
-                            attachment:rotateZ(-self.GearVelocity * dt)
-                        elseif attachment.Name == "GearTopFrontPart" then
-                            attachment:rotateZ(2 * self.GearVelocity * dt)
-                        elseif attachment.Name == "GearTopBackPart" then
-                            attachment:rotateZ(2 * self.GearVelocity * dt)
-                        end
-                    end
-                )
+    self.treadmill:forEachChild(
+        function(mesh)
+            if not starts_with(mesh.Name, "PATH") then
+                mesh:rotateAround({ 0, 0, 0 }, { 0, 0, 1 }, -self.GearVelocity * dt)
             end
         end
     )
+    
+    self.gearMiddle:rotateZ(self.GearVelocity * dt)
+    self.gearMiddleFront:rotateZ(-2 * self.GearVelocity * dt)
+    self.gearMiddleBack:rotateZ(-2 * self.GearVelocity * dt)
+    
+    self.gearTop:rotateZ(-self.GearVelocity * dt)
+    self.gearTopFront:rotateZ(2 * self.GearVelocity * dt)
+    self.gearTopBack:rotateZ(2 * self.GearVelocity * dt)
 end
 
 function COMP_WATER_CRANE:craneRotationSequence()
     local dt = self:getLevel():getDeltaTime()
     if self.craneStop == false then
-        self:getOwner():forEachChild(
-            function(child)
-                if child.Name == "AttachMajor.GearMain" then
-                    --waterCrane:log(child.Name)
-                    child:forEachChild(
-                        function(attachment)
-                            --waterCrane:log(attachment.Name)
-                            if attachment.Name == "GearMainPart" then
-                                if self.craneWaterSide == true then
-                                    --waterCrane:log(quaternion.getEulerAngles(attachment.Orientation).y)
-                                    if quaternion.getEulerAngles(attachment.Orientation).y <= 0 then
-                                        --waterCrane:log("rotating to land")
-                                        attachment:rotateY(-self.GearVelocity * dt)
-                                    else
-                                        --waterCrane:log("rotation to land finished")
-                                        attachment:setRotationY(-1*math.pi)
-                                        self.craneWaterSide = false
-                                        if self.sequence == 1 then
-                                            self.sequence = 2
-                                            self.craneStop = true
-                                        end
-                                    end
-                                else
-                                    --waterCrane:log(quaternion.getEulerAngles(attachment.Orientation).y)
-                                    if quaternion.getEulerAngles(attachment.Orientation).y < 0 or quaternion.getEulerAngles(attachment.Orientation).y > 3.14 then
-                                        --waterCrane:log("rotating to water")
-                                        attachment:rotateY(self.GearVelocity * dt)
-                                    else
-                                        --waterCrane:log("rotation to water finished")
-                                        attachment:setRotationY(0)
-                                        self.craneWaterSide = true
-                                        if self.sequence == 3 then
-                                            self.sequence = 0
-                                            self.craneStop = true
-                                        end
-                                    end
-                                end
-                            end
-                        end
-                    )
-                elseif child.Name == "AttachMinor.GearMainFront" then
-                    child:forEachChild(
-                        function(attachment)
-                            if attachment.Name == "GearMainFrontPart" then
-                                if self.craneWaterSide == true then
-                                    attachment:rotateY(2 * self.GearVelocity * dt)
-                                else
-                                    attachment:rotateY(-2 * self.GearVelocity * dt)
-                                end
-                            end
-                        end
-                    )
-                elseif child.Name == "AttachMinor.GearMainBack" then
-                    child:forEachChild(
-                        function(attachment)
-                            if attachment.Name == "GearMainBackPart" then
-                                if self.craneWaterSide == true then
-                                    attachment:rotateY(2 * self.GearVelocity * dt)
-                                else
-                                    attachment:rotateY(-2 * self.GearVelocity * dt)
-                                end
-                            end
-                        end
-                    )
+        if self.craneWaterSide == true then
+            if quaternion.getEulerAngles(self.cranePart.Orientation).y <= 0 then
+                --waterCrane:log("rotating to land")
+                self.cranePart:rotateY(-self.GearVelocity * dt)
+            else
+                --waterCrane:log("rotation to land finished")
+                self.cranePart:setRotationY(-1*math.pi)
+                self.craneWaterSide = false
+                if self.sequence == 1 then
+                    self.sequence = 2
+                    self.craneStop = true
                 end
             end
-        )
+        else
+            if quaternion.getEulerAngles(self.cranePart.Orientation).y < 0 or quaternion.getEulerAngles(self.cranePart.Orientation).y > 3.14 then
+                --waterCrane:log("rotating to water")
+                self.cranePart:rotateY(self.GearVelocity * dt)
+            else
+                --waterCrane:log("rotation to water finished")
+                self.cranePart:setRotationY(0)
+                self.craneWaterSide = true
+                if self.sequence == 3 then
+                    self.sequence = 0
+                    self.craneStop = true
+                end
+            end
+        end
+        
+        if self.craneWaterSide == true then
+            self.gearMainFront:rotateY(2 * self.GearVelocity * dt)
+            self.gearMainBack:rotateY(2 * self.GearVelocity * dt)
+        else
+            self.gearMainFront:rotateY(-2 * self.GearVelocity * dt)
+            self.gearMainBack:rotateY(-2 * self.GearVelocity * dt)
+        end
     end
 end
 

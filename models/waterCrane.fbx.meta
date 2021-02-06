@@ -185,8 +185,8 @@
 		<meta id="91bbf2ff-0f75-4c1b-9017-283f8ec65ba2" name="BucketMain_Material.WoodBrownWorn"/>
 		<meta id="005a2cc3-5848-4cce-847e-4d407c2fd5bc" name="BucketHandle_Material.MetalRusty"/>
 		<meta id="a2a09509-9197-4214-b5f2-ce7f61255046" name="BucketRope_Material.RopeBrown"/>
-		<meta id="93e80af8-de2f-40e8-bee1-dea9571835c6" name="step_0 _Material.WoodBrownDark"/>
-		<meta id="df757927-bfb2-4f7c-b894-d1ee3e70731b" name="step_0 .003_Material.WoodBrownDark"/>
+		<meta id="8c2725b0-227e-47fe-b245-9d1b2db0ff05" name="Step_0_A_Material.WoodBrownDark"/>
+		<meta id="bbffb6e3-fcb9-4b7d-8e5b-435acaa0dc0d" name="Step_0_C_Material.WoodBrownDark"/>
 	</meta>
 	<meta id="10246f63-31c0-4009-a90e-e74abad8046f" name="Prefab">
 		<meta id="2e9fcba4-d850-4540-9c5e-10a4ad410894" name="Camera"/>
@@ -617,20 +617,420 @@
 		</meta>
 		<meta id="cc49fade-9365-4497-b56d-123e830c5069" name="Light.Point"/>
 		<meta id="b34ae6ad-0d6b-49d0-b731-c6c811a75390" name="Light.Sun"/>
-		<meta id="cc412d08-ffd9-4bde-97fd-95736562b36e" name="ConstructionSteps">
-			<meta id="6c8c535e-2f7f-4dfa-8e63-d618f0ed7825" name="WaterCraneCorePart.001">
-				<meta id="dfa60a9f-3357-4487-b47a-33eb88d01302" name="step_0 "/>
-				<meta id="6b4266f0-96f0-41fb-9619-e125b074b107" name="step_0 .001"/>
-				<meta id="0aa5f668-568b-4add-a9dc-61ffbdcdb86b" name="step_0 .003"/>
-				<meta id="01165e54-ed01-43c8-b79a-4fbd7a44f666" name="step_0 .002"/>
-				<meta id="d67f4cf5-f66b-47b9-a595-e6d8a8b72dd7" name="step_0 .004"/>
-				<meta id="4fd9f16c-3944-413b-bc7a-37b1f6e7f66b" name="step_0 .005"/>
+		<meta id="6ca33b31-1cad-483c-92d0-3c9df57fe0fd" name="WaterCraneCorePart.ConstructionSteps">
+			<meta id="be79677c-5e42-4634-9056-dd068f83ef14" name="Step_0_A"/>
+			<meta id="2c018650-4f9c-4afc-91e2-c9db65d297a8" name="Step_0_B"/>
+			<meta id="582c3ca4-266b-4fb7-8dfb-05eed76800f5" name="Step_0_C"/>
+			<meta id="16c5aae8-c0cd-453c-b5ae-a1b6a6cb984f" name="Step_0_D"/>
+			<meta id="8b2444b4-54d6-4012-a65b-d92f3d733434" name="Step_0_E"/>
+			<meta id="86fc0d69-f7eb-464a-ae84-7dbe1561fb8c" name="Step_0_F"/>
+			<meta id="a00f554f-20fd-4ed9-b9e8-b44330b5cd1c" name="Step_1_B"/>
+			<meta id="5e5358cc-3d2d-4265-80aa-2eea656e40ca" name="Step_1_A"/>
+			<meta id="425379b5-1540-463c-bce7-979f2f9f3c05" name="Step_1_F"/>
+			<meta id="6a741792-9bd3-45c8-b458-829b3cb98897" name="Step_1_C"/>
+			<meta id="eb982244-de4a-4b69-a2e9-44212ea4d288" name="Step_1_E"/>
+			<meta id="d93fd120-d17d-44d1-b9f5-d7f4b82ebd5a" name="Step_1_D"/>
+			<meta id="4ed98d43-191e-4cbf-bc07-ed8b3b50a166" name="Step_3_F"/>
+			<meta id="14e53a14-de11-4278-847d-8294efed4464" name="Step_3_E"/>
+			<meta id="087ae91e-dbed-4166-9608-8787d74a8837" name="Step_3_A"/>
+			<meta id="142dd769-0ae3-413a-8d0e-e65c57ca8779" name="Step_3_B"/>
+			<meta id="ca170615-720c-4e71-b6e1-faecfdf97102" name="Step_3_D"/>
+			<meta id="35934dc5-10ca-44fd-a31b-2ea0ebd398e3" name="Step_3_C"/>
+			<meta id="14565bb9-4009-463c-ad8f-68c87409ebaa" name="Step_3_G"/>
+			<meta id="91c37ed7-bd47-4ec6-ba97-2b5233573692" name="Step_3_H"/>
+			<meta id="e2134b8e-7a97-491f-9b22-ac30546742ba" name="Step_4_C"/>
+			<meta id="e338b4d2-2036-474a-a59a-c6c301d67dbf" name="Step_2_C"/>
+			<meta id="3e5c427d-7f20-412d-8ac6-af5c3a27170d" name="Step_4_A"/>
+			<meta id="ba5dcb67-8437-4c2f-ad6c-ab88676964ff" name="Step_2_A"/>
+			<meta id="74f49a56-a4fb-4511-9fe5-efc9fe6ba059" name="Step_4_B"/>
+			<meta id="a166cb8d-7140-4851-97d1-7ca8e9a4ff8a" name="Step_2_B"/>
+			<meta id="0412db47-323f-44a8-8e27-87b8e87c99bb" name="Step_4_D"/>
+			<meta id="c519da26-4d73-4275-801a-735f89ab8710" name="Step_2_D"/>
+			<meta id="273ce26a-3459-49c4-9e02-9d74df8b63f7" name="Step_5_E"/>
+			<meta id="c4132be0-fa26-4cbb-8c54-eb9f3f1b0dec" name="Step_5_F"/>
+			<meta id="10dd3908-1cae-4ffc-a3c1-7a158f95755c" name="Step_5_A"/>
+			<meta id="9266fd59-149c-46c9-9366-ec69e4903d8c" name="Step_5_B"/>
+			<meta id="987d905f-98fb-4b05-b9cc-b9287449edcc" name="Step_5_D"/>
+			<meta id="adff9a59-d91a-4c17-9b51-70b9d4cce550" name="Step_5_C"/>
+			<meta id="26858c15-ff6a-4fd5-94ae-f8d506314a83" name="Step_5_H"/>
+			<meta id="288f5203-6f12-4c40-8eb2-bf11cb368078" name="Step_5_G"/>
+			<meta id="568b937f-1302-4622-8957-5321cd62cbb9" name="Step_6_G"/>
+			<meta id="8a413ea4-bfdc-436c-bcbc-6d9b5e56d6d4" name="Step_6_A"/>
+			<meta id="c5f22349-b34f-44e3-ad48-4e6fbc27e540" name="Step_6_D"/>
+			<meta id="c5df75ad-b99d-422a-ab84-df1ce3d412b5" name="Step_6_J"/>
+			<meta id="a11eac72-023d-46a0-97f4-973b711280d4" name="Step_6_H"/>
+			<meta id="3f7816ce-9ff7-4738-99ce-58a6da489873" name="Step_6_B"/>
+			<meta id="5c6e5f9e-bfad-425b-8328-58f5bacd074d" name="Step_6_E"/>
+			<meta id="f6848778-67ca-4c54-89ca-78442f2129b1" name="Step_6_K"/>
+			<meta id="951a1d9b-3d6d-434e-a071-07602ae0cb25" name="Step_6_I"/>
+			<meta id="fa94bc83-fe8a-4363-9330-1c0ba12673f6" name="Step_6_C"/>
+			<meta id="bbc1449e-3510-4811-b983-aedaff8f3e88" name="Step_6_F"/>
+			<meta id="bc49d52e-f31e-48a8-b820-f2709373e504" name="Step_6_L.002"/>
+			<meta id="10e9d8e0-8ca0-42c0-a399-f4ffe332dcb9" name="Step_7_C"/>
+			<meta id="e4b7abf3-3964-46d3-ae06-c74c2379af54" name="Step_7_A"/>
+			<meta id="8ca029e4-2ec0-47a2-921a-cdbc8f780752" name="Step_7_D"/>
+			<meta id="768c4c39-5c5b-4c10-a20f-acbde0f54d57" name="Step_7_B"/>
+			<meta id="d1421245-545f-4ea1-a954-d2fc09a1af63" name="Step_8_K"/>
+			<meta id="6bdc8e21-26b0-4d75-b1f2-02f933b28359" name="Step_8_P"/>
+			<meta id="3184705d-195b-4024-b2dd-1b4f1f9dd915" name="Step_8_F"/>
+			<meta id="27e12944-572f-41e9-9258-454d2d82dbf5" name="Step_8_J"/>
+			<meta id="67419890-4a37-4cef-9f52-9c9a6bd6bde8" name="Step_8_I"/>
+			<meta id="d08a91fe-4bf5-46c8-82ab-ce0ae8949714" name="Step_8_H"/>
+			<meta id="f7357e45-96d8-417f-ad45-e20db8880ff7" name="Step_8_G"/>
+			<meta id="20c3a6fb-7239-4fb1-850d-6151364e57cf" name="Step_8_E"/>
+			<meta id="091ce026-b787-40e5-b294-146b8c57a405" name="Step_8_D"/>
+			<meta id="53903649-8624-49f1-99e8-424ffebe4bbb" name="Step_8_C"/>
+			<meta id="92991038-05b3-4638-b67d-090c6d523537" name="Step_8_B"/>
+			<meta id="d772a192-d209-4efe-ad37-1df62782591d" name="Step_8_L"/>
+			<meta id="bc1ec3ee-897a-427d-9b21-49575072a5b2" name="Step_8_M"/>
+			<meta id="d679ddb6-232a-4372-ad49-b6909821064e" name="Step_8_N"/>
+			<meta id="d96b9326-e54b-40a0-92d6-388ea0b1a2b1" name="Step_8_O"/>
+			<meta id="affdf7ee-817d-4320-99f6-478b54648847" name="Step_8_Q"/>
+			<meta id="e47f33b9-4694-4b1b-b998-c8fb506787a3" name="Step_8_R"/>
+			<meta id="7c5ba755-d160-4d17-9d7c-50afc161eb4d" name="Step_8_S"/>
+			<meta id="fb22c15f-7ed5-4da3-8b78-521dc459b83f" name="Step_8_T"/>
+			<meta id="d7a7df35-fe62-4003-972b-f67b11f845ee" name="Step_8_U"/>
+			<meta id="3aebc9e8-f28f-4eaf-9667-c4df76746d40" name="Step_8_A"/>
+			<meta id="a33f6368-02ed-44c9-8c62-c9c7c9eb52d0" name="Step_9_G"/>
+			<meta id="0b417deb-bcdb-46c5-a8cc-7f2bedd9d9bb" name="Step_9_J"/>
+			<meta id="69c10ac3-d813-4c24-8092-3f6cb20188d8" name="Step_9_D"/>
+			<meta id="c2204e86-3b1a-4cad-8341-5c25088efc2b" name="Step_9_A"/>
+			<meta id="e9961b53-5975-421c-bc1d-8e1fb876ee3e" name="Step_9_F"/>
+			<meta id="5a51f37e-1b13-4b1b-afd8-083ff2cff5db" name="Step_9_E"/>
+			<meta id="410f1633-b771-4805-aa23-890e31a62eef" name="Step_9_K"/>
+			<meta id="c3dd2ac7-2a22-4b47-8ff1-b7664e92a163" name="Step_9_L"/>
+			<meta id="a5cf5322-da64-4877-be89-ed951d9053a3" name="Step_9_B"/>
+			<meta id="e92c1440-06b9-4596-879f-d82a7d9113fe" name="Step_9_C"/>
+			<meta id="f1c4571c-32d4-4c26-8138-ae2a6e9fc3a5" name="Step_9_I"/>
+			<meta id="8e6cdbb5-8fed-4a16-86fc-c1ba4337e366" name="Step_9_H"/>
+			<meta id="fda4ce4c-5a1a-425d-8f72-3ff1e182a8f1" name="Step_10_M"/>
+			<meta id="80cdbaf2-7635-42fe-a374-5c89acf78b0c" name="Step_10_P"/>
+			<meta id="db5ba6be-92f2-400e-8703-0c2985e82aba" name="Step_10_J"/>
+			<meta id="4b1c7dbf-b663-4670-8f01-4b8807252e50" name="Step_10_N"/>
+			<meta id="d24e4da1-6a69-40a1-b003-4a2a5138ceb6" name="Step_10_Q"/>
+			<meta id="9328d14f-09a5-4acf-ac91-894a58d75413" name="Step_10_K"/>
+			<meta id="b3bb6ee5-7d1a-4a05-a30f-d229fe740bef" name="Step_10_O"/>
+			<meta id="7549729b-d404-492d-b12b-5211ed87107d" name="Step_10_R"/>
+			<meta id="306bc031-0d21-4960-aa85-f217aca6fd8c" name="Step_10_L"/>
+			<meta id="1b6e2bba-190f-4be0-a97d-58b7a69f226f" name="Step_10_AE"/>
+			<meta id="7f072ad2-154c-4acb-8809-9fb353e49124" name="Step_10_AB"/>
+			<meta id="fc7e301c-cc6c-4c5c-8c83-d59b103ab2e6" name="Step_10_AH"/>
+			<meta id="7c33e993-b767-4236-bfd5-6c0065efbe58" name="Step_10_AF"/>
+			<meta id="1f11d784-941b-4df5-9370-ef16729f501a" name="Step_10_AC"/>
+			<meta id="965bf27c-7a64-43d7-984f-b263c5ed8bfc" name="Step_10_AI"/>
+			<meta id="3203fe92-575a-4f1a-ac9c-997007afec6f" name="Step_10_AG"/>
+			<meta id="d98bbefd-4fdd-410f-81aa-5695f91ec63a" name="Step_10_AD"/>
+			<meta id="92d10751-f18d-4d20-90e9-82561f32ed3d" name="Step_10_AJ"/>
+			<meta id="aea1edc1-3fac-495c-afb4-fe5980d1a522" name="Step_10_V"/>
+			<meta id="aaf63a11-37e0-48bc-9bbe-eedc15a24231" name="Step_10_Y"/>
+			<meta id="ff2006cf-6daa-4596-afc4-813ac6a3a2b2" name="Step_10_S"/>
+			<meta id="c141682c-ead8-44cf-8793-3c146c46a6a6" name="Step_10_X"/>
+			<meta id="c1a847b1-78c1-4a42-9df5-e323154d4110" name="Step_10_AA"/>
+			<meta id="8ae32658-efd0-47a2-944c-72bcfde358d9" name="Step_10_U"/>
+			<meta id="ec11b197-c280-4d11-9ed9-cf77f6bdb5dd" name="Step_10_W"/>
+			<meta id="e70c8e90-eb4a-41a4-bbd4-7ae8c0a572c6" name="Step_10_Z"/>
+			<meta id="b33a5608-f971-44db-ba5b-cbbacc0a7e2f" name="Step_10_T"/>
+			<meta id="15da7f49-3224-443e-af6a-6e6d16add420" name="Step_10_D"/>
+			<meta id="90162a42-5975-4aa8-9feb-c00c6d369bec" name="Step_10_A"/>
+			<meta id="cf288008-f557-42d3-a3ef-c297648e2e54" name="Step_10_G"/>
+			<meta id="3ce3e138-80c2-4444-98b1-9df29f75637a" name="Step_10_F"/>
+			<meta id="08eb557a-3727-40b1-86da-b077d90afbbb" name="Step_10_C"/>
+			<meta id="44e2e909-deb2-4893-98c8-081c73e7dca5" name="Step_10_I"/>
+			<meta id="fbe0f771-fc45-466a-9afd-83f6f53d526e" name="Step_10_E"/>
+			<meta id="6c3e0c08-5e12-4f1b-b66d-c862e226c5d6" name="Step_10_B"/>
+			<meta id="20abb16b-7e02-4f8a-93d2-af5adbae7dd8" name="Step_10_H"/>
+			<meta id="978b003e-b918-4241-9db6-714bd2536c57" name="Step_11_E"/>
+			<meta id="5b168bdb-732d-4e74-8ab8-d166acf27a56" name="Step_11_F"/>
+			<meta id="6fc26b50-49f6-48e1-baca-b41161e06c95" name="Step_11_H"/>
+			<meta id="2219daf0-f27b-41b4-bdd6-fe70451c8875" name="Step_15_AL"/>
+			<meta id="a8e115c8-3f06-496e-b716-38cd40f78a6e" name="Step_11_I"/>
+			<meta id="84d9ae3f-0807-44b1-97ab-759fa1a31002" name="Step_12_D"/>
+			<meta id="cd8d3cd6-c1db-40ec-999b-c303860faede" name="Step_12_B"/>
+			<meta id="682b6fa7-8ae6-428b-a2f6-ca80235e37e0" name="Step_12_A"/>
+			<meta id="53f528b8-2e7a-4210-9e08-58056fdeae59" name="Step_12_C"/>
+			<meta id="b7f503b0-c313-4858-9dc9-9be4a06bcb2f" name="Step_13_K"/>
+			<meta id="00f5f131-4520-4b97-b650-daf3d15726b4" name="Step_13_F"/>
+			<meta id="24aaec20-9f72-4cf4-a345-020e3e6d9fa7" name="Step_13_P"/>
+			<meta id="bf796cfa-2ae6-4eff-882c-e4167505046e" name="Step_13_L"/>
+			<meta id="b0a4bfca-8abd-4276-a0c2-98a973562c50" name="Step_13_M"/>
+			<meta id="fa771aa0-9182-48c6-9981-0e7ef0618660" name="Step_13_N"/>
+			<meta id="36509b85-7dfb-4b98-a8c4-f59ede2f170f" name="Step_13_O"/>
+			<meta id="17437f4f-0d59-4e9a-a1e9-70f52765cb78" name="Step_13_Q"/>
+			<meta id="25e7daaa-d63d-47cb-b48f-c429b95171e3" name="Step_13_R"/>
+			<meta id="691d231d-3b3e-429b-b46c-4bd72d0d4b76" name="Step_13_S"/>
+			<meta id="3699022e-27ec-431e-898b-8d0b7397bb19" name="Step_13_T"/>
+			<meta id="289e31b6-fd92-42fb-bb95-5c25e871c111" name="Step_13_J"/>
+			<meta id="1d07a117-393a-4776-9c6a-074a31858d6a" name="Step_13_I"/>
+			<meta id="91f09f0b-7961-4b2d-b307-cb54482afa23" name="Step_13_H"/>
+			<meta id="41361ecb-e415-486d-8274-cc0453a5bff4" name="Step_13_G"/>
+			<meta id="0d4686f1-a74a-4cd9-bd4c-b69ebfe3e259" name="Step_13_E"/>
+			<meta id="12de69da-cba0-4137-aea2-111fdd64522e" name="Step_13_D"/>
+			<meta id="e2f2c6cc-ebb7-4017-9ee4-692dffff165a" name="Step_13_C"/>
+			<meta id="2b57456b-5df8-47da-a349-3228231b1915" name="Step_13_B"/>
+			<meta id="9e908656-4787-49e2-9235-bb74c2a7d798" name="Step_13_A"/>
+			<meta id="62a1f24a-33fe-4c78-86b1-80afaad9aee0" name="Step_13_U"/>
+			<meta id="d0bfee59-52bb-48d8-a5d3-517d6add2d3c" name="Step_14_J"/>
+			<meta id="9e65f581-0be3-4b33-949f-03f17a142320" name="Step_14_A"/>
+			<meta id="2c53901c-73dd-45d4-aafb-e5bdd5d986dc" name="Step_14_G"/>
+			<meta id="764a50f1-b35a-434d-9ee9-d9772c9ca653" name="Step_14_D"/>
+			<meta id="f028638d-e16b-4030-9a4b-de031454dc2f" name="Step_14_I"/>
+			<meta id="a8d8629f-d654-426f-a72e-e2914f6941f5" name="Step_14_H"/>
+			<meta id="f589d163-b3fb-4d33-87cf-9ccb8758e6d5" name="Step_14_B"/>
+			<meta id="0e1063ae-c96c-46dc-a198-f8e8fb311c00" name="Step_14_C"/>
+			<meta id="2cdb4ce4-0c2e-46fe-8209-6ecdaa22bbeb" name="Step_14_E"/>
+			<meta id="9b78bb0e-3e92-43dd-b13f-1d30c075564d" name="Step_14_F"/>
+			<meta id="f61865d4-fa23-465d-9c3d-629739949d93" name="Step_14_L"/>
+			<meta id="00dadef8-b91f-4f0c-9ebe-98938c2e9810" name="Step_14_K"/>
+			<meta id="3ff7d82f-be59-4692-941e-13c6ff809478" name="Step_15_V"/>
+			<meta id="7f72e5e2-ccc7-4435-a7da-663aac052194" name="Step_15_Y"/>
+			<meta id="963ae65c-4e40-46b5-b1ca-6088d2426c31" name="Step_15_S"/>
+			<meta id="907f9453-d119-4544-99f2-cd193ce198d7" name="Step_15_W"/>
+			<meta id="42f467d9-bcd7-4efb-9192-4b6cfc7c14f2" name="Step_15_Z"/>
+			<meta id="c4c441cb-7285-444c-a235-c705609a9e9a" name="Step_15_T"/>
+			<meta id="4d848113-45a0-4bc4-b2f3-bb44a322a78e" name="Step_15_X"/>
+			<meta id="c3591174-e3f7-4b4d-aba9-cdff61cafb0d" name="Step_15_AA"/>
+			<meta id="a2fd3127-c4a8-468f-b253-18bfa3cd8aa4" name="Step_15_U"/>
+			<meta id="f23bb845-adf0-4a40-8732-e620a4e40d33" name="Step_15_D"/>
+			<meta id="daf15184-b779-402b-a40d-14f4b8799ed4" name="Step_15_A"/>
+			<meta id="d9a4ee12-df14-4cb7-b53b-5857617a26e4" name="Step_15_G"/>
+			<meta id="7a8e57fb-ac62-4abd-b9bb-3b7350453aa1" name="Step_15_E"/>
+			<meta id="e5d89390-f6aa-4f06-8ca0-d0cc6f6f3771" name="Step_15_B"/>
+			<meta id="c68665f4-4a60-4447-a6c7-130e101de7d1" name="Step_15_H"/>
+			<meta id="be1d0fd5-fee9-4920-9426-ad6b8c7161d9" name="Step_15_F"/>
+			<meta id="c8d5a84c-eed6-4853-84cf-a5bb082f75a1" name="Step_15_C"/>
+			<meta id="1e5a3dda-95b2-452c-85ba-d390631a5c70" name="Step_15_I"/>
+			<meta id="37908f71-58f6-4a45-a636-8dd3951e04c1" name="Step_15_AE"/>
+			<meta id="704d13ca-46f4-40f2-a24d-1f2693fe1770" name="Step_15_AH"/>
+			<meta id="0e21f650-96a3-4c24-8100-c171096e3756" name="Step_15_AB"/>
+			<meta id="8f6deec7-9393-4c3a-97ed-e6bfb6de89e1" name="Step_15_AG"/>
+			<meta id="1d1339b9-bfc2-4595-bdfc-341c2ab8d470" name="Step_15_AJ"/>
+			<meta id="f11b9e73-46a8-472e-bf31-c870de815bb0" name="Step_15_AD"/>
+			<meta id="6648f4bf-d20f-40f1-80e6-9d1f2729b1b4" name="Step_15_AF"/>
+			<meta id="f8c83812-dd6c-4c4d-9719-84e968476c50" name="Step_15_AI"/>
+			<meta id="0ed96b23-70fc-46c7-90a5-fe524cc20c85" name="Step_15_AC"/>
+			<meta id="51fd8ddc-583d-4206-9943-1c81ed7f1619" name="Step_15_M"/>
+			<meta id="7d8765dd-05ca-4810-a0ba-91848a4098b3" name="Step_15_J"/>
+			<meta id="c87837e9-f08d-4730-abe8-94eaf199a823" name="Step_15_P"/>
+			<meta id="baba5566-06de-4773-8355-b4c351b87f66" name="Step_15_O"/>
+			<meta id="2cdd0b73-6c40-4dd4-9d46-0fc9c41a6c24" name="Step_15_L"/>
+			<meta id="8be42c40-a633-460b-9283-b42a2b333da2" name="Step_15_R"/>
+			<meta id="8d401df8-4c67-496a-bea2-8000d2d1e728" name="Step_15_N"/>
+			<meta id="f69bccc1-9f7b-4f15-998a-6af13876e4c6" name="Step_15_K"/>
+			<meta id="5da1e5b0-df34-428b-ae63-0bc27b2cb28d" name="Step_15_Q"/>
+			<meta id="8520e7f2-efb9-4371-a267-0a1f2682c0be" name="Step_11_C"/>
+			<meta id="263b0af9-e1fa-4292-b0b7-a9d55f916aff" name="Step_11_D"/>
+			<meta id="cd36aeb2-ea6a-470e-8a8c-868720c6434a" name="Step_11_B"/>
+			<meta id="6b55f84d-d8be-42ba-a7c5-636b8c6a030d" name="Step_11_A"/>
+			<meta id="1664b259-5284-4bf8-8ee2-48709a1c4ca4" name="Step_15_AK"/>
+			<meta id="0adadc35-7a72-413a-ad38-50be0f1eec0a" name="Step_11_J"/>
+			<meta id="ebedcced-c183-44be-ba4a-4bde0e0cc991" name="Step_11_G"/>
+		</meta>
+		<meta id="d6ded104-12bb-42f3-9dc6-8711f5b8559a" name="TreadmillPart.ConstructionSteps">
+			<meta id="ca96bf03-3ffc-4dd9-9de7-901255fb6583" name="Step_8_A.001"/>
+			<meta id="e1737767-5f7f-4101-813c-6404d5d3d25b" name="Step_8_B.001"/>
+			<meta id="a52d5d8f-9cb3-4f3d-9a69-287f851e8ac5" name="Step_9_G.001"/>
+			<meta id="d6730feb-c7de-4cdc-b013-89f0385719cf" name="Step_9_U"/>
+			<meta id="500a77ec-503a-47d1-b8c3-c732834efaf2" name="Step_9_N"/>
+			<meta id="4ca0820b-2918-4125-a9df-22a56dbeb089" name="Step_9_AB"/>
+			<meta id="cd5c09c0-b2a7-4bbc-8350-2ef74b790706" name="Step_9_F.001"/>
+			<meta id="6293f2d8-05f0-4c1c-9bfc-8bc522a9de09" name="Step_9_E.001"/>
+			<meta id="c8961b1b-d034-4fa9-8823-0af4d6f2b5ca" name="Step_9_D.001"/>
+			<meta id="d4a43873-aabd-488e-9cf2-45970d7a8f2f" name="Step_9_C.001"/>
+			<meta id="288ffe25-a44e-4b78-a003-58a48924cd6c" name="Step_9_B.001"/>
+			<meta id="5cfd47d0-d916-4e21-bb7c-c53944c6a742" name="Step_9_A.001"/>
+			<meta id="51316b7d-2c63-4e72-875c-25ac94825494" name="Step_9_H.001"/>
+			<meta id="f637f924-96f5-4b9f-90bd-08a4efdda79f" name="Step_9_I.001"/>
+			<meta id="b9d65c61-7f64-4852-b4cd-6fd416e483f2" name="Step_9_J.001"/>
+			<meta id="8aaff7bb-3b4a-40f4-abd9-2945b56db564" name="Step_9_K.001"/>
+			<meta id="b00d5700-7517-4e96-a475-2717d45e841d" name="Step_9_L.001"/>
+			<meta id="7dd48dbc-d7c0-416c-a17f-a6a634e0c9de" name="Step_9_M"/>
+			<meta id="d5eaf5da-53ea-4702-9550-f6b99b681573" name="Step_9_V"/>
+			<meta id="e2941597-ee60-473d-91ea-08db266b3947" name="Step_9_W"/>
+			<meta id="bc25c62d-c86a-4a1c-9503-2b86e27bf35c" name="Step_9_X"/>
+			<meta id="66070c3c-be23-4988-ab7b-d1cf9dbbfac8" name="Step_9_Y"/>
+			<meta id="13d12085-6b4b-4399-984e-bd847419f2e2" name="Step_9_Z"/>
+			<meta id="34e9a35f-fa3e-4894-a7eb-bbe73ac35f39" name="Step_9_AA"/>
+			<meta id="8d28a9db-abd6-46a2-97ea-16e65996bb18" name="Step_9_T"/>
+			<meta id="c6f52b00-2955-43ac-99db-c1c83ef4e4c1" name="Step_9_S"/>
+			<meta id="7223e088-9d62-4507-a9d6-16c5c3e07086" name="Step_9_R"/>
+			<meta id="955b1ca7-05ba-4804-afd5-15bcfdfb602e" name="Step_9_Q"/>
+			<meta id="0168de59-d5db-46f6-9d6a-e92d9ebda283" name="Step_9_P"/>
+			<meta id="aae4f0a1-4184-49a3-a171-2013c3bd97b5" name="Step_9_O"/>
+			<meta id="7bd00abb-31d0-4320-bbda-f6c7a7e9b82b" name="Step_5_D.001"/>
+			<meta id="11392991-586f-4ed8-8fc2-7f230fbbb640" name="Step_5_C.001"/>
+			<meta id="65d52da6-880a-45fa-a405-14d4e8c9b9bb" name="Step_5_B.001"/>
+			<meta id="3638773c-1086-47db-b3f8-8c45a0c4bfb5" name="Step_5_A.001"/>
+			<meta id="3bdb02b3-3318-43d4-91d9-a0a547765001" name="Step_6_A.001"/>
+			<meta id="e300a50e-d864-4b85-b853-80ffa3139d7f" name="Step_7_A.001"/>
+			<meta id="56206898-8522-48eb-a0bb-c745690e19bf" name="Step_6_G.001"/>
+			<meta id="7f7869ff-12b0-4274-882a-38408ea87fcf" name="Step_7_B.001"/>
+			<meta id="77414833-201d-4522-8461-27f0f3a33127" name="Step_6_E.001"/>
+			<meta id="3e2dadee-bf91-446f-be09-f3a03dc34f8f" name="Step_7_C.001"/>
+			<meta id="eb4bc116-5ef8-4cb2-881e-2000aebaa226" name="Step_6_C.001"/>
+			<meta id="fc9e9248-3dd3-4789-997e-9be229d4666e" name="Step_7_D.001"/>
+			<meta id="ddfb291f-7000-4c81-92e5-8d63b8ce50eb" name="Step_6_H.001"/>
+			<meta id="8dac4b05-c960-4789-98dd-0d7ed808fc3f" name="Step_6_D.001"/>
+			<meta id="7c0643fb-4689-4a73-bafd-0f1efaafbbaa" name="Step_6_B.001"/>
+			<meta id="1a6b9be3-4348-4e0a-b499-43073eae1a69" name="Step_6_F.001"/>
+			<meta id="70bf8df9-9bff-45f5-a085-4e9ead919015" name="Step_5_H.001"/>
+			<meta id="89adc447-8172-4099-b220-d50b27c6f8a1" name="Step_5_G.001"/>
+			<meta id="231477d4-f874-4d40-bba0-001ceeb17cd9" name="Step_5_E.001"/>
+			<meta id="f731f9ff-8507-4f89-afc1-2ef91881ae6b" name="Step_5_F.001"/>
+			<meta id="6f326b32-ccbb-462c-a0d8-2349d18e9fa4" name="Step_6_O"/>
+			<meta id="9105b4c1-7957-42cb-af72-1e463180f9b1" name="Step_7_H"/>
+			<meta id="ab15825f-61e7-4963-ad0b-be62d301943c" name="Step_6_I.001"/>
+			<meta id="e5f52314-7544-4f2c-84c7-73a90fdc39ed" name="Step_7_E"/>
+			<meta id="6d4622ba-0b06-4a04-92b2-c1d346bf92b0" name="Step_6_K.001"/>
+			<meta id="8ae0788a-60ee-4bf7-baf6-c187d4de86e7" name="Step_7_F"/>
+			<meta id="c342df8a-91fd-42fa-b89d-be184f668858" name="Step_6_M"/>
+			<meta id="b1ea30c2-3748-4232-b3ee-d1941049b464" name="Step_7_G"/>
+			<meta id="7850a67e-e399-4a41-912c-b17ad3a685ca" name="Step_6_P"/>
+			<meta id="12bcb24e-fd73-49ee-832a-81460951fbf5" name="Step_6_L.001"/>
+			<meta id="c3f0e681-8b47-4f59-9fed-1a0f59c6385e" name="Step_6_N"/>
+			<meta id="8498dba5-2def-453c-9232-9990386ec7e0" name="Step_6_J.001"/>
+			<meta id="85babbba-1747-4744-babe-aa627473d860" name="Step_2_A.001"/>
+			<meta id="c015037d-fa09-4527-8988-981ab14046f0" name="Step_1_A.001"/>
+			<meta id="5f889c9e-5d8a-4499-ae9d-32081a2d582a" name="Step_3_A.001"/>
+			<meta id="39d6f7c5-bb70-4cc0-85e8-d0a4fbc09848" name="Step_4_A.001"/>
+		</meta>
+		<meta id="02f222f3-462e-480e-b13a-13a5dc26883c" name="GearMiddlePart.ConstructionSteps">
+			<meta id="8902bcd6-a306-4a7d-95d0-a36ab9bae050" name="Step_2_A.010"/>
+			<meta id="6ff980de-1df5-4da4-be57-1838fff0e0cc" name="Step_3_A.004"/>
+			<meta id="ab8d0046-a998-485b-9ad4-1ea773173e7a" name="Step_1_A.005"/>
+		</meta>
+		<meta id="b71ad957-f6be-435e-aa23-9b42832addd8" name="GearTopFrontPart.ConstructionSteps">
+			<meta id="c7206600-36fb-4f8b-b05b-62064c75afdc" name="Step_3_A.008"/>
+			<meta id="adbe1ae2-14a3-4cb1-a8f2-1581c36cbe42" name="Step_2_A.004"/>
+			<meta id="e4a8a055-b432-4fa1-bfed-35db0c2f9ec9" name="Step_1_A.006"/>
+			<meta id="6149f2cd-1961-4c13-b099-e31feee2c7e4" name="Step_4_A.005"/>
+		</meta>
+		<meta id="69226c8b-911d-4b60-866d-2c10628f3230" name="GearMiddleFrontPart.ConstructionSteps">
+			<meta id="895041b2-e222-4201-97a0-d90b2148f2c6" name="Step_3_A.003"/>
+			<meta id="5b91f200-e1eb-44b6-ae44-cbbe457aee1a" name="Step_2_A.003"/>
+			<meta id="c639c156-2739-4e64-8b0b-92c5b63dbc2c" name="Step_1_A.003"/>
+			<meta id="ae03a707-e22b-40c5-96a3-97d22ea82d7c" name="Step_4_A.002"/>
+		</meta>
+		<meta id="fb2bcd5a-8577-4411-ae1b-10e444563f0a" name="GearTopPart.ConstructionSteps">
+			<meta id="ec3e13e8-f98d-48eb-8567-37f80765c8d6" name="Step_2_A.005"/>
+			<meta id="054619d0-d931-48d9-ba2a-386671d01ae7" name="Step_3_A.007"/>
+			<meta id="8950151c-d7d8-441a-8389-016234acea9a" name="Step_1_A.010"/>
+		</meta>
+		<meta id="b8b27c18-99a5-4dbf-8488-6dd0d4162ac7" name="GearTopBackPart.ConstructionSteps">
+			<meta id="3c8a1e6c-5e30-4a58-b188-f1d082a66e65" name="Step_3_A.006"/>
+			<meta id="dcf18176-cae0-4114-9aa9-06c309b228cc" name="Step_2_A.006"/>
+			<meta id="6d102ab2-36c1-480d-8c74-9f1a078458ea" name="Step_1_A.007"/>
+			<meta id="c288a62d-c6b5-4a6a-b4f8-452f5e47293a" name="Step_4_A.004"/>
+		</meta>
+		<meta id="25ad80b0-0486-4fd0-bd70-067481ea10be" name="GearMiddleBackPart.ConstructionSteps">
+			<meta id="78d630f3-af68-4dc9-81db-6258d7047ca1" name="Step_3_A.005"/>
+			<meta id="01e4cbe8-66e7-4723-a71a-c0e91425a915" name="Step_2_A.007"/>
+			<meta id="462b1b52-9eee-477f-993d-ca7dd8471584" name="Step_1_A.004"/>
+			<meta id="0db666c5-4282-4bba-b9df-cdc636329235" name="Step_4_A.003"/>
+		</meta>
+		<meta id="81f9db5f-4c0a-4ac3-9ab3-21e6181d981e" name="GearMainFrontPart.ConstructionSteps">
+			<meta id="a956c8f7-9b37-43ac-bd89-92e8f5422e6d" name="Step_3_A.010"/>
+			<meta id="c2fc7d14-aac3-4258-ab89-eefb74863403" name="Step_2_A.009"/>
+			<meta id="743a80ee-4179-40f1-9898-4024c598942a" name="Step_1_A.008"/>
+		</meta>
+		<meta id="e9291525-1041-415e-b054-a702931e301a" name="GearMainBackPart.ConstructionSteps">
+			<meta id="a0463c67-a652-4202-b894-9cf024895059" name="Step_3_A.009"/>
+			<meta id="c768aa3b-373a-43e9-acb8-857ce3f1524c" name="Step_2_A.008"/>
+			<meta id="6752f90e-bdf2-4511-b004-1164cfbc8037" name="Step_1_A.009"/>
+		</meta>
+		<meta id="dbf7cf9d-e45e-43fd-a53e-c04463e80774" name="GearMainPart.ConstructionSteps">
+			<meta id="137d8ebe-6854-4aa3-a28e-1046f9858fe4" name="Step_2_A.011"/>
+			<meta id="94ea3ba4-b1f5-4573-b655-8e075b3f0ca3" name="Step_3_A.011"/>
+			<meta id="29d19df1-3399-43c8-9d43-7bc643b2e175" name="Step_1_A.011"/>
+			<meta id="9b62024f-2ba6-4739-807f-c8c45eadc9ba" name="Step_2_B.001"/>
+			<meta id="70104bed-94c4-447f-be62-f16f833d08ee" name="Step_5_L"/>
+			<meta id="90b74754-b644-4703-86b0-6130c9a0e785" name="Step_3_G.001"/>
+			<meta id="9d0c65e8-0f77-4992-ab1e-33a4263a7e7a" name="Step_7_A.002"/>
+			<meta id="a5b2b4e6-8fe0-4e57-ab84-1a1527458ee6" name="Step_5_Q">
+				<meta id="61e9ec24-d7c6-40ff-9ec1-5ac822b2d564" name="Step_5_Q_0"/>
+				<meta id="fe21cc1a-ac7e-4809-a6e0-54fbca58ab09" name="Step_5_Q_1"/>
+				<meta id="a6885285-9f37-4689-bf54-37ea1b3be38a" name="Step_5_Q_2"/>
+				<meta id="2bc37654-38f0-44ec-b8cc-e0f04c38f657" name="Step_5_Q_3"/>
 			</meta>
+			<meta id="da6d6d98-e7c2-40f7-ac01-435459aab3f1" name="Step_4_F"/>
+			<meta id="35ec27a8-a3cf-4f0e-8508-14c58729e5c5" name="Step_5_K"/>
+			<meta id="f53ba30e-40f3-4845-af32-5dbb6676c9a3" name="Step_5_N"/>
+			<meta id="4f94bba9-65f4-486d-8848-553a890af9aa" name="Step_5_M"/>
+			<meta id="fe12780f-0f3e-401c-ae3e-b0ea0e9b73f3" name="Step_5_D.002"/>
+			<meta id="22eebe9b-dc45-44ad-a1ae-9615b392f23d" name="Step_5_C.002"/>
+			<meta id="434982e0-12b1-431e-8cf6-b0b31a3d29cd" name="Step_4_A.006"/>
+			<meta id="9270ece2-5d58-49c0-a735-9cf9f89fbe11" name="Step_3_E.001"/>
+			<meta id="94221e3c-31b9-4797-a62e-024a0b3e36bb" name="Step_5_F.002"/>
+			<meta id="34c60367-cf9a-4cc6-b4b2-09059bf27f57" name="Step_5_E.002"/>
+			<meta id="b7075fbf-fdcc-4f94-aaed-e42b990fb96b" name="Step_4_B.001"/>
+			<meta id="2e5d5e12-8583-4270-8818-a90105a7d1f6" name="Step_5_B.002"/>
+			<meta id="48a2e7c6-7498-4683-96dc-d44323747aa4" name="Step_5_I"/>
+			<meta id="6717ecb5-8c88-4dff-97ab-4303ffab724b" name="Step_5_J"/>
+			<meta id="4022a220-196a-4a6f-9432-cb68525b755c" name="Step_4_C.001"/>
+			<meta id="11b795fb-feb9-4996-af48-8d76cdc91c7b" name="Step_4_D.001"/>
+			<meta id="36d9fac1-9525-4b05-b30e-754534fdd54f" name="Step_6_E.002"/>
+			<meta id="47b950e6-6dcb-4105-b449-cf45154c887c" name="Step_6_F.002"/>
+			<meta id="b2995144-1e9d-49f8-a9ab-6b44889af509" name="Step_6_G.002"/>
+			<meta id="07da0728-1597-4946-82b5-e368fd372ab1" name="Step_6_H.002"/>
+			<meta id="a07b7f2a-d36c-4e0f-8db5-ec195d006739" name="Step_6_I.002"/>
+			<meta id="00120dd0-05e1-43f2-815d-40637ed517d2" name="Step_6_D.002"/>
+			<meta id="64597868-62be-4b8d-83fc-0bdff9c271d9" name="Step_6_C.002"/>
+			<meta id="8ff54a84-763f-4020-ad0f-608b2700fe6d" name="Step_6_B.002"/>
+			<meta id="824a2c02-74ac-41a2-bdb5-4e1f8594050e" name="Step_6_A.002"/>
+			<meta id="9f1817c6-b7c9-44c8-8245-5b6c97ea6f10" name="Step_5_G.002"/>
+			<meta id="16785517-f468-4371-a20e-e5e51c710814" name="Step_5_H.002"/>
+			<meta id="2941a51e-1f0c-4125-8044-9dbd0e0673c7" name="Step_6_L"/>
+			<meta id="1742eeaf-3e0f-4539-b345-96189c83db6f" name="Step_7_B.002">
+				<meta id="d694c260-c5fc-43ac-bbbf-0d8582011740" name="Step_7_B.002_0"/>
+				<meta id="eb829d17-34c9-467c-91ee-ca5ebc0e0ff7" name="Step_7_B.002_1"/>
+				<meta id="2b74b388-85f4-4950-abc9-f9041344751a" name="Step_7_B.002_2"/>
+			</meta>
+			<meta id="d0632a30-82c1-4952-aee7-52cd49a6121d" name="Step_5_P"/>
+			<meta id="a8cb119d-f8ad-462f-9750-20ac998609a7" name="Step_5_O"/>
+			<meta id="6a6157d0-cfa2-4697-823b-089b60d13cfe" name="Step_8_A.002"/>
+			<meta id="98c2f93f-d54b-49a9-bae3-34d64b48e9d9" name="Step_7_C.002"/>
+			<meta id="7d6b4145-8e79-4b86-9ddf-9e194590485f" name="Step_8_C.001">
+				<meta id="e93b75c8-ce63-49aa-86c2-f31585e1bdab" name="Step_8_C.001_0"/>
+				<meta id="4a94fa9e-e282-48da-a3bb-5e3742cc41a0" name="Step_8_C.001_1"/>
+				<meta id="52b5d773-ebad-47dc-aeae-0b4e5c5f11e5" name="Step_8_C.001_2"/>
+			</meta>
+			<meta id="39cbe622-6fff-4370-ab08-9dee4f1d6520" name="Step_6_J.002"/>
+			<meta id="4a2a93d1-88fa-4540-b915-41c684c16505" name="Step_6_K.002"/>
+			<meta id="fd6df254-eb43-486e-acd2-5ebc66e15611" name="Step_9_E.002"/>
+			<meta id="1f7318c4-db96-4867-8b05-fa06d42dfd9e" name="Step_7_D.002"/>
+			<meta id="8a6b8d6d-13ca-494b-80e6-b607abb78593" name="Step_7_E.001"/>
+			<meta id="426e203f-7b46-4608-8a6e-225362e4ca86" name="Step_8_B.002"/>
+			<meta id="76b48824-d228-47ae-b5f2-2e8157db904e" name="Step_3_B.001"/>
+			<meta id="b277c466-f5fb-471a-aa2d-7035d769c939" name="Step_3_H.001"/>
+			<meta id="20c86acf-b111-4ca0-ba45-17c10466a909" name="Step_5_A.002"/>
+			<meta id="12762bd8-c5b4-4eee-8592-eb74b7afb6e8" name="Step_9_A.002"/>
+			<meta id="6599b2a4-2f7a-423a-8fca-c1490a9b4156" name="Step_4_E"/>
+			<meta id="9e610cc0-ca69-4753-a412-37f1663f5cbf" name="Step_3_D.001"/>
+			<meta id="1efb8162-41b2-4230-b1c5-3f8beb09eca1" name="Step_3_F.001"/>
+			<meta id="74f1d536-bb11-4805-8bfe-ab3e30d96e5e" name="Step_3_C.001"/>
+			<meta id="ce25268c-fe7f-455b-aa70-53f98a3c9de1" name="Step_9_C.002"/>
+			<meta id="63329108-0d32-4efc-a174-090dfd9796cc" name="Step_9_D.002"/>
+			<meta id="443ad764-73ae-4d20-91b5-1753fea666fd" name="Step_9_B.002"/>
+			<meta id="f9ed1783-4850-47ee-8b6d-743ba9164b64" name="Step_12_A.001"/>
+			<meta id="3154a25e-dd2f-43a7-9b30-44866aa4ce47" name="Step_13_A.001"/>
+			<meta id="1eacf214-0b5f-41b0-b470-78e866c0b122" name="Step_11_A.001"/>
+			<meta id="63a9326f-e960-4ebb-bc34-7ecb947d6fb0" name="Step_10_A.001"/>
+		</meta>
+		<meta id="6fdeb06d-c198-4f9d-9630-f9811a6fb7db" name="WaterLevelMarkPart.ConstructionSteps">
+			<meta id="5c14591a-e9b4-4ae4-8a63-b9da10aa4601" name="Step_0_A.001"/>
+		</meta>
+		<meta id="a9d3d4af-25dc-42a2-9c37-d065f59ed81c" name="GroundLevelMarkPart.ConstructionSteps">
+			<meta id="373ed4aa-b65e-453d-9743-47605a3853cc" name="Step_0_A.002"/>
+			<meta id="19929027-bf8f-482f-bd0f-9ea2f0ce9e35" name="Step_2_A.002"/>
+			<meta id="6d6630ac-09cc-48c8-8261-38efeea618d8" name="Step_3_A.002"/>
+			<meta id="9314e52d-b920-4b97-b475-dfbb04208bc1" name="Step_1_C.001"/>
+			<meta id="c981ba09-68ee-4424-9053-1d013a7ef1ac" name="Step_1_D.001"/>
+			<meta id="8042545d-de2a-400c-91a3-94f008b31672" name="Step_1_B.001"/>
+			<meta id="72906559-64e5-4ffe-9d33-0e1b49f18b1a" name="Step_1_A.002"/>
 		</meta>
 	</meta>
 </meta>
 <importer type="GamCFbxImporterConfiguration">
-	<Md5Checksum value="55eb46f6d1e7e0bb6c29229524ae4d26"/>
+	<Md5Checksum value="69884e20524819feaadc868a154a3c56"/>
 	<Scale value="0.01"/>
 	<PatchMeshOffset value="true"/>
 	<UniqueNodeName value="false"/>
@@ -2724,42 +3124,1986 @@
 				<ChildList>
 					<Item type="GenCFbxNodeConfig">
 						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_0_A"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_0_B"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_0_C"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_0_D"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_0_E"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_0_F"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_1_B"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_1_A"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_1_F"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_1_C"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_1_E"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_1_D"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_3_F"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_3_E"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_3_A"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_3_B"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_3_D"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_3_C"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_3_G"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_3_H"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_4_C"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_2_C"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_4_A"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_2_A"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_4_B"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_2_B"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_4_D"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_2_D"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_5_E"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_5_F"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_5_A"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_5_B"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_5_D"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_5_C"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_5_H"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_5_G"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_6_G"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_6_A"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_6_D"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_6_J"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_6_H"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_6_B"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_6_E"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_6_K"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_6_I"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_6_C"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_6_F"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_6_L.002"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_7_C"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_7_A"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_7_D"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_7_B"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_8_K"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_8_P"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_8_F"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_8_J"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_8_I"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_8_H"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_8_G"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_8_E"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_8_D"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_8_C"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_8_B"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_8_L"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_8_M"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_8_N"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_8_O"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_8_Q"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_8_R"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_8_S"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_8_T"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_8_U"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_8_A"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_9_G"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_9_J"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_9_D"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_9_A"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_9_F"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_9_E"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_9_K"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_9_L"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_9_B"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_9_C"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_9_I"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_9_H"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_10_M"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_10_P"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_10_J"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_10_N"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_10_Q"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_10_K"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_10_O"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_10_R"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_10_L"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_10_AE"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_10_AB"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_10_AH"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_10_AF"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_10_AC"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_10_AI"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_10_AG"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_10_AD"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_10_AJ"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_10_V"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_10_Y"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_10_S"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_10_X"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_10_AA"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_10_U"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_10_W"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_10_Z"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_10_T"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_10_D"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_10_A"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_10_G"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_10_F"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_10_C"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_10_I"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_10_E"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_10_B"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_10_H"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_11_E"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_11_F"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_11_H"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_15_AL"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_11_I"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_12_D"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_12_B"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_12_A"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_12_C"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_13_K"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_13_F"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_13_P"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_13_L"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_13_M"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_13_N"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_13_O"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_13_Q"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_13_R"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_13_S"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_13_T"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_13_J"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_13_I"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_13_H"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_13_G"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_13_E"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_13_D"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_13_C"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_13_B"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_13_A"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_13_U"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_14_J"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_14_A"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_14_G"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_14_D"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_14_I"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_14_H"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_14_B"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_14_C"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_14_E"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_14_F"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_14_L"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_14_K"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_15_V"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_15_Y"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_15_S"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_15_W"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_15_Z"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_15_T"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_15_X"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_15_AA"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_15_U"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_15_D"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_15_A"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_15_G"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_15_E"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_15_B"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_15_H"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_15_F"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_15_C"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_15_I"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_15_AE"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_15_AH"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_15_AB"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_15_AG"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_15_AJ"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_15_AD"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_15_AF"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_15_AI"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_15_AC"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_15_M"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_15_J"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_15_P"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_15_O"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_15_L"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_15_R"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_15_N"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_15_K"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_15_Q"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_11_C"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_11_D"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_11_B"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_11_A"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_15_AK"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_11_J"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_11_G"/>
+					</Item>
+				</ChildList>
+				<NodeName value="WaterCraneCorePart.ConstructionSteps"/>
+			</Item>
+			<Item type="GenCFbxNodeConfig">
+				<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+				<ChildList>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_8_A.001"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_8_B.001"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_9_G.001"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_9_U"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_9_N"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_9_AB"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_9_F.001"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_9_E.001"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_9_D.001"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_9_C.001"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_9_B.001"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_9_A.001"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_9_H.001"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_9_I.001"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_9_J.001"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_9_K.001"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_9_L.001"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_9_M"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_9_V"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_9_W"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_9_X"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_9_Y"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_9_Z"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_9_AA"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_9_T"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_9_S"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_9_R"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_9_Q"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_9_P"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_9_O"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_5_D.001"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_5_C.001"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_5_B.001"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_5_A.001"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_6_A.001"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_7_A.001"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_6_G.001"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_7_B.001"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_6_E.001"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_7_C.001"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_6_C.001"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_7_D.001"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_6_H.001"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_6_D.001"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_6_B.001"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_6_F.001"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_5_H.001"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_5_G.001"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_5_E.001"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_5_F.001"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_6_O"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_7_H"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_6_I.001"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_7_E"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_6_K.001"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_7_F"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_6_M"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_7_G"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_6_P"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_6_L.001"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_6_N"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_6_J.001"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_2_A.001"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_1_A.001"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_3_A.001"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_4_A.001"/>
+					</Item>
+				</ChildList>
+				<NodeName value="TreadmillPart.ConstructionSteps"/>
+			</Item>
+			<Item type="GenCFbxNodeConfig">
+				<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+				<ChildList>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_2_A.010"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_3_A.004"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_1_A.005"/>
+					</Item>
+				</ChildList>
+				<NodeName value="GearMiddlePart.ConstructionSteps"/>
+			</Item>
+			<Item type="GenCFbxNodeConfig">
+				<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+				<ChildList>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_3_A.008"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_2_A.004"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_1_A.006"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_4_A.005"/>
+					</Item>
+				</ChildList>
+				<NodeName value="GearTopFrontPart.ConstructionSteps"/>
+			</Item>
+			<Item type="GenCFbxNodeConfig">
+				<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+				<ChildList>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_3_A.003"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_2_A.003"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_1_A.003"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_4_A.002"/>
+					</Item>
+				</ChildList>
+				<NodeName value="GearMiddleFrontPart.ConstructionSteps"/>
+			</Item>
+			<Item type="GenCFbxNodeConfig">
+				<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+				<ChildList>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_2_A.005"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_3_A.007"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_1_A.010"/>
+					</Item>
+				</ChildList>
+				<NodeName value="GearTopPart.ConstructionSteps"/>
+			</Item>
+			<Item type="GenCFbxNodeConfig">
+				<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+				<ChildList>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_3_A.006"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_2_A.006"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_1_A.007"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_4_A.004"/>
+					</Item>
+				</ChildList>
+				<NodeName value="GearTopBackPart.ConstructionSteps"/>
+			</Item>
+			<Item type="GenCFbxNodeConfig">
+				<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+				<ChildList>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_3_A.005"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_2_A.007"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_1_A.004"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_4_A.003"/>
+					</Item>
+				</ChildList>
+				<NodeName value="GearMiddleBackPart.ConstructionSteps"/>
+			</Item>
+			<Item type="GenCFbxNodeConfig">
+				<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+				<ChildList>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_3_A.010"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_2_A.009"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_1_A.008"/>
+					</Item>
+				</ChildList>
+				<NodeName value="GearMainFrontPart.ConstructionSteps"/>
+			</Item>
+			<Item type="GenCFbxNodeConfig">
+				<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+				<ChildList>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_3_A.009"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_2_A.008"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_1_A.009"/>
+					</Item>
+				</ChildList>
+				<NodeName value="GearMainBackPart.ConstructionSteps"/>
+			</Item>
+			<Item type="GenCFbxNodeConfig">
+				<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+				<ChildList>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_2_A.011"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_3_A.011"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_1_A.011"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_2_B.001"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_5_L"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_3_G.001"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_7_A.002"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
 						<ChildList>
 							<Item type="GenCFbxNodeConfig">
 								<LodConfig value="00000000-0000-0000-0000-000000000000"/>
 								<ChildList/>
-								<NodeName value="step_0 "/>
+								<NodeName value="Step_5_Q_0"/>
 							</Item>
 							<Item type="GenCFbxNodeConfig">
 								<LodConfig value="00000000-0000-0000-0000-000000000000"/>
 								<ChildList/>
-								<NodeName value="step_0 .001"/>
+								<NodeName value="Step_5_Q_1"/>
 							</Item>
 							<Item type="GenCFbxNodeConfig">
 								<LodConfig value="00000000-0000-0000-0000-000000000000"/>
 								<ChildList/>
-								<NodeName value="step_0 .003"/>
+								<NodeName value="Step_5_Q_2"/>
 							</Item>
 							<Item type="GenCFbxNodeConfig">
 								<LodConfig value="00000000-0000-0000-0000-000000000000"/>
 								<ChildList/>
-								<NodeName value="step_0 .002"/>
-							</Item>
-							<Item type="GenCFbxNodeConfig">
-								<LodConfig value="00000000-0000-0000-0000-000000000000"/>
-								<ChildList/>
-								<NodeName value="step_0 .004"/>
-							</Item>
-							<Item type="GenCFbxNodeConfig">
-								<LodConfig value="00000000-0000-0000-0000-000000000000"/>
-								<ChildList/>
-								<NodeName value="step_0 .005"/>
+								<NodeName value="Step_5_Q_3"/>
 							</Item>
 						</ChildList>
-						<NodeName value="WaterCraneCorePart.001"/>
+						<NodeName value="Step_5_Q"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_4_F"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_5_K"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_5_N"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_5_M"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_5_D.002"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_5_C.002"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_4_A.006"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_3_E.001"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_5_F.002"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_5_E.002"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_4_B.001"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_5_B.002"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_5_I"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_5_J"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_4_C.001"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_4_D.001"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_6_E.002"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_6_F.002"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_6_G.002"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_6_H.002"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_6_I.002"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_6_D.002"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_6_C.002"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_6_B.002"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_6_A.002"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_5_G.002"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_5_H.002"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_6_L"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList>
+							<Item type="GenCFbxNodeConfig">
+								<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+								<ChildList/>
+								<NodeName value="Step_7_B.002_0"/>
+							</Item>
+							<Item type="GenCFbxNodeConfig">
+								<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+								<ChildList/>
+								<NodeName value="Step_7_B.002_1"/>
+							</Item>
+							<Item type="GenCFbxNodeConfig">
+								<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+								<ChildList/>
+								<NodeName value="Step_7_B.002_2"/>
+							</Item>
+						</ChildList>
+						<NodeName value="Step_7_B.002"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_5_P"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_5_O"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_8_A.002"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_7_C.002"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList>
+							<Item type="GenCFbxNodeConfig">
+								<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+								<ChildList/>
+								<NodeName value="Step_8_C.001_0"/>
+							</Item>
+							<Item type="GenCFbxNodeConfig">
+								<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+								<ChildList/>
+								<NodeName value="Step_8_C.001_1"/>
+							</Item>
+							<Item type="GenCFbxNodeConfig">
+								<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+								<ChildList/>
+								<NodeName value="Step_8_C.001_2"/>
+							</Item>
+						</ChildList>
+						<NodeName value="Step_8_C.001"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_6_J.002"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_6_K.002"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_9_E.002"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_7_D.002"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_7_E.001"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_8_B.002"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_3_B.001"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_3_H.001"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_5_A.002"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_9_A.002"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_4_E"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_3_D.001"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_3_F.001"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_3_C.001"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_9_C.002"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_9_D.002"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_9_B.002"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_12_A.001"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_13_A.001"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_11_A.001"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_10_A.001"/>
 					</Item>
 				</ChildList>
-				<NodeName value="ConstructionSteps"/>
+				<NodeName value="GearMainPart.ConstructionSteps"/>
+			</Item>
+			<Item type="GenCFbxNodeConfig">
+				<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+				<ChildList>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_0_A.001"/>
+					</Item>
+				</ChildList>
+				<NodeName value="WaterLevelMarkPart.ConstructionSteps"/>
+			</Item>
+			<Item type="GenCFbxNodeConfig">
+				<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+				<ChildList>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_0_A.002"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_2_A.002"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_3_A.002"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_1_C.001"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_1_D.001"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_1_B.001"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="Step_1_A.002"/>
+					</Item>
+				</ChildList>
+				<NodeName value="GroundLevelMarkPart.ConstructionSteps"/>
 			</Item>
 		</ChildList>
 		<NodeName value="Prefab"/>

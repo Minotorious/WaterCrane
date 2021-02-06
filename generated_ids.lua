@@ -39,6 +39,7 @@ IdMap = {
 	{ "TREADMILL_WORKER_BEHAVIOR_TREE/WorkLoopRepeater", "", "613eaa99-ecb4-413e-890a-54604b9fa466" },
 	{ "TREADMILL_WORKER_BEHAVIOR_TREE/WorkingGlobalSequencer", "", "0d2f7058-0242-4c00-b829-627a26a215fb" },
 	{ "TREADMILL_WORKER_BEHAVIOR_TREE/WorkLoopSequencer", "", "4bce9f89-4d5e-4154-acee-8e739abbeba5" },
+	{ "models/waterCraneSquare1024.png", "", "36c1cd77-98a6-4ab1-9d9c-aee5095dcbf1" },
 	{ "TREADMILL_WORKER_BEHAVIOR_TREE/GoToWorkplace", "", "6ebffeec-7ab2-42fa-8621-98c70b8c1c4c" },
 	{ "TREADMILL_WORKER_BEHAVIOR_TREE/ProduceResource", "", "c383c942-d4c8-43af-baa3-53979bd3ad13" },
 	{ "TREADMILL_WORKER_BEHAVIOR_TREE/GettingXp", "", "ce676cf4-6bac-46fa-93c1-28b885f2d5bd" },

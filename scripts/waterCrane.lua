@@ -24,6 +24,20 @@ waterCrane:registerAssetId("models/waterCrane.fbx/Prefab/WaterCraneCorePart", "P
 waterCrane:registerAssetId("models/waterCrane.fbx/Prefab/WaterLevelMarkPart", "PREFAB_WATER_LEVEL_MARK_PART")
 waterCrane:registerAssetId("models/waterCrane.fbx/Prefab/GroundLevelMarkPart", "PREFAB_GROUND_LEVEL_MARK_PART")
 
+waterCrane:registerAssetId("models/waterCrane.fbx/Prefab/GearMainPart.ConstructionSteps", "PREFAB_GEAR_MAIN_PART_CONSTRUCTION_STEPS")
+waterCrane:registerAssetId("models/waterCrane.fbx/Prefab/GearMainFrontPart.ConstructionSteps", "PREFAB_GEAR_MAIN_FRONT_PART_CONSTRUCTION_STEPS")
+waterCrane:registerAssetId("models/waterCrane.fbx/Prefab/GearMainBackPart.ConstructionSteps", "PREFAB_GEAR_MAIN_BACK_PART_CONSTRUCTION_STEPS")
+waterCrane:registerAssetId("models/waterCrane.fbx/Prefab/GearTopPart.ConstructionSteps", "PREFAB_GEAR_TOP_PART_CONSTRUCTION_STEPS")
+waterCrane:registerAssetId("models/waterCrane.fbx/Prefab/GearTopFrontPart.ConstructionSteps", "PREFAB_GEAR_TOP_FRONT_PART_CONSTRUCTION_STEPS")
+waterCrane:registerAssetId("models/waterCrane.fbx/Prefab/GearTopBackPart.ConstructionSteps", "PREFAB_GEAR_TOP_BACK_PART_CONSTRUCTION_STEPS")
+waterCrane:registerAssetId("models/waterCrane.fbx/Prefab/GearMiddlePart.ConstructionSteps", "PREFAB_GEAR_MIDDLE_PART_CONSTRUCTION_STEPS")
+waterCrane:registerAssetId("models/waterCrane.fbx/Prefab/GearMiddleFrontPart.ConstructionSteps", "PREFAB_GEAR_MIDDLE_FRONT_PART_CONSTRUCTION_STEPS")
+waterCrane:registerAssetId("models/waterCrane.fbx/Prefab/GearMiddleBackPart.ConstructionSteps", "PREFAB_GEAR_MIDDLE_BACK_PART_CONSTRUCTION_STEPS")
+waterCrane:registerAssetId("models/waterCrane.fbx/Prefab/TreadmillPart.ConstructionSteps", "PREFAB_TREADMILL_PART_CONSTRUCTION_STEPS")
+waterCrane:registerAssetId("models/waterCrane.fbx/Prefab/WaterCraneCorePart.ConstructionSteps", "PREFAB_WATER_CRANE_CORE_PART_CONSTRUCTION_STEPS")
+waterCrane:registerAssetId("models/waterCrane.fbx/Prefab/WaterLevelMarkPart.ConstructionSteps", "PREFAB_WATER_LEVEL_MARK_PART_CONSTRUCTION_STEPS")
+waterCrane:registerAssetId("models/waterCrane.fbx/Prefab/GroundLevelMarkPart.ConstructionSteps", "PREFAB_GROUND_LEVEL_MARK_PART_CONSTRUCTION_STEPS")
+
 waterCrane:registerAssetId("models/waterCrane.fbx/Prefab/TreadmillPart/PATH_A_1.TreadmillWork", "PATH_TREADMILL_WORK_A1")
 waterCrane:registerAssetId("models/waterCrane.fbx/Prefab/TreadmillPart/PATH_A_2.TreadmillWork", "PATH_TREADMILL_WORK_A2")
 waterCrane:registerAssetId("models/waterCrane.fbx/Prefab/TreadmillPart/PATH_A_3.TreadmillWork", "PATH_TREADMILL_WORK_A3")
@@ -548,7 +562,8 @@ function registerDefaultBuildingPart(_nodePrefix)
     waterCrane:register({
         DataType = "BUILDING_PART",
         Id = _nodePrefix .. "_PART",
-        ConstructorData = { DataType = "BUILDING_CONSTRUCTOR_DEFAULT", CoreObjectPrefab = "PREFAB_" .. _nodePrefix .. "_PART" }
+        ConstructorData = { DataType = "BUILDING_CONSTRUCTOR_DEFAULT", CoreObjectPrefab = "PREFAB_" .. _nodePrefix .. "_PART" },
+        ConstructionVisual = "PREFAB_" .. _nodePrefix .. "_PART_CONSTRUCTION_STEPS"
     })
 end
 
@@ -605,12 +620,12 @@ waterCrane:register({
             { BuildingPart = "GEAR_TOP_FRONT_PART", OptionalAttachNodeString = "AttachMinor.GearTopFront" },
             { BuildingPart = "GEAR_TOP_BACK_PART", OptionalAttachNodeString = "AttachMinor.GearTopBack" },
             { BuildingPart = "GEAR_MIDDLE_PART", OptionalAttachNodeString = "AttachMajor.GearMiddle" },
-            { BuildingPart = "GEAR_MIDDLE_FRONT_PART",  OptionalAttachNodeString = "AttachMinor.GearMiddleFront" },
-            { BuildingPart = "GEAR_MIDDLE_BACK_PART",  OptionalAttachNodeString = "AttachMinor.GearMiddleBack" },
+            { BuildingPart = "GEAR_MIDDLE_FRONT_PART", OptionalAttachNodeString = "AttachMinor.GearMiddleFront" },
+            { BuildingPart = "GEAR_MIDDLE_BACK_PART", OptionalAttachNodeString = "AttachMinor.GearMiddleBack" },
             { BuildingPart = "TREADMILL_PART", OptionalAttachNodeString = "AttachMajor.Treadmill" },
             { BuildingPart = "WATER_LEVEL_MARK_PART", OptionalAttachNodeString = "AttachMinor.WaterLevelMark" },
             { BuildingPart = "GROUND_LEVEL_MARK_PART", OptionalAttachNodeString = "AttachMinor.GroundLevelMark" }
-        }
+        },
     },
     AssetBuildingFunction = "BUILDING_FUNCTION_WELL",
     BuildingZone = {
@@ -633,7 +648,7 @@ waterCrane:register({
             },
         }
     },
-    ConstructionVisual = nil,
+    ConstructionVisual = "PREFAB_WATER_CRANE_CORE_PART_CONSTRUCTION_STEPS",
     EstateSplendor = {
         {
             Estate = "LABOUR",

@@ -185,6 +185,8 @@
 		<meta id="91bbf2ff-0f75-4c1b-9017-283f8ec65ba2" name="BucketMain_Material.WoodBrownWorn"/>
 		<meta id="005a2cc3-5848-4cce-847e-4d407c2fd5bc" name="BucketHandle_Material.MetalRusty"/>
 		<meta id="a2a09509-9197-4214-b5f2-ce7f61255046" name="BucketRope_Material.RopeBrown"/>
+		<meta id="93e80af8-de2f-40e8-bee1-dea9571835c6" name="step_0 _Material.WoodBrownDark"/>
+		<meta id="df757927-bfb2-4f7c-b894-d1ee3e70731b" name="step_0 .003_Material.WoodBrownDark"/>
 	</meta>
 	<meta id="10246f63-31c0-4009-a90e-e74abad8046f" name="Prefab">
 		<meta id="2e9fcba4-d850-4540-9c5e-10a4ad410894" name="Camera"/>
@@ -615,10 +617,20 @@
 		</meta>
 		<meta id="cc49fade-9365-4497-b56d-123e830c5069" name="Light.Point"/>
 		<meta id="b34ae6ad-0d6b-49d0-b731-c6c811a75390" name="Light.Sun"/>
+		<meta id="cc412d08-ffd9-4bde-97fd-95736562b36e" name="ConstructionSteps">
+			<meta id="6c8c535e-2f7f-4dfa-8e63-d618f0ed7825" name="WaterCraneCorePart.001">
+				<meta id="dfa60a9f-3357-4487-b47a-33eb88d01302" name="step_0 "/>
+				<meta id="6b4266f0-96f0-41fb-9619-e125b074b107" name="step_0 .001"/>
+				<meta id="0aa5f668-568b-4add-a9dc-61ffbdcdb86b" name="step_0 .003"/>
+				<meta id="01165e54-ed01-43c8-b79a-4fbd7a44f666" name="step_0 .002"/>
+				<meta id="d67f4cf5-f66b-47b9-a595-e6d8a8b72dd7" name="step_0 .004"/>
+				<meta id="4fd9f16c-3944-413b-bc7a-37b1f6e7f66b" name="step_0 .005"/>
+			</meta>
+		</meta>
 	</meta>
 </meta>
 <importer type="GamCFbxImporterConfiguration">
-	<Md5Checksum value="5a079220083d24bc28c76318066bba57"/>
+	<Md5Checksum value="55eb46f6d1e7e0bb6c29229524ae4d26"/>
 	<Scale value="0.01"/>
 	<PatchMeshOffset value="true"/>
 	<UniqueNodeName value="false"/>
@@ -2706,6 +2718,48 @@
 				<LodConfig value="00000000-0000-0000-0000-000000000000"/>
 				<ChildList/>
 				<NodeName value="Light.Sun"/>
+			</Item>
+			<Item type="GenCFbxNodeConfig">
+				<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+				<ChildList>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList>
+							<Item type="GenCFbxNodeConfig">
+								<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+								<ChildList/>
+								<NodeName value="step_0 "/>
+							</Item>
+							<Item type="GenCFbxNodeConfig">
+								<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+								<ChildList/>
+								<NodeName value="step_0 .001"/>
+							</Item>
+							<Item type="GenCFbxNodeConfig">
+								<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+								<ChildList/>
+								<NodeName value="step_0 .003"/>
+							</Item>
+							<Item type="GenCFbxNodeConfig">
+								<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+								<ChildList/>
+								<NodeName value="step_0 .002"/>
+							</Item>
+							<Item type="GenCFbxNodeConfig">
+								<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+								<ChildList/>
+								<NodeName value="step_0 .004"/>
+							</Item>
+							<Item type="GenCFbxNodeConfig">
+								<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+								<ChildList/>
+								<NodeName value="step_0 .005"/>
+							</Item>
+						</ChildList>
+						<NodeName value="WaterCraneCorePart.001"/>
+					</Item>
+				</ChildList>
+				<NodeName value="ConstructionSteps"/>
 			</Item>
 		</ChildList>
 		<NodeName value="Prefab"/>

@@ -1,0 +1,10 @@
+{
+	"": {
+        "WATER_CRANE_NAME": "Water Crane",
+        "WATER_CRANE_PART_NAME": "Water Crane",
+        "WATER_CRANE_DESC": "A Water Crane that serves water to villagers and produces fish with a chance of exhuming gems",
+        "WATER_CRANE_PART_DESC": "A Water Crane that serves water to villagers and produces fish with a chance of exhuming gems",
+        "TREADMILL_WORKER_NAME": "Treadmill Worker",
+        "TREADMILL_WORKER_DESC": "A worker for operating the treadmill"
+    }
+}

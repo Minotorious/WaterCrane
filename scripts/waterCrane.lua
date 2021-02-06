@@ -63,13 +63,16 @@ function COMP_WATER_CRANE:create()
     self.craneWaterSide = true
     self.craneStop = true
     self.leverUp = false
+    self.bucketTipped = false
     self.maxScaleWater = 1
     self.maxScaleGround = 1
 end
 
 function COMP_WATER_CRANE:init()
+    self:bucketWaterSequence()
     local waterLevel = 0
     local groundLevel = 0
+    local bucketLevel = 0
     self:getOwner():forEachChild(
         function(child)
             if child.Name == "AttachMinor.WaterLevelMark" then
@@ -88,20 +91,33 @@ function COMP_WATER_CRANE:init()
                         end
                     end
                 )
+            elseif child.Name == "AttachMajor.GearMain" then
+                child:forEachChild(
+                    function(part)
+                        if part.Name == "GearMainPart" then
+                            part:forEachChild(
+                                function(bucketPart)
+                                    if bucketPart.Name == "BucketRope" then
+                                        bucketLevel = bucketPart.Position.y
+                                    end
+                                end
+                            )
+                        end
+                    end
+                )
             end
         end
     )
     self.maxScaleWater = (6 + math.abs(waterLevel))/6
-    self.maxScaleGround = (6 + math.abs(groundLevel + 0.7))/6
-    self:bucketWaterSequence()
+    self.maxScaleGround = (6 + math.abs(groundLevel + 0.9))/6
 end
 
 function COMP_WATER_CRANE:onEnabled()
-    waterCrane:log("Component Enabled")
+    --waterCrane:log("Component Enabled")
 end
 
 function COMP_WATER_CRANE:onDisabled()
-    waterCrane:log("Component Disabled")
+    --waterCrane:log("Component Disabled")
 end
 
 function COMP_WATER_CRANE:bucketWaterSequence()
@@ -136,7 +152,6 @@ function COMP_WATER_CRANE:bucketWaterSequence()
 end
 
 function COMP_WATER_CRANE:bucketReelSequence(dif)
-    local dt = self:getLevel():getDeltaTime()
     self:getOwner():forEachChild(
         function(child)
             if child.Name == "AttachMajor.GearMain" then
@@ -147,6 +162,102 @@ function COMP_WATER_CRANE:bucketReelSequence(dif)
                                 function(bucketPart)
                                     if starts_with(bucketPart.Name, "Bucket") then
                                         bucketPart:move({ 0, dif, 0 })
+                                    end
+                                end
+                            )
+                        end
+                    end
+                )
+            end
+        end
+    )
+end
+
+function COMP_WATER_CRANE:bucketTipSequence()
+    local dt = self:getLevel():getDeltaTime()
+    local tipPointX = 6.975
+    local tipPointY = 0
+    local tipPointZ = 0
+    self:getOwner():forEachChild(
+        function(child)
+            if child.Name == "AttachMajor.GearMain" then
+                child:forEachChild(
+                    function(part)
+                        if part.Name == "GearMainPart" then
+                            part:forEachChild(
+                                function(bucketPart)
+                                    if bucketPart.Name == "BucketRope" then
+                                        --waterCrane:log(bucketPart.Position)
+                                        tipPointY = bucketPart.Position.y
+                                    end
+                                end
+                            )
+                        end
+                    end
+                )
+            end
+        end
+    )
+    
+    self:getOwner():forEachChild(
+        function(child)
+            if child.Name == "AttachMajor.GearMain" then
+                child:forEachChild(
+                    function(part)
+                        if part.Name == "GearMainPart" then
+                            part:forEachChild(
+                                function(bucketPart)
+                                    if starts_with(bucketPart.Name, "Bucket") then
+                                        if self.bucketTipped == false then
+                                            --waterCrane:log("Bucket Tipping")
+                                            bucketPart:rotateAround({ tipPointX, tipPointY, tipPointZ }, { 0, 0, 1 }, -self.GearVelocity * dt)
+                                            if bucketPart.Name == "BucketRope" then
+                                                --waterCrane:log(quaternion.getEulerAngles(bucketPart.Orientation).z)
+                                                if quaternion.getEulerAngles(bucketPart.Orientation).z < -1.3 then
+                                                    --waterCrane:log("Bucket Tipped")
+                                                    self.bucketTipped = true
+                                                    self:bucketWaterSequence()
+                                                end
+                                            end
+                                        else
+                                            --waterCrane:log("Bucket Untipping")
+                                            bucketPart:rotateAround({ tipPointX, tipPointY, tipPointZ }, { 0, 0, 1 }, self.GearVelocity * dt)
+                                            if bucketPart.Name == "BucketRope" then
+                                                if quaternion.getEulerAngles(bucketPart.Orientation).z > 0 then
+                                                    --waterCrane:log("Bucket Untipped")
+                                                    self:bucketResetSequence(tipPointY)
+                                                    self.bucketTipped = false
+                                                    self.ropeReeled = false
+                                                end
+                                            end
+                                        end
+                                    end
+                                end
+                            )
+                        end
+                    end
+                )
+            end
+        end
+    )
+end
+
+function COMP_WATER_CRANE:bucketResetSequence(tipPointY)
+    self:getOwner():forEachChild(
+        function(child)
+            if child.Name == "AttachMajor.GearMain" then
+                child:forEachChild(
+                    function(part)
+                        if part.Name == "GearMainPart" then
+                            part:forEachChild(
+                                function(bucketPart)
+                                    if starts_with(bucketPart.Name, "Bucket") then
+                                        bucketPart:setRotationZ(0)
+                                        if bucketPart.Name == "BucketRope" then
+                                            bucketPart:move({ 6.975 - bucketPart.Position.x, tipPointY - bucketPart.Position.y, 0 })
+                                        else
+                                            bucketPart:move({ 6.975 - bucketPart.Position.x, tipPointY - bucketPart.Position.y - 0.35894, 0 }) -- 0.35894 is the height rope to bucket difference in the fbx
+                                        end
                                     end
                                 end
                             )
@@ -181,7 +292,7 @@ function COMP_WATER_CRANE:ropeReelSequence()
                                                 self:bucketReelSequence(dif)
                                             else
                                                 --waterCrane:log(rope.Scale.y)
-                                                waterCrane:log("RopeReeled")
+                                                --waterCrane:log("RopeReeled")
                                                 self.ropeReeled = true
                                                 if self.sequence == 0 then
                                                     self.sequence = 1
@@ -203,7 +314,7 @@ function COMP_WATER_CRANE:ropeReelSequence()
                                                     self:bucketReelSequence(dif)
                                                 else
                                                     --waterCrane:log(rope.Scale.y)
-                                                    waterCrane:log("RopeUnreeled")
+                                                    --waterCrane:log("RopeUnreeled")
                                                     self.ropeReeled = false
                                                     self:bucketWaterSequence()
                                                 end
@@ -215,12 +326,14 @@ function COMP_WATER_CRANE:ropeReelSequence()
                                                     local newScale = rope.Scale.y
                                                     local dif = 6 * (oldScale - newScale)
                                                     --waterCrane:log("Difference: " .. dif)
+                                                    --waterCrane:log("scale: " .. newScale)
                                                     self:bucketReelSequence(dif)
                                                 else
                                                     --waterCrane:log(rope.Scale.y)
-                                                    waterCrane:log("RopeUnreeled")
-                                                    self.ropeReeled = false
-                                                    self:bucketWaterSequence()
+                                                    --waterCrane:log("RopeUnreeled")
+                                                    self:bucketTipSequence()
+                                                    --self.ropeReeled = false
+                                                    --self:bucketWaterSequence()
                                                 end
                                             end
                                         end
@@ -309,10 +422,10 @@ function COMP_WATER_CRANE:craneRotationSequence()
                                 if self.craneWaterSide == true then
                                     --waterCrane:log(quaternion.getEulerAngles(attachment.Orientation).y)
                                     if quaternion.getEulerAngles(attachment.Orientation).y <= 0 then
-                                        waterCrane:log("rotating to land")
+                                        --waterCrane:log("rotating to land")
                                         attachment:rotateY(-self.GearVelocity * dt)
                                     else
-                                        waterCrane:log("rotation to land finished")
+                                        --waterCrane:log("rotation to land finished")
                                         attachment:setRotationY(-1*math.pi)
                                         self.craneWaterSide = false
                                         if self.sequence == 1 then
@@ -321,12 +434,12 @@ function COMP_WATER_CRANE:craneRotationSequence()
                                         end
                                     end
                                 else
-                                    waterCrane:log(quaternion.getEulerAngles(attachment.Orientation).y)
+                                    --waterCrane:log(quaternion.getEulerAngles(attachment.Orientation).y)
                                     if quaternion.getEulerAngles(attachment.Orientation).y < 0 or quaternion.getEulerAngles(attachment.Orientation).y > 3.14 then
-                                        waterCrane:log("rotating to water")
+                                        --waterCrane:log("rotating to water")
                                         attachment:rotateY(self.GearVelocity * dt)
                                     else
-                                        waterCrane:log("rotation to water finished")
+                                        --waterCrane:log("rotation to water finished")
                                         attachment:setRotationY(0)
                                         self.craneWaterSide = true
                                         if self.sequence == 3 then
@@ -396,7 +509,7 @@ waterCrane:registerPrefabComponent("models/waterCrane.fbx/Prefab/WaterCraneCoreP
     DataType = "COMP_BUILDING_PART",
     PathList = {
         {   
-            PathType = BUILDING_PATH_TYPE.WORK, --"WORK",
+            PathType = "WORK",
             WayPointList = {
                 "PATH_TREADMILL_WORK_A1",
                 "PATH_TREADMILL_WORK_A2",
@@ -405,19 +518,19 @@ waterCrane:registerPrefabComponent("models/waterCrane.fbx/Prefab/WaterCraneCoreP
             }
         },
         {   
-            PathType = BUILDING_PATH_TYPE.DEFAULT, --"DEFAULT",
+            PathType = "DEFAULT",
             WayPointList = {
                 "PATH_WATER_WELL_B1"
             }
         },
         {   
-            PathType = BUILDING_PATH_TYPE.DEFAULT, --"DEFAULT",
+            PathType = "DEFAULT",
             WayPointList = {
                 "PATH_WATER_WELL_C1"
             }
         },
         {   
-            PathType = BUILDING_PATH_TYPE.DEFAULT, --"DEFAULT",
+            PathType = "DEFAULT",
             WayPointList = {
                 "PATH_WATER_WELL_D1"
             }
@@ -472,7 +585,7 @@ waterCrane:register({
     AssetCoreBuildingPart = "WATER_CRANE_PART",
     VillagerRequired = {
         Status = "SERF",
-        Quantity = 1--10
+        Quantity = 10
     }
 })
 
@@ -515,7 +628,7 @@ waterCrane:register({
                 Type = { DEFAULT = true, NAVIGABLE = true }
             },
             {
-                Polygon = polygon.createRectangle( { 2, 1 }, { -8.075, 2 } ),
+                Polygon = polygon.createRectangle( { 2, 1 }, { -7.575, 2 } ),
                 Type = { DEFAULT = true, NAVIGABLE = true, GRASS_CLEAR = true }
             },
         }
@@ -543,15 +656,15 @@ waterCrane:register({
         RessourcesNeeded = {
             {
                 Resource = "PLANK",
-                Quantity = 0--50
+                Quantity = 50
             },
             {
                 Resource = "STONE",
-                Quantity = 0--10
+                Quantity = 10
             },
             {
                 Resource = "TOOL",
-                Quantity = 0--10
+                Quantity = 10
             }
         }
     },
@@ -576,7 +689,7 @@ waterCrane:register({
     CharacterSetup = {
         IdleAnimation = "WALKING",
     },
-    ProductionDelay = 60,
+    ProductionDelay = 240,
     IsLockedByDefault = true,
     UseWorkplaceBehavior = true,
     AssetJobProgression = "DEFAULT_JOB_PROGRESSION"
@@ -588,7 +701,7 @@ waterCrane:register({
     WorkerCapacity = 1,
     RelatedJob = { Job = "TREADMILL_WORKER", Behavior = "TREADMILL_WORKER_BEHAVIOR_TREE" },
     ResourceProduced = {
-        { Resource = "FISH", Quantity = 0 }
+        { Resource = "FISH", Quantity = 5 }
     },
     RandomResourceToSpawn = "GEMS",
     SpawnPercentage = 0.33

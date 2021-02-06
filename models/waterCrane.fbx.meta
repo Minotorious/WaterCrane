@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<meta id="5d4d152e-48cc-4ce7-91d5-64915d53a875">
+<meta id="1de9d7c8-a2f0-440a-8078-74152bd8e66d">
 	<meta id="6dad35f7-b2a5-44dd-a57a-d34640e230c4" type="group" folder="true" name="Materials">
 		<meta id="e96e687d-5647-48d5-a56b-f37c9b067399" name="Material.WoodBrownWorn"/>
 		<meta id="8dc214bb-b70d-4c14-a6e2-88513bd1449a" name="Material.WoodBrown"/>
@@ -172,10 +172,7 @@
 		<meta id="1b0b6104-8819-4262-b418-8c7f5b4fc8e0" name="BezierCircle.010_Material.WoodBrownWorn"/>
 		<meta id="80a86d45-96db-4493-9d97-ee8c3f3761c8" name="WaterCraneCorePart_COLLIDER"/>
 		<meta id="b5d45405-be46-4b24-bdf4-dac50a90ac37" name="Rope_Material.RopeBrown"/>
-		<meta id="8dd637c2-f027-4dfb-8e58-ed3e4724f681" name="BucketMain_Material.WoodBrownWorn"/>
 		<meta id="6489d4ce-3f25-414e-8e7a-8fc0e14b4bf5" name="BucketWater_Material.Water"/>
-		<meta id="cebe59f9-faae-49ef-82da-9965db05aa16" name="BucketHandle_Material.MetalRusty"/>
-		<meta id="20272bb0-07dc-44dd-9af7-cbdc915b151c" name="BucketRope_Material.RopeBrown"/>
 		<meta id="06fd2b34-f965-442a-a281-f380546ae52b" name="WaterLevelMark_Material.Transparent"/>
 		<meta id="31d51cbd-6458-40bd-801a-2d7b16031c62" name="Lever_Material.MetalSilver"/>
 		<meta id="727d7a57-192d-4250-85be-2cf8d3d2163d" name="Reel.Bottom_Material.WoodBrownWorn"/>
@@ -185,9 +182,11 @@
 		<meta id="52df7d1b-9c3a-4125-a6e0-494eebf09adf" name="Cube.186_Material.WoodBrownDark"/>
 		<meta id="87310b19-24ad-4475-a2fb-b2b79fb7a195" name="Cube.268_Material.Water"/>
 		<meta id="2e951660-c3c6-4ad0-acf3-4a6cda92d470" name="Cube.270_Material.WoodBrownDark"/>
+		<meta id="91bbf2ff-0f75-4c1b-9017-283f8ec65ba2" name="BucketMain_Material.WoodBrownWorn"/>
+		<meta id="005a2cc3-5848-4cce-847e-4d407c2fd5bc" name="BucketHandle_Material.MetalRusty"/>
+		<meta id="a2a09509-9197-4214-b5f2-ce7f61255046" name="BucketRope_Material.RopeBrown"/>
 	</meta>
 	<meta id="10246f63-31c0-4009-a90e-e74abad8046f" name="Prefab">
-		<meta id="e45de41c-83b6-417f-ab97-288816e9f9f8" name="Light"/>
 		<meta id="2e9fcba4-d850-4540-9c5e-10a4ad410894" name="Camera"/>
 		<meta id="3db7f22f-c170-463b-b3bb-fc500ff1061c" name="BezierCircle"/>
 		<meta id="cce27e3c-b254-4be3-87ff-2871cb0b9601" name="CameraSquareCloseUp"/>
@@ -570,10 +569,7 @@
 			<meta id="b2d6fdeb-f6e2-4c5f-a0c3-cf2641b9a43e" name="Cylinder.051"/>
 			<meta id="5c8177de-c7db-42ca-b76a-c3ca6db53483" name="Cylinder.052"/>
 			<meta id="1955e3b0-d7b2-4232-8ae7-208cb1e60878" name="Rope"/>
-			<meta id="93e9c8da-3e91-466d-85d8-391938e03da8" name="BucketMain"/>
 			<meta id="0214ef93-e8e0-44bf-83de-785c0aea0605" name="BucketWater"/>
-			<meta id="910d7649-69bc-4041-a8eb-49cbdd84a923" name="BucketHandle"/>
-			<meta id="8c474414-b15f-40e9-850e-9820f89b4cc8" name="BucketRope"/>
 			<meta id="c4be8645-052c-4b56-98f0-1495b7492187" name="Lever"/>
 			<meta id="44347b83-4d78-4225-aadc-8cd5f596c4fd" name="Reel.Bottom">
 				<meta id="6f932456-9772-4d47-a337-0ad059c2740d" name="Reel.Bottom_0"/>
@@ -591,6 +587,9 @@
 				<meta id="62603500-27ec-4a45-a5a9-018bcd20003b" name="Reel.Outer_1"/>
 				<meta id="be190d39-1be8-498d-8afc-c81e6188a8b9" name="Reel.Outer_2"/>
 			</meta>
+			<meta id="da579fa7-b872-4a40-9eac-f744d01655eb" name="BucketMain"/>
+			<meta id="33972b6a-3330-4b99-b7d9-0282fb42f8d7" name="BucketHandle"/>
+			<meta id="67524740-28e4-46f0-816e-c6ff9fa266c2" name="BucketRope"/>
 		</meta>
 		<meta id="4f647bad-7d5e-47e7-ae9e-7dfa404495ba" name="GearMainFrontPart">
 			<meta id="9057a82d-3b29-4f9f-bed9-e0fa1d77b013" name="Cylinder.017"/>
@@ -614,10 +613,12 @@
 			<meta id="9861e3b9-c489-463f-abb5-05fd664cbb98" name="Cube.304"/>
 			<meta id="7c2ff8cf-d500-4854-9e0c-666802a0998b" name="Cube.305"/>
 		</meta>
+		<meta id="cc49fade-9365-4497-b56d-123e830c5069" name="Light.Point"/>
+		<meta id="b34ae6ad-0d6b-49d0-b731-c6c811a75390" name="Light.Sun"/>
 	</meta>
 </meta>
 <importer type="GamCFbxImporterConfiguration">
-	<Md5Checksum value="fe76a7842c8157d4dabcd73fd1848a20"/>
+	<Md5Checksum value="5a079220083d24bc28c76318066bba57"/>
 	<Scale value="0.01"/>
 	<PatchMeshOffset value="true"/>
 	<UniqueNodeName value="false"/>
@@ -630,11 +631,6 @@
 	<NodeConfig type="GenCFbxNodeConfig">
 		<LodConfig value="00000000-0000-0000-0000-000000000000"/>
 		<ChildList>
-			<Item type="GenCFbxNodeConfig">
-				<LodConfig value="00000000-0000-0000-0000-000000000000"/>
-				<ChildList/>
-				<NodeName value="Light"/>
-			</Item>
 			<Item type="GenCFbxNodeConfig">
 				<LodConfig value="00000000-0000-0000-0000-000000000000"/>
 				<ChildList/>
@@ -2514,22 +2510,7 @@
 					<Item type="GenCFbxNodeConfig">
 						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
 						<ChildList/>
-						<NodeName value="BucketMain"/>
-					</Item>
-					<Item type="GenCFbxNodeConfig">
-						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
-						<ChildList/>
 						<NodeName value="BucketWater"/>
-					</Item>
-					<Item type="GenCFbxNodeConfig">
-						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
-						<ChildList/>
-						<NodeName value="BucketHandle"/>
-					</Item>
-					<Item type="GenCFbxNodeConfig">
-						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
-						<ChildList/>
-						<NodeName value="BucketRope"/>
 					</Item>
 					<Item type="GenCFbxNodeConfig">
 						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
@@ -2603,6 +2584,21 @@
 							</Item>
 						</ChildList>
 						<NodeName value="Reel.Outer"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="BucketMain"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="BucketHandle"/>
+					</Item>
+					<Item type="GenCFbxNodeConfig">
+						<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+						<ChildList/>
+						<NodeName value="BucketRope"/>
 					</Item>
 				</ChildList>
 				<NodeName value="GearMainPart"/>
@@ -2700,6 +2696,16 @@
 					</Item>
 				</ChildList>
 				<NodeName value="GroundLevelMarkPart"/>
+			</Item>
+			<Item type="GenCFbxNodeConfig">
+				<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+				<ChildList/>
+				<NodeName value="Light.Point"/>
+			</Item>
+			<Item type="GenCFbxNodeConfig">
+				<LodConfig value="00000000-0000-0000-0000-000000000000"/>
+				<ChildList/>
+				<NodeName value="Light.Sun"/>
 			</Item>
 		</ChildList>
 		<NodeName value="Prefab"/>

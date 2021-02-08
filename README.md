@@ -5,6 +5,8 @@ The Water Crane is unlocked after reaching **10 Serfs**. It has a quite high **u
 
 In return it provides **Water** to villagers in the nearby houses, produces **Fish** in half the amount as a fishing hut and has a **33% chance** of exhuming **Gems** from the depths of the river!
 
+# To stay updated with my upcoming projects:
+
 Check out my [Official Website](https://minotorious.github.io/)
 
 For updates on my projects follow me on [Twitter](https://twitter.com/theOneTrueMino), [Instagram](https://www.instagram.com/minotorious), & [Facebook](https://www.facebook.com/Minotorious.Official)

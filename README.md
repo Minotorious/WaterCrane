@@ -1,5 +1,9 @@
 # WaterCrane
-A fully animated Water Crane for Foundation
+A fully animated Water Crane that serves Water to the Villagers and produces Fish with a chance of exhuming Gems from the depths of the river!
+
+The Water Crane is unlocked after reaching **10 Serfs**. It has a quite high **upfront cost of 200 gold** and requires **50 planks, 10 stone, and 10 tools** to be built. It consequently has a **50 gold per week maintenance cost** and reduces the residential desirability in a small radius around it.
+
+In return it provides **Water** to villagers in the nearby houses, produces **Fish** in half the amount as a fishing hut and has a **33% chance** of exhuming **Gems** from the depths of the river!
 
 Check out my [Official Website](https://minotorious.github.io/)
 

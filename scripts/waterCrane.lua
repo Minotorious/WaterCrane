@@ -24,6 +24,8 @@ waterCrane:registerAssetId("models/waterCrane.fbx/Prefab/WaterCraneCorePart", "P
 waterCrane:registerAssetId("models/waterCrane.fbx/Prefab/WaterLevelMarkPart", "PREFAB_WATER_LEVEL_MARK_PART")
 waterCrane:registerAssetId("models/waterCrane.fbx/Prefab/GroundLevelMarkPart", "PREFAB_GROUND_LEVEL_MARK_PART")
 
+waterCrane:registerAssetId("models/waterCrane.fbx/Prefab/WaterCraneIconPart", "PREFAB_WATER_CRANE_ICON_PART")
+
 waterCrane:registerAssetId("models/waterCrane.fbx/Prefab/GearMainPart.ConstructionSteps", "PREFAB_GEAR_MAIN_PART_CONSTRUCTION_STEPS")
 waterCrane:registerAssetId("models/waterCrane.fbx/Prefab/GearMainFrontPart.ConstructionSteps", "PREFAB_GEAR_MAIN_FRONT_PART_CONSTRUCTION_STEPS")
 waterCrane:registerAssetId("models/waterCrane.fbx/Prefab/GearMainBackPart.ConstructionSteps", "PREFAB_GEAR_MAIN_BACK_PART_CONSTRUCTION_STEPS")
@@ -528,11 +530,30 @@ waterCrane:register({
     Id = "WATER_CRANE",
     Name = "WATER_CRANE_NAME",
     Description = "WATER_CRANE_DESC",
-    BuildingType = "GENERAL",
+    BuildingType = "FOOD_PRODUCTION",
     AssetCoreBuildingPart = "WATER_CRANE_PART",
+    AssetMiniatureBuildingPart = "WATER_CRANE_ICON_PART",
     VillagerRequired = {
         Status = "SERF",
         Quantity = 10
+    }
+})
+
+waterCrane:register({
+	DataType = "BUILDING_PART",
+	Id = "WATER_CRANE_ICON_PART",
+	Name = "WATER_CRANE_ICON_PART_NAME",
+	--Description = "WATER_CRANE_ICON_PART_DESC",
+	ConstructorData = {
+		DataType = "BUILDING_CONSTRUCTOR_DEFAULT",
+		CoreObjectPrefab = "PREFAB_WATER_CRANE_ICON_PART",
+        MiniatureConfig = {
+            ClipUnderGround = true,
+            GroupHeight = 0.0,
+            CameraPosition = { 0, 5, -30 },
+            OrientationOffset = -90.0,
+            CameraPitchOffset = 0.0
+        }
     }
 })
 
@@ -557,7 +578,7 @@ waterCrane:register({
             { BuildingPart = "TREADMILL_PART", OptionalAttachNodeString = "AttachMajor.Treadmill" },
             { BuildingPart = "WATER_LEVEL_MARK_PART", OptionalAttachNodeString = "AttachMinor.WaterLevelMark" },
             { BuildingPart = "GROUND_LEVEL_MARK_PART", OptionalAttachNodeString = "AttachMinor.GroundLevelMark" }
-        },
+        }
     },
     AssetBuildingFunction = "BUILDING_FUNCTION_WELL",
     BuildingZone = {

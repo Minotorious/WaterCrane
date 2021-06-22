@@ -29,6 +29,7 @@ IdMap = {
 	{ "models/metalSilver.png", "", "edf9186b-20cc-46c0-af39-308373754628" },
 	{ "models/ropeBrown.jpg", "", "aecf1455-64e0-47f5-96da-2335f761e743" },
 	{ "models/stoneGrey.png", "", "ac2e0678-c1c7-4b11-8967-3deb4c5ffcb7" },
+	{ "WATER_CRANE_ASSEMBLAGE_PART", "BUILDING_PART", "dec29ed9-9f15-4543-9ade-cfe499ab4bce" },
 	{ "models/Transparent.png", "", "7b0e438a-7135-4ec2-95ef-50e15cb7d76e" },
 	{ "models/waterCrane.fbx", "", "1de9d7c8-a2f0-440a-8078-74152bd8e66d" },
 	{ "TREADMILL_WORKER_BEHAVIOR_TREE/DoJobTimer", "", "a2670079-4250-4f9e-aa43-9e13e9f34595" },
@@ -43,4 +44,5 @@ IdMap = {
 	{ "TREADMILL_WORKER_BEHAVIOR_TREE/GoToWorkplace", "", "6ebffeec-7ab2-42fa-8621-98c70b8c1c4c" },
 	{ "TREADMILL_WORKER_BEHAVIOR_TREE/ProduceResource", "", "c383c942-d4c8-43af-baa3-53979bd3ad13" },
 	{ "TREADMILL_WORKER_BEHAVIOR_TREE/GettingXp", "", "ce676cf4-6bac-46fa-93c1-28b885f2d5bd" },
+	{ "WATER_CRANE_ICON_PART", "BUILDING_PART", "0b28c5b5-9e8a-4e3e-8955-ee305baf317f" },
 }

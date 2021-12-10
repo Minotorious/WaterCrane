@@ -50,7 +50,7 @@ waterCrane:registerAssetId("models/waterCrane.fbx/Prefab/WaterCraneCorePart/PATH
 
 waterCrane:registerAssetId("models/waterCrane.fbx/Materials/Material.Transparent", "MATERIAL_TRANSPARENT")
 
-waterCrane:override({
+waterCrane:overrideAsset({
     Id = "MATERIAL_TRANSPARENT",
     HasAlphaTest = true
 })
@@ -493,7 +493,7 @@ waterCrane:registerPrefabComponent("models/waterCrane.fbx/Prefab/GroundLevelMark
 --[[------------------------ BUILDINGS & BUILDING PARTS -----------------------]]--
 
 function registerDefaultBuildingPart(_nodePrefix)
-    waterCrane:register({
+    waterCrane:registerAsset({
         DataType = "BUILDING_PART",
         Id = _nodePrefix .. "_PART",
         ConstructorData = { DataType = "BUILDING_CONSTRUCTOR_DEFAULT", CoreObjectPrefab = "PREFAB_" .. _nodePrefix .. "_PART" },
@@ -520,12 +520,12 @@ for i, nodePrefix in ipairs(defaultNodePrefixList) do
     registerDefaultBuildingPart(nodePrefix)
 end
 
-waterCrane:override({
+waterCrane:overrideAsset({
     Id = "TREADMILL_PART",
     AssetBuildingFunction = "WATER_CRANE_BUILDING_FUNCTION"
 })
 
-waterCrane:register({
+waterCrane:registerAsset({
     DataType = "BUILDING",
     Id = "WATER_CRANE",
     Name = "WATER_CRANE_NAME",
@@ -539,7 +539,7 @@ waterCrane:register({
     }
 })
 
-waterCrane:register({
+waterCrane:registerAsset({
 	DataType = "BUILDING_PART",
 	Id = "WATER_CRANE_ICON_PART",
 	Name = "WATER_CRANE_ICON_PART_NAME",
@@ -557,7 +557,7 @@ waterCrane:register({
     }
 })
 
-waterCrane:register({
+waterCrane:registerAsset({
     DataType = "BUILDING_PART",
     Id = "WATER_CRANE_PART",
     Name = "WATER_CRANE_PART_NAME",
@@ -598,7 +598,7 @@ waterCrane:register({
             {
                 Polygon = polygon.createRectangle( { 2, 1 }, { -7.575, 2 } ),
                 Type = { DEFAULT = true, NAVIGABLE = true, GRASS_CLEAR = true }
-            },
+            }
         }
     },
     ConstructionVisual = "PREFAB_WATER_CRANE_CORE_PART_CONSTRUCTION_STEPS",
@@ -621,18 +621,11 @@ waterCrane:register({
                 Quantity = 50
             }
         },
-        RessourcesNeeded = {
+        ResourceNeededList = {
             {
-                Resource = "PLANK",
-                Quantity = 50
-            },
-            {
-                Resource = "STONE",
-                Quantity = 10
-            },
-            {
-                Resource = "TOOL",
-                Quantity = 10
+                { Resource = "PLANK", Quantity = 50 },
+                { Resource = "STONE", Quantity = 10 },
+                { Resource = "TOOL", Quantity = 10 }
             }
         }
     },
@@ -649,7 +642,7 @@ waterCrane:register({
 
 --[[------------------------- JOBS & BUILDING FUNCTIONS -----------------------]]--
 
-waterCrane:register({
+waterCrane:registerAsset({
     DataType = "JOB",
     Id = "TREADMILL_WORKER",
     JobName = "TREADMILL_WORKER_NAME",
@@ -663,7 +656,7 @@ waterCrane:register({
     AssetJobProgression = "DEFAULT_JOB_PROGRESSION"
 })
 
-waterCrane:register({ 
+waterCrane:registerAsset({ 
     DataType = "BUILDING_FUNCTION_QUARRY",
     Id = "WATER_CRANE_BUILDING_FUNCTION",
     WorkerCapacity = 1,
@@ -679,9 +672,9 @@ local overridenCompatibleJobList = {
     Action = "APPEND",
     "TREADMILL_WORKER"
 }
-waterCrane:override({ Id = "SERF", CompatibleJobList = overridenCompatibleJobList })
-waterCrane:override({ Id = "COMMONER", CompatibleJobList = overridenCompatibleJobList })
-waterCrane:override({ Id = "CITIZEN", CompatibleJobList = overridenCompatibleJobList })
+waterCrane:overrideAsset({ Id = "SERF", CompatibleJobList = overridenCompatibleJobList })
+waterCrane:overrideAsset({ Id = "COMMONER", CompatibleJobList = overridenCompatibleJobList })
+waterCrane:overrideAsset({ Id = "CITIZEN", CompatibleJobList = overridenCompatibleJobList })
 
 --[[----------------------------- BEHAVIOUR TREES -----------------------------]]--
 

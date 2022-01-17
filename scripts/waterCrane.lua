@@ -73,6 +73,7 @@ local COMP_WATER_CRANE = {
 }
 
 function COMP_WATER_CRANE:create()
+    self.isInit = false
     self.sequence = 0
     self.ropeReeled = true
     self.bucketFilled = true
@@ -102,141 +103,136 @@ function COMP_WATER_CRANE:create()
     self.gearMainBack = nil
 end
 
-function COMP_WATER_CRANE:init()
-    local waterLevel = 0
-    local groundLevel = 0
-    local bucketLevel = 0
-    self:getOwner():forEachChild(
-        function(child)
-            if child.Name == "AttachMinor.WaterLevelMark" then
-                child:forEachChild(
-                    function(part)
-                        if part.Name == "WaterLevelMarkPart" then
-                            waterLevel = part.Position.y
-                        end
-                    end
-                )
-            elseif child.Name == "AttachMinor.GroundLevelMark" then
-                child:forEachChild(
-                    function(part)
-                        if part.Name == "GroundLevelMarkPart" then
-                            groundLevel = part.Position.y
-                        end
-                    end
-                )
-            elseif child.Name == "AttachMajor.Treadmill" then
-                child:forEachChild(
-                    function(part)
-                        if part.Name == "TreadmillPart" then
-                            self.treadmill = part
-                        end
-                    end
-                )
-            elseif child.Name == "AttachMajor.GearMiddle" then
-                child:forEachChild(
-                    function(part)
-                        if part.Name == "GearMiddlePart" then
-                            self.gearMiddle = part
-                        end
-                    end
-                )
-            elseif child.Name == "AttachMinor.GearMiddleFront" then
-                child:forEachChild(
-                    function(part)
-                        if part.Name == "GearMiddleFrontPart" then
-                            self.gearMiddleFront = part
-                        end
-                    end
-                )
-            elseif child.Name == "AttachMinor.GearMiddleBack" then
-                child:forEachChild(
-                    function(part)
-                        if part.Name == "GearMiddleBackPart" then
-                            self.gearMiddleBack = part
-                        end
-                    end
-                )
-            elseif child.Name == "AttachMajor.GearTop" then
-                child:forEachChild(
-                    function(part)
-                        if part.Name == "GearTopPart" then
-                            self.gearTop = part
-                        end
-                    end
-                )
-            elseif child.Name == "AttachMinor.GearTopFront" then
-                child:forEachChild(
-                    function(part)
-                        if part.Name == "GearTopFrontPart" then
-                            self.gearTopFront = part
-                        end
-                    end
-                )
-            elseif child.Name == "AttachMinor.GearTopBack" then
-                child:forEachChild(
-                    function(part)
-                        if part.Name == "GearTopBackPart" then
-                            self.gearTopBack = part
-                        end
-                    end
-                )
-            elseif child.Name == "AttachMinor.GearMainFront" then
-                child:forEachChild(
-                    function(part)
-                        if part.Name == "GearMainFrontPart" then
-                            self.gearMainFront = part
-                        end
-                    end
-                )
-            elseif child.Name == "AttachMinor.GearMainBack" then
-                child:forEachChild(
-                    function(part)
-                        if part.Name == "GearMainBackPart" then
-                            self.gearMainBack = part
-                        end
-                    end
-                )
-            elseif child.Name == "AttachMajor.GearMain" then
-                child:forEachChild(
-                    function(part)
-                        if part.Name == "GearMainPart" then
-                            self.cranePart = part
-                            part:forEachChild(
-                                function(mainGearPart)
-                                    if starts_with(mainGearPart.Name, "Bucket") then
-                                        table.insert(self.bucketParts, mainGearPart)
-                                        if mainGearPart.Name == "BucketRope" then
-                                            bucketLevel = mainGearPart.Position.y
-                                            self.bucketRope = mainGearPart
-                                        elseif mainGearPart.Name == "BucketWater" then
-                                            self.bucketWater = mainGearPart
-                                        end
-                                    elseif mainGearPart.Name == "Rope" then
-                                        self.rope = mainGearPart
-                                    elseif starts_with(mainGearPart.Name, "Reel") then
-                                        table.insert(self.reels, mainGearPart)
-                                    elseif mainGearPart.Name == "Lever" then
-                                        self.lever = mainGearPart
-                                    end
-                                end
-                            )
-                        end
-                    end
-                )
-            end
-        end
-    )
-    self.maxScaleWater = (6 + math.abs(waterLevel))/6
-    self.maxScaleGround = (6 + math.abs(groundLevel + 0.9))/6
-    self:bucketWaterSequence()
-end
-
 function COMP_WATER_CRANE:onEnabled()
-    --waterCrane:log("Component Enabled")
-end
-
-function COMP_WATER_CRANE:onDisabled()
-    --waterCrane:log("Component Disabled")
+    if not self.isInit then
+        local waterLevel = 0
+        local groundLevel = 0
+        local bucketLevel = 0
+        self:getOwner():forEachChild(
+            function(child)
+                if child.Name == "AttachMinor.WaterLevelMark" then
+                    child:forEachChild(
+                        function(part)
+                            if part.Name == "WaterLevelMarkPart" then
+                                waterLevel = part.Position.y
+                            end
+                        end
+                    )
+                elseif child.Name == "AttachMinor.GroundLevelMark" then
+                    child:forEachChild(
+                        function(part)
+                            if part.Name == "GroundLevelMarkPart" then
+                                groundLevel = part.Position.y
+                            end
+                        end
+                    )
+                elseif child.Name == "AttachMajor.Treadmill" then
+                    child:forEachChild(
+                        function(part)
+                            if part.Name == "TreadmillPart" then
+                                self.treadmill = part
+                            end
+                        end
+                    )
+                elseif child.Name == "AttachMajor.GearMiddle" then
+                    child:forEachChild(
+                        function(part)
+                            if part.Name == "GearMiddlePart" then
+                                self.gearMiddle = part
+                            end
+                        end
+                    )
+                elseif child.Name == "AttachMinor.GearMiddleFront" then
+                    child:forEachChild(
+                        function(part)
+                            if part.Name == "GearMiddleFrontPart" then
+                                self.gearMiddleFront = part
+                            end
+                        end
+                    )
+                elseif child.Name == "AttachMinor.GearMiddleBack" then
+                    child:forEachChild(
+                        function(part)
+                            if part.Name == "GearMiddleBackPart" then
+                                self.gearMiddleBack = part
+                            end
+                        end
+                    )
+                elseif child.Name == "AttachMajor.GearTop" then
+                    child:forEachChild(
+                        function(part)
+                            if part.Name == "GearTopPart" then
+                                self.gearTop = part
+                            end
+                        end
+                    )
+                elseif child.Name == "AttachMinor.GearTopFront" then
+                    child:forEachChild(
+                        function(part)
+                            if part.Name == "GearTopFrontPart" then
+                                self.gearTopFront = part
+                            end
+                        end
+                    )
+                elseif child.Name == "AttachMinor.GearTopBack" then
+                    child:forEachChild(
+                        function(part)
+                            if part.Name == "GearTopBackPart" then
+                                self.gearTopBack = part
+                            end
+                        end
+                    )
+                elseif child.Name == "AttachMinor.GearMainFront" then
+                    child:forEachChild(
+                        function(part)
+                            if part.Name == "GearMainFrontPart" then
+                                self.gearMainFront = part
+                            end
+                        end
+                    )
+                elseif child.Name == "AttachMinor.GearMainBack" then
+                    child:forEachChild(
+                        function(part)
+                            if part.Name == "GearMainBackPart" then
+                                self.gearMainBack = part
+                            end
+                        end
+                    )
+                elseif child.Name == "AttachMajor.GearMain" then
+                    child:forEachChild(
+                        function(part)
+                            if part.Name == "GearMainPart" then
+                                self.cranePart = part
+                                part:forEachChild(
+                                    function(mainGearPart)
+                                        if starts_with(mainGearPart.Name, "Bucket") then
+                                            table.insert(self.bucketParts, mainGearPart)
+                                            if mainGearPart.Name == "BucketRope" then
+                                                bucketLevel = mainGearPart.Position.y
+                                                self.bucketRope = mainGearPart
+                                            elseif mainGearPart.Name == "BucketWater" then
+                                                self.bucketWater = mainGearPart
+                                            end
+                                        elseif mainGearPart.Name == "Rope" then
+                                            self.rope = mainGearPart
+                                        elseif starts_with(mainGearPart.Name, "Reel") then
+                                            table.insert(self.reels, mainGearPart)
+                                        elseif mainGearPart.Name == "Lever" then
+                                            self.lever = mainGearPart
+                                        end
+                                    end
+                                )
+                            end
+                        end
+                    )
+                end
+            end
+        )
+        self.maxScaleWater = (6 + math.abs(waterLevel))/6
+        self.maxScaleGround = (6 + math.abs(groundLevel + 0.9))/6
+        self:bucketWaterSequence()
+        self.isInit = true
+    end
 end
 
 function COMP_WATER_CRANE:bucketWaterSequence()
@@ -466,19 +462,19 @@ waterCrane:registerPrefabComponent("models/waterCrane.fbx/Prefab/WaterCraneCoreP
             }
         },
         {   
-            PathType = "DEFAULT",
+            PathType = "PICKUP",
             WayPointList = {
                 "PATH_WATER_WELL_B1"
             }
         },
         {   
-            PathType = "DEFAULT",
+            PathType = "PICKUP",
             WayPointList = {
                 "PATH_WATER_WELL_C1"
             }
         },
         {   
-            PathType = "DEFAULT",
+            PathType = "PICKUP",
             WayPointList = {
                 "PATH_WATER_WELL_D1"
             }
@@ -660,7 +656,7 @@ waterCrane:registerAsset({
     DataType = "BUILDING_FUNCTION_QUARRY",
     Id = "WATER_CRANE_BUILDING_FUNCTION",
     WorkerCapacity = 1,
-    RelatedJob = { Job = "TREADMILL_WORKER", Behavior = "TREADMILL_WORKER_BEHAVIOR_TREE" },
+    RelatedJob = { Job = "TREADMILL_WORKER", Behavior = "BEHAVIOR_WORK" },
     ResourceProduced = {
         { Resource = "FISH", Quantity = 15 }
     },
@@ -677,91 +673,3 @@ waterCrane:overrideAsset({ Id = "COMMONER", CompatibleJobList = overridenCompati
 waterCrane:overrideAsset({ Id = "CITIZEN", CompatibleJobList = overridenCompatibleJobList })
 
 --[[----------------------------- BEHAVIOUR TREES -----------------------------]]--
-
-waterCrane:registerBehaviorTree({
-    Id = "TREADMILL_WORKER_BEHAVIOR_TREE",
-    VariableList = {
-        {
-            Name = "AgentData",
-            DataType = "BEHAVIOR_TREE_DATA_AGENT",
-            IsPublic = true,
-            InitialValue = {}
-        },
-        {
-            Name = "DoJobTimer",
-            DataType = "BEHAVIOR_TREE_DATA_WAIT",
-            IsPublic = false,
-            InitialValue = {
-                TimeToWait = 0,
-                Animation = "IDLE",
-                SetIdleAfterWait = false
-            }
-        },
-        {
-            Name = "WorkplacePosition",
-            DataType = "BEHAVIOR_TREE_DATA_LOCATION",
-            IsPublic = false,
-            InitialValue = {
-                CanNavigateOnGround = true,
-                CanNavigateOnWater = false,
-                IsSetOrientationOnDestination = true
-            }
-        },
-        {
-            Name = "WorkLoop",
-            DataType = "BEHAVIOR_TREE_DATA_LOOP",
-            IsPublic = true,
-            InitialValue = {
-                LoopCount = 1,
-                Duration = 240,
-                IsInfinite = false,
-                IsDuration = true
-            }
-        }
-    },
-    Root = {
-        Name = "WorkingGlobalSequencer",
-        Type = "SEQUENCER",
-        Children = {
-            {
-                Name = "WorkLoopRepeater",
-                Type = "REPEAT",
-                RepeatData = "WorkLoop",
-                Child = {
-                    Name = "WorkLoopSequencer",
-                    Type = "SEQUENCER",
-                    Children = {
-                        {
-                            Name = "SetupWork",
-                            Type = "SETUP_WORK",
-                            AgentData = "AgentData",
-                            TimeToWait = "DoJobTimer",
-                            WorkPosition = "WorkplacePosition"
-                        },
-                        {
-                            Name = "GoToWorkplace",
-                            Type = "GO_TO",
-                            AgentData = "AgentData",
-                            Destination = "WorkplacePosition",
-                            BuildingPathType = "",
-                            AnimationData = "",
-                            AnimationSpeedMultiplier = ""
-                        },
-                        {
-                            Name = "ProduceResource",
-                            Type = "PRODUCE_RESOURCE",
-                            AgentData = "AgentData",
-                            TimeToWait = "DoJobTimer"
-                        },
-                        {
-                            Name = "GettingXp",
-                            Type = "GIVE_JOB_XP",
-                            AgentData = "AgentData",
-                            ShouldReceiveXp = ""
-                        }
-                    }
-                }
-            }
-        }
-    }
-})

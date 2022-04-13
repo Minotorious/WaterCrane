@@ -488,7 +488,7 @@ waterCrane:registerPrefabComponent("models/waterCrane.fbx/Prefab/GroundLevelMark
 
 --[[------------------------ BUILDINGS & BUILDING PARTS -----------------------]]--
 
-function registerDefaultBuildingPart(_nodePrefix)
+local function registerDefaultBuildingPart(_nodePrefix)
     waterCrane:registerAsset({
         DataType = "BUILDING_PART",
         Id = _nodePrefix .. "_PART",

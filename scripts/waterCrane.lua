@@ -83,7 +83,7 @@ function COMP_WATER_CRANE:create()
     self.bucketTipped = false
     self.maxScaleWater = 1
     self.maxScaleGround = 1
-    
+
     -- Game Objects
     self.rope = nil
     self.reels = {}
@@ -259,7 +259,7 @@ function COMP_WATER_CRANE:bucketTipSequence()
     local tipPointX = 6.975
     local tipPointY = self.bucketRope.Position.y
     local tipPointZ = 0
-    
+
     for i, bucketPart in ipairs(self.bucketParts) do
         if self.bucketTipped == false then
             --waterCrane:log("Bucket Tipping")
@@ -295,7 +295,7 @@ end
 
 function COMP_WATER_CRANE:ropeReelSequence()
     local dt = self:getLevel():getDeltaTime()
-    
+
     if self.ropeReeled == false then
         if self.rope.Scale.y > 0.1 then
             local oldScale = self.rope.Scale.y
@@ -340,7 +340,7 @@ function COMP_WATER_CRANE:ropeReelSequence()
             end
         end
     end
-    
+
     for i, reel in ipairs(self.reels) do
         if self.ropeReeled == false then
             reel:rotateZ(2 * self.GearVelocity * dt)
@@ -348,7 +348,7 @@ function COMP_WATER_CRANE:ropeReelSequence()
             reel:rotateZ(-2 * self.GearVelocity * dt)
         end
     end
-    
+
     if self.leverUp == false then
         if self.lever.Position.y < 2.02 then
             self.lever:move({ 0, self.LeverVelocity*dt, 0 })
@@ -366,7 +366,7 @@ end
 
 function COMP_WATER_CRANE:generalGearsSequence()
     local dt = self:getLevel():getDeltaTime()
-    
+
     self.treadmill:forEachChild(
         function(mesh)
             if not starts_with(mesh.Name, "PATH") then
@@ -374,11 +374,11 @@ function COMP_WATER_CRANE:generalGearsSequence()
             end
         end
     )
-    
+
     self.gearMiddle:rotateZ(self.GearVelocity * dt)
     self.gearMiddleFront:rotateZ(-2 * self.GearVelocity * dt)
     self.gearMiddleBack:rotateZ(-2 * self.GearVelocity * dt)
-    
+
     self.gearTop:rotateZ(-self.GearVelocity * dt)
     self.gearTopFront:rotateZ(2 * self.GearVelocity * dt)
     self.gearTopBack:rotateZ(2 * self.GearVelocity * dt)
@@ -414,7 +414,7 @@ function COMP_WATER_CRANE:craneRotationSequence()
                 end
             end
         end
-        
+
         if self.craneWaterSide == true then
             self.gearMainFront:rotateY(2 * self.GearVelocity * dt)
             self.gearMainBack:rotateY(2 * self.GearVelocity * dt)
@@ -452,7 +452,7 @@ waterCrane:registerAssetProcessor("models/waterCrane.fbx", { DataType = "BUILDIN
 waterCrane:registerPrefabComponent("models/waterCrane.fbx/Prefab/WaterCraneCorePart", {
     DataType = "COMP_BUILDING_PART",
     PathList = {
-        {   
+        {
             PathType = "WORK",
             WayPointList = {
                 "PATH_TREADMILL_WORK_A1",
@@ -461,19 +461,19 @@ waterCrane:registerPrefabComponent("models/waterCrane.fbx/Prefab/WaterCraneCoreP
                 "PATH_TREADMILL_WORK_A4"
             }
         },
-        {   
+        {
             PathType = "PICKUP",
             WayPointList = {
                 "PATH_WATER_WELL_B1"
             }
         },
-        {   
+        {
             PathType = "PICKUP",
             WayPointList = {
                 "PATH_WATER_WELL_C1"
             }
         },
-        {   
+        {
             PathType = "PICKUP",
             WayPointList = {
                 "PATH_WATER_WELL_D1"
@@ -528,11 +528,7 @@ waterCrane:registerAsset({
     Description = "WATER_CRANE_DESC",
     BuildingType = "FOOD_PRODUCTION",
     AssetCoreBuildingPart = "WATER_CRANE_PART",
-    AssetMiniatureBuildingPart = "WATER_CRANE_ICON_PART",
-    VillagerRequired = {
-        Status = "SERF",
-        Quantity = 10
-    }
+    AssetMiniatureBuildingPart = "WATER_CRANE_ICON_PART"
 })
 
 waterCrane:registerAsset({
@@ -608,13 +604,13 @@ waterCrane:registerAsset({
         BuildRightTaxes = {
             {
                 Resource = "GOLD_COINS",
-                Quantity = 200
+                Quantity = 100
             }
         },
         UpkeepCost = {
             {
                 Resource = "GOLD_COINS",
-                Quantity = 50
+                Quantity = 5
             }
         },
         ResourceNeededList = {
@@ -636,6 +632,23 @@ waterCrane:registerAsset({
     IsVisibleWhenBuilt = true
 })
 
+--[[------------------------------- UNLOCKABLES -------------------------------]]--
+
+waterCrane:overrideAsset({
+    Id = "UNLOCKABLE_COMMON_FISHING_HUT",
+    ActionList = {
+        Action = "APPEND",
+        {
+            DataType = "GAME_ACTION_UNLOCK_BUILDING_LIST",
+            BuildingProgressData = {
+                AssetBuildingList = {
+                    "WATER_CRANE"
+                }
+            }
+        }
+    }
+})
+
 --[[------------------------- JOBS & BUILDING FUNCTIONS -----------------------]]--
 
 waterCrane:registerAsset({
@@ -646,7 +659,6 @@ waterCrane:registerAsset({
     CharacterSetup = {
         IdleAnimation = "WALKING",
     },
-    ProductionDelay = 240,
     IsLockedByDefault = true,
     UseWorkplaceBehavior = true,
     AssetJobProgression = "DEFAULT_JOB_PROGRESSION"
@@ -660,6 +672,7 @@ waterCrane:registerAsset({
     ResourceProduced = {
         { Resource = "FISH", Quantity = 15 }
     },
+    ProductionCycleDurationInSec = 240,
     RandomResourceToSpawn = "GEMS",
     SpawnPercentage = 0.33
 })

@@ -1411,13 +1411,14 @@
 </meta>
 <importer type="GamCFbxImporterConfiguration">
 	<Md5Checksum value="fa3cac4d18abf95155e23a3604c2074d"/>
-	<ModelVersion value="30"/>
+	<ModelVersion value="31"/>
 	<Scale value="0.01"/>
 	<PatchMeshOffset value="true"/>
 	<UniqueNodeName value="false"/>
 	<ImportAnimation value="false"/>
 	<IgnoreRootAnimation value="false"/>
 	<FlipXAxis value="true"/>
+	<ZUpSource value="false"/>
 	<MergeDuplicateMeshes value="true"/>
 	<GenerateLod value="false"/>
 	<OverrideExistingLod value="false"/>
